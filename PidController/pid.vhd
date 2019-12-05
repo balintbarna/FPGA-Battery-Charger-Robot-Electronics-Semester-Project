@@ -3,26 +3,26 @@ USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 ENTITY PID IS
 	PORT (
+		clk : IN STD_LOGIC;
+		en : IN std_logic; --determines if controller is active
 		p_en : IN std_logic; --determines if p term is needed
 		i_en : IN std_logic; --determines if i term is needed
 		d_en : IN std_logic; --determines if d term is needed
 		sp : IN std_logic_vector(11 DOWNTO 0); -- Setpoint: user input reference
 		input : IN std_logic_vector(11 DOWNTO 0); --feedback value from sensor
-		en : IN std_logic; --determines if controller is active
-		output : OUT std_logic_vector(11 DOWNTO 0); --output of controller
-		clk : IN STD_LOGIC
+		output : OUT std_logic_vector(11 DOWNTO 0) --output of controller
 	);
 END PID;
 ARCHITECTURE Behavioral OF PID IS
 
     -- PID params
     -- Specify numerator and denominator because we only have INTEGERs
-	CONSTANT kp : INTEGER := 1; --proportional constant
-	CONSTANT kp_den : INTEGER := 2;
-	CONSTANT kd : INTEGER := 1; --differential constant
+	CONSTANT kp : INTEGER := 100; --proportional constant
+	CONSTANT kp_den : INTEGER := 100;
+	CONSTANT ki : INTEGER := 10; --integral constant
+	CONSTANT ki_den : INTEGER := 100;
+	CONSTANT kd : INTEGER := 10; --differential constant
 	CONSTANT kd_den : INTEGER := 100;
-	CONSTANT ki : INTEGER := 1; --integral constant
-	CONSTANT ki_den : INTEGER := 10;
 	-- Specify controller freq
 	CONSTANT freq : INTEGER := 1000; -- controller frequency, to have proper size for derivate and integral
 
@@ -51,7 +51,6 @@ IF rising_edge(clk) then
 
 		output_int <= 0;
 		output_buffer <= 0;
-		output <= (OTHERS => '0');
 	ELSE
 	    -- Conversion
 	    sp_int <= to_integer(unsigned(sp));
@@ -87,8 +86,8 @@ IF rising_edge(clk) then
 	    ELSE
 		  output_int <= output_buffer;
 	    END IF;
-	       output <= std_logic_vector(to_unsigned(output_int, 12));
     END IF;
 END IF;
 END PROCESS; --end of process
+output <= std_logic_vector(to_unsigned(output_int, 12));
 END Behavioral; --end of Architecture

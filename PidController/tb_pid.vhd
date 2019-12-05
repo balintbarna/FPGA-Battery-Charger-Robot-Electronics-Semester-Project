@@ -38,58 +38,79 @@ end tb_pid;
 architecture Behavioral of tb_pid is
 component pid
 	PORT
-	(    kp_sw           : IN std_logic;
-		ki_sw           : IN std_logic;
-		kd_sw           : IN std_logic; 
-	    SetVal    :in std_logic_vector(11 downto 0);    
-		adc_data : in std_logic_vector(11 downto 0);
-        on_off_switch           : in std_logic;
-		output  : OUT std_logic_vector(11 DOWNTO 0);
-		clk            : IN STD_LOGIC
+	(   p_en : IN std_logic; --determines if p term is needed
+		i_en : IN std_logic; --determines if i term is needed
+		d_en : IN std_logic; --determines if d term is needed
+		sp : IN std_logic_vector(11 DOWNTO 0); -- Setpoint: user input reference
+		input : IN std_logic_vector(11 DOWNTO 0); --feedback value from sensor
+		en : IN std_logic; --determines if controller is active
+		output : OUT std_logic_vector(11 DOWNTO 0); --output of controller
+		clk : IN STD_LOGIC
 	);
 	end component;
 	 
-	signal    SetVal    : std_logic_vector(11 downto 0):= "100000000000";    
-	signal	adc_data : std_logic_vector(11 downto 0):="000000000000";
-    signal  on_off_switch           :  std_logic:='0';
-	signal	output  :  std_logic_vector(11 DOWNTO 0):="000000000000";
-	signal	clk            :  STD_LOGIC:='0';
-	signal ki_sw,kp_sw,kd_sw: std_logic := '0';
+	signal sp    : std_logic_vector(11 downto 0):="000000000000";    
+	signal input : std_logic_vector(11 downto 0):="000000000000";
+	signal output : std_logic_vector(11 DOWNTO 0):="000000000000";
+    signal en : std_logic:='0';
+	signal clk :  STD_LOGIC:='0';
+	signal i_en, p_en, d_en: std_logic := '0';
 	constant clk_period:time := 10ns;
 	
 begin
 UUT1:pid PORT MAP
-(    kp_sw           => kp_sw,
-		ki_sw           => ki_sw,
-		kd_sw           => kd_sw,
-	    SetVal    => SetVal,    
-		adc_data => adc_data,
-        on_off_switch     => on_off_switch,
-		output  =>output,
-		clk            => clk);
-		clk_process:process
-		begin 
-		wait for clk_period/2;
-		clk <= not clk;
-		wait for clk_period/2;
-		end process;
+(
+    p_en => p_en,
+    i_en => i_en,
+	d_en => d_en,
+	sp => sp,    
+	input => input,
+    en => en,
+	output =>output,
+	clk => clk
+);
+clk_process:process
+begin 
+	wait for clk_period/2;
+	clk <= not clk;
+	wait for clk_period/2;
+end process;
 		
-		switch_process:process
-		begin 
-		ki_sw <= '1';
-		on_off_switch <= '1';
-		kp_sw <= '1';
-		kd_sw <= '0';
-		wait for 100 ms;
-		ki_sw <= '1';
-		on_off_switch <= '0';
-		kp_sw <= '0';
-		kd_sw <= '0';
-		end process;
-		feedback_process:process
-		begin 
-		adc_data<= std_logic_vector(to_unsigned(to_integer(unsigned(output)+10),12));
-		wait for 2*clk_period;
-		end process;
+switch_process:process
+begin
+	wait for 1 ms;
+	sp <= "011000000000";
+--	p_en <= '1';
+--	i_en <= '0';
+--	d_en <= '0';
+--	en <= '1';
+--	wait for 100 ms;
+--	en <= '0';
+--	p_en <= '0';
+--	i_en <= '1';
+--	d_en <= '0';
+--	en <= '1';
+--	wait for 100 ms;
+--	en <= '0';
+--	p_en <= '1';
+--	i_en <= '1';
+--	d_en <= '0';
+--	en <= '1';
+--	wait for 100 ms;
+--	en <= '0';
+	p_en <= '1';
+	i_en <= '1';
+	d_en <= '0';
+	en <= '1';
+	wait for 100 ms;
+	en <= '0';
+	wait for 1 ms;
+end process;
+
+feedback_process:process
+begin 
+	input <= std_logic_vector(to_unsigned(to_integer(unsigned(output)/2 + 512),12));
+	wait for clk_period;
+end process;
 
 end Behavioral;
