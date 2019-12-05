@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Nov 28 18:01:34 2019" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Dec  5 20:46:47 2019" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="pwm_model" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -9,9 +9,9 @@
         <CONNECTION INSTANCE="counter_10" PORT="sys_clk"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="comparator_10_c">
+    <PORT DIR="O" NAME="pwm" SIGIS="undef" SIGNAME="inverter_0_b">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="comparator_10" PORT="c"/>
+        <CONNECTION INSTANCE="inverter_0" PORT="b"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -38,7 +38,7 @@
         </PORT>
         <PORT DIR="O" NAME="c" SIGIS="undef" SIGNAME="comparator_10_c">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="pwm"/>
+            <CONNECTION INSTANCE="inverter_0" PORT="a"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -64,11 +64,31 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
+    <MODULE COREREVISION="1" FULLNAME="/inverter_0" HWVERSION="1.0" INSTANCE="inverter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="inverter" VLNV="xilinx.com:module_ref:inverter:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="pwm_model_inverter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="a" SIGIS="undef" SIGNAME="comparator_10_c">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="comparator_10" PORT="c"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="b" SIGIS="undef" SIGNAME="inverter_0_b">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="pwm"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE COREREVISION="6" FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_WIDTH" VALUE="10"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x299"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x384"/>
         <PARAMETER NAME="Component_Name" VALUE="pwm_model_xlconstant_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

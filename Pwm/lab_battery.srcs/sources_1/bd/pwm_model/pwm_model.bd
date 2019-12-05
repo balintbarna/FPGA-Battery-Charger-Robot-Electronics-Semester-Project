@@ -5,7 +5,8 @@
       "device": "xc7z020clg400-1",
       "name": "pwm_model",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1"
+      "tool_version": "2019.1",
+      "validated": "true"
     },
     "design_tree": {
       "comparator_10": "",
@@ -16,7 +17,25 @@
     "ports": {
       "sys_clk": {
         "type": "clk",
-        "direction": "I"
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "pwm_model_sys_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
       },
       "pwm": {
         "direction": "O"
@@ -52,7 +71,7 @@
         "xci_name": "pwm_model_xlconstant_0_0",
         "parameters": {
           "CONST_VAL": {
-            "value": "665"
+            "value": "900"
           },
           "CONST_WIDTH": {
             "value": "10"
@@ -70,7 +89,13 @@
         "ports": {
           "sys_clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "pwm_model_sys_clk",
+                "value_src": "default_prop"
+              }
+            }
           },
           "count": {
             "direction": "O",
@@ -88,10 +113,10 @@
           "boundary_crc": "0x0"
         },
         "ports": {
-          "input": {
+          "a": {
             "direction": "I"
           },
-          "output": {
+          "b": {
             "direction": "O"
           }
         }
@@ -119,12 +144,12 @@
       "comparator_10_c": {
         "ports": [
           "comparator_10/c",
-          "inverter_0/input"
+          "inverter_0/a"
         ]
       },
       "inverter_0_output": {
         "ports": [
-          "inverter_0/output",
+          "inverter_0/b",
           "pwm"
         ]
       }

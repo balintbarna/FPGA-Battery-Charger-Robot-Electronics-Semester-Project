@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Thu Nov 28 18:01:33 2019
---Host        : Lenovo-Ideapad running 64-bit Ubuntu 16.04.6 LTS
+--Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+--Date        : Thu Dec  5 20:46:46 2019
+--Host        : balintmaci-surface running 64-bit major release  (build 9200)
 --Command     : generate_target pwm_model_wrapper.bd
 --Design      : pwm_model_wrapper
 --Purpose     : IP block netlist

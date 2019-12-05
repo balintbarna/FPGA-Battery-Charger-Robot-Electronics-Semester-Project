@@ -57,7 +57,7 @@
 #include "systemc.h"
 class pwm_model_xlconstant_0_0 : public sc_module {
   public:
-xlconstant_v1_1_6<10,665> mod;
+xlconstant_v1_1_6<10,900> mod;
   sc_out< sc_bv<10> > dout;
 pwm_model_xlconstant_0_0 (sc_core::sc_module_name name) :sc_module(name), mod("mod") {
     mod.dout(dout);

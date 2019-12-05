@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# comparator_10, counter_10
+# comparator_10, counter_10, inverter
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -190,16 +190,28 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: inverter_0, and set properties
+  set block_name inverter
+  set block_cell_name inverter_0
+  if { [catch {set inverter_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $inverter_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: xlconstant_0, and set properties
   set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
   set_property -dict [ list \
-   CONFIG.CONST_VAL {665} \
+   CONFIG.CONST_VAL {900} \
    CONFIG.CONST_WIDTH {10} \
  ] $xlconstant_0
 
   # Create port connections
-  connect_bd_net -net comparator_10_0_c [get_bd_ports pwm] [get_bd_pins comparator_10/c]
+  connect_bd_net -net comparator_10_c [get_bd_pins comparator_10/c] [get_bd_pins inverter_0/a]
   connect_bd_net -net counter_10_0_count [get_bd_pins comparator_10/a] [get_bd_pins counter_10/count]
+  connect_bd_net -net inverter_0_output [get_bd_ports pwm] [get_bd_pins inverter_0/b]
   connect_bd_net -net sys_clk_0_1 [get_bd_ports sys_clk] [get_bd_pins counter_10/sys_clk]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins comparator_10/b] [get_bd_pins xlconstant_0/dout]
 

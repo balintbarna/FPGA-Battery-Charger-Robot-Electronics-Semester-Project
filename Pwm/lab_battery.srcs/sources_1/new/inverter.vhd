@@ -32,13 +32,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity inverter is
-    Port ( input : in STD_LOGIC;
-           output : out STD_LOGIC);
+    Port (a : in STD_LOGIC;
+          b : out STD_LOGIC);
 end inverter;
 
 architecture Behavioral of inverter is
 
 begin
-output <= not input;
+b <= not a;
 
 end Behavioral;
