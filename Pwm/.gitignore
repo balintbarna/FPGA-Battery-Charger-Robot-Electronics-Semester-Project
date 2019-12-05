@@ -1,0 +1,6 @@
+.Xil/
+*.cache/
+*.runs/
+
+vivado.jou
+vivado.log
