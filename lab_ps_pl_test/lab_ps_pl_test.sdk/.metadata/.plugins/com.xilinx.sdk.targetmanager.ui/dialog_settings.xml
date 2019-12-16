@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="Local" key="bram_reader_hw_platform_0-target"/>
+	<item value="bram_reader_hw_platform_0" key="programfpga.hwplatform"/>
+	<item value="bram_reader.mmi" key="bram_reader_hw_platform_0-bmmFile"/>
+	<item value="Auto Detect" key="bram_reader_hw_platform_0-device"/>
+	<item value="bram_reader.bit" key="bram_reader_hw_platform_0-bitFile"/>
+	<item value="false" key="bram_reader_hw_platform_0-partial_bit"/>
+</section>
