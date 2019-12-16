@@ -1,0 +1,1881 @@
+12:44:26 INFO  : Registering command handlers for SDK TCF services
+12:44:28 INFO  : Launching XSCT server: xsct.bat -interactive C:\Avnet\project_PL_PS_new\project_PL_PS_new.sdk\temp_xsdb_launch_script.tcl
+12:44:32 INFO  : XSCT server has started successfully.
+12:44:32 INFO  : Successfully done setting XSCT server connection channel  
+12:44:36 INFO  : Successfully done setting SDK workspace  
+12:44:36 INFO  : Processing command line option -hwspec C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf.
+12:46:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:46:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:46:49 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+12:47:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:47:00 INFO  : 'fpga -state' command is executed.
+12:47:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:47:00 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:47:00 INFO  : 'jtag frequency' command is executed.
+12:47:00 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:47:00 INFO  : Context for 'APU' is selected.
+12:47:00 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:47:00 INFO  : 'configparams force-mem-access 1' command is executed.
+12:47:00 INFO  : Context for 'APU' is selected.
+12:47:00 INFO  : 'stop' command is executed.
+12:47:01 INFO  : 'ps7_init' command is executed.
+12:47:01 INFO  : 'ps7_post_config' command is executed.
+12:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:47:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:47:01 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:47:01 INFO  : 'configparams force-mem-access 0' command is executed.
+12:47:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:47:01 INFO  : 'con' command is executed.
+12:47:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:47:01 INFO  : Disconnected from the channel tcfchan#1.
+12:48:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:48:52 INFO  : 'fpga -state' command is executed.
+12:48:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:48:52 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:48:52 INFO  : 'jtag frequency' command is executed.
+12:48:52 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:48:53 INFO  : Context for 'APU' is selected.
+12:48:53 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:48:53 INFO  : 'configparams force-mem-access 1' command is executed.
+12:48:53 INFO  : Context for 'APU' is selected.
+12:48:53 INFO  : 'stop' command is executed.
+12:48:53 INFO  : 'ps7_init' command is executed.
+12:48:53 INFO  : 'ps7_post_config' command is executed.
+12:48:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:48:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:48:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:48:53 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:48:53 INFO  : 'configparams force-mem-access 0' command is executed.
+12:48:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:48:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:48:53 INFO  : 'con' command is executed.
+12:48:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:48:53 INFO  : Disconnected from the channel tcfchan#2.
+12:55:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:55:06 INFO  : 'fpga -state' command is executed.
+12:55:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:55:06 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:55:06 INFO  : 'jtag frequency' command is executed.
+12:55:06 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:55:06 INFO  : Context for 'APU' is selected.
+12:55:06 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:55:06 INFO  : 'configparams force-mem-access 1' command is executed.
+12:55:06 INFO  : Context for 'APU' is selected.
+12:55:06 INFO  : 'stop' command is executed.
+12:55:07 INFO  : 'ps7_init' command is executed.
+12:55:07 INFO  : 'ps7_post_config' command is executed.
+12:55:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:07 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:55:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:07 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:55:07 INFO  : 'configparams force-mem-access 0' command is executed.
+12:55:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:55:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:55:07 INFO  : 'con' command is executed.
+12:55:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:55:07 INFO  : Disconnected from the channel tcfchan#3.
+13:02:48 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572868864325,  Project:1572867815740
+13:02:48 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:02:53 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+13:02:56 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:03:01 INFO  : 
+13:03:01 INFO  : Updating hardware inferred compiler options for Ex1.
+13:03:01 INFO  : Clearing existing target manager status.
+13:03:01 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+13:03:02 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:03:04 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:03:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:03:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:03:17 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+13:03:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:03:50 INFO  : 'fpga -state' command is executed.
+13:03:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:03:50 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:03:50 INFO  : 'jtag frequency' command is executed.
+13:03:50 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:03:50 INFO  : Context for 'APU' is selected.
+13:03:50 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:03:50 INFO  : 'configparams force-mem-access 1' command is executed.
+13:03:50 INFO  : Context for 'APU' is selected.
+13:03:51 INFO  : 'stop' command is executed.
+13:03:51 INFO  : 'ps7_init' command is executed.
+13:03:51 INFO  : 'ps7_post_config' command is executed.
+13:03:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:03:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:03:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:03:51 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:03:51 INFO  : 'configparams force-mem-access 0' command is executed.
+13:03:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:03:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:03:51 INFO  : 'con' command is executed.
+13:03:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:03:51 INFO  : Disconnected from the channel tcfchan#4.
+13:04:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:04:30 INFO  : 'fpga -state' command is executed.
+13:04:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:30 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:04:30 INFO  : 'jtag frequency' command is executed.
+13:04:30 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:04:30 INFO  : Context for 'APU' is selected.
+13:04:30 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:04:30 INFO  : 'configparams force-mem-access 1' command is executed.
+13:04:30 INFO  : Context for 'APU' is selected.
+13:04:30 INFO  : 'stop' command is executed.
+13:04:31 INFO  : 'ps7_init' command is executed.
+13:04:31 INFO  : 'ps7_post_config' command is executed.
+13:04:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:04:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:31 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:04:31 INFO  : 'configparams force-mem-access 0' command is executed.
+13:04:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:04:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:31 INFO  : 'con' command is executed.
+13:04:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:04:31 INFO  : Disconnected from the channel tcfchan#5.
+13:04:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:04:52 INFO  : 'fpga -state' command is executed.
+13:04:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:04:52 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:04:52 INFO  : 'jtag frequency' command is executed.
+13:04:52 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:04:52 INFO  : Context for 'APU' is selected.
+13:04:52 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:04:52 INFO  : 'configparams force-mem-access 1' command is executed.
+13:04:52 INFO  : Context for 'APU' is selected.
+13:04:52 INFO  : 'stop' command is executed.
+13:04:53 INFO  : 'ps7_init' command is executed.
+13:04:53 INFO  : 'ps7_post_config' command is executed.
+13:04:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:53 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:04:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:53 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:04:53 INFO  : 'configparams force-mem-access 0' command is executed.
+13:04:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:04:53 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:04:53 INFO  : 'con' command is executed.
+13:04:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:04:53 INFO  : Disconnected from the channel tcfchan#6.
+13:06:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:06:30 INFO  : 'fpga -state' command is executed.
+13:06:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:06:30 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:06:30 INFO  : 'jtag frequency' command is executed.
+13:06:30 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:06:30 INFO  : Context for 'APU' is selected.
+13:06:30 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:06:30 INFO  : 'configparams force-mem-access 1' command is executed.
+13:06:30 INFO  : Context for 'APU' is selected.
+13:06:30 INFO  : 'stop' command is executed.
+13:06:31 INFO  : 'ps7_init' command is executed.
+13:06:31 INFO  : 'ps7_post_config' command is executed.
+13:06:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:06:31 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:06:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:06:31 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:06:31 INFO  : 'configparams force-mem-access 0' command is executed.
+13:06:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:06:31 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:06:31 INFO  : 'con' command is executed.
+13:06:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:06:31 INFO  : Disconnected from the channel tcfchan#7.
+13:09:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:09:08 INFO  : 'fpga -state' command is executed.
+13:09:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:09:08 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:09:08 INFO  : 'jtag frequency' command is executed.
+13:09:08 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:09:08 INFO  : Context for 'APU' is selected.
+13:09:08 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:09:08 INFO  : 'configparams force-mem-access 1' command is executed.
+13:09:08 INFO  : Context for 'APU' is selected.
+13:09:08 INFO  : 'stop' command is executed.
+13:09:09 INFO  : 'ps7_init' command is executed.
+13:09:09 INFO  : 'ps7_post_config' command is executed.
+13:09:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:09 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:09:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:09 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:09:09 INFO  : 'configparams force-mem-access 0' command is executed.
+13:09:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:09:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:09 INFO  : 'con' command is executed.
+13:09:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:09:09 INFO  : Disconnected from the channel tcfchan#8.
+13:09:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:09:37 INFO  : 'fpga -state' command is executed.
+13:09:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:09:37 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:09:38 INFO  : 'jtag frequency' command is executed.
+13:09:38 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:09:38 INFO  : Context for 'APU' is selected.
+13:09:38 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:09:38 INFO  : 'configparams force-mem-access 1' command is executed.
+13:09:38 INFO  : Context for 'APU' is selected.
+13:09:38 INFO  : 'stop' command is executed.
+13:09:38 INFO  : 'ps7_init' command is executed.
+13:09:38 INFO  : 'ps7_post_config' command is executed.
+13:09:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:38 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:09:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:39 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:09:39 INFO  : 'configparams force-mem-access 0' command is executed.
+13:09:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:09:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:39 INFO  : 'con' command is executed.
+13:09:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:09:39 INFO  : Disconnected from the channel tcfchan#9.
+13:16:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:16:30 INFO  : 'fpga -state' command is executed.
+13:16:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:16:31 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:16:31 INFO  : 'jtag frequency' command is executed.
+13:16:31 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:16:31 INFO  : Context for 'APU' is selected.
+13:16:31 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:16:31 INFO  : 'configparams force-mem-access 1' command is executed.
+13:16:31 INFO  : Context for 'APU' is selected.
+13:16:31 INFO  : 'stop' command is executed.
+13:16:31 INFO  : 'ps7_init' command is executed.
+13:16:31 INFO  : 'ps7_post_config' command is executed.
+13:16:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:32 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:16:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:32 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:16:32 INFO  : 'configparams force-mem-access 0' command is executed.
+13:16:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:16:32 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:16:32 INFO  : 'con' command is executed.
+13:16:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:16:32 INFO  : Disconnected from the channel tcfchan#10.
+13:18:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:18:50 INFO  : 'fpga -state' command is executed.
+13:18:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:18:51 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:18:51 INFO  : 'jtag frequency' command is executed.
+13:18:51 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:18:51 INFO  : Context for 'APU' is selected.
+13:18:51 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:18:51 INFO  : 'configparams force-mem-access 1' command is executed.
+13:18:51 INFO  : Context for 'APU' is selected.
+13:18:51 INFO  : 'stop' command is executed.
+13:18:51 INFO  : 'ps7_init' command is executed.
+13:18:51 INFO  : 'ps7_post_config' command is executed.
+13:18:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:18:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:18:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:18:52 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:18:52 INFO  : 'configparams force-mem-access 0' command is executed.
+13:18:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:18:52 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:18:52 INFO  : 'con' command is executed.
+13:18:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:18:52 INFO  : Disconnected from the channel tcfchan#11.
+13:19:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572869770260,  Project:1572868864325
+13:19:39 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:19:40 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+13:19:44 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:19:50 INFO  : 
+13:19:51 INFO  : Updating hardware inferred compiler options for Ex1.
+13:19:51 INFO  : Clearing existing target manager status.
+13:19:51 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+13:19:52 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:19:55 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:20:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:20:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:20:08 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+13:20:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:20:45 INFO  : 'fpga -state' command is executed.
+13:20:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:20:45 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:20:45 INFO  : 'jtag frequency' command is executed.
+13:20:45 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:20:45 INFO  : Context for 'APU' is selected.
+13:20:45 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:20:45 INFO  : 'configparams force-mem-access 1' command is executed.
+13:20:45 INFO  : Context for 'APU' is selected.
+13:20:45 INFO  : 'stop' command is executed.
+13:20:46 INFO  : 'ps7_init' command is executed.
+13:20:46 INFO  : 'ps7_post_config' command is executed.
+13:20:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:20:46 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:20:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:20:46 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:20:46 INFO  : 'configparams force-mem-access 0' command is executed.
+13:20:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:20:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:20:46 INFO  : 'con' command is executed.
+13:20:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:20:46 INFO  : Disconnected from the channel tcfchan#12.
+13:21:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:21:14 INFO  : 'fpga -state' command is executed.
+13:21:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:21:15 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:21:15 INFO  : 'jtag frequency' command is executed.
+13:21:15 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:21:15 INFO  : Context for 'APU' is selected.
+13:21:15 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:21:15 INFO  : 'configparams force-mem-access 1' command is executed.
+13:21:15 INFO  : Context for 'APU' is selected.
+13:21:15 INFO  : 'stop' command is executed.
+13:21:15 INFO  : 'ps7_init' command is executed.
+13:21:15 INFO  : 'ps7_post_config' command is executed.
+13:21:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:21:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:16 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:21:16 INFO  : 'configparams force-mem-access 0' command is executed.
+13:21:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:21:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:21:16 INFO  : 'con' command is executed.
+13:21:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:21:16 INFO  : Disconnected from the channel tcfchan#13.
+13:21:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:21:59 INFO  : 'fpga -state' command is executed.
+13:21:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:22:00 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:22:00 INFO  : 'jtag frequency' command is executed.
+13:22:00 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:22:00 INFO  : Context for 'APU' is selected.
+13:22:00 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:22:00 INFO  : 'configparams force-mem-access 1' command is executed.
+13:22:00 INFO  : Context for 'APU' is selected.
+13:22:00 INFO  : 'stop' command is executed.
+13:22:01 INFO  : 'ps7_init' command is executed.
+13:22:01 INFO  : 'ps7_post_config' command is executed.
+13:22:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:22:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:22:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:22:01 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:22:01 INFO  : 'configparams force-mem-access 0' command is executed.
+13:22:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:22:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:22:01 INFO  : 'con' command is executed.
+13:22:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:22:01 INFO  : Disconnected from the channel tcfchan#14.
+13:22:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:22:28 INFO  : 'fpga -state' command is executed.
+13:22:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:22:29 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:22:29 INFO  : 'jtag frequency' command is executed.
+13:22:29 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:22:29 INFO  : Context for 'APU' is selected.
+13:22:29 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:22:29 INFO  : 'configparams force-mem-access 1' command is executed.
+13:22:29 INFO  : Context for 'APU' is selected.
+13:22:29 INFO  : 'stop' command is executed.
+13:22:30 INFO  : 'ps7_init' command is executed.
+13:22:30 INFO  : 'ps7_post_config' command is executed.
+13:22:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:22:30 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:22:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:22:30 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:22:30 INFO  : 'configparams force-mem-access 0' command is executed.
+13:22:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:22:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:22:30 INFO  : 'con' command is executed.
+13:22:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:22:30 INFO  : Disconnected from the channel tcfchan#15.
+13:30:19 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572870588556,  Project:1572869770260
+13:30:19 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:30:21 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+13:30:25 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:30:29 INFO  : 
+13:30:30 INFO  : Updating hardware inferred compiler options for Ex1.
+13:30:30 INFO  : Clearing existing target manager status.
+13:30:30 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+13:30:31 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:30:32 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:31:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:31:35 INFO  : 'fpga -state' command is executed.
+13:31:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:31:35 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:31:35 INFO  : 'jtag frequency' command is executed.
+13:31:35 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:31:35 INFO  : Context for 'APU' is selected.
+13:31:35 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:31:35 INFO  : 'configparams force-mem-access 1' command is executed.
+13:31:35 INFO  : Context for 'APU' is selected.
+13:31:35 INFO  : 'stop' command is executed.
+13:31:35 INFO  : 'ps7_init' command is executed.
+13:31:35 INFO  : 'ps7_post_config' command is executed.
+13:31:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:35 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:31:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:36 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:31:36 INFO  : 'configparams force-mem-access 0' command is executed.
+13:31:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:31:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:31:36 INFO  : 'con' command is executed.
+13:31:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:31:36 INFO  : Disconnected from the channel tcfchan#16.
+13:33:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:33:32 INFO  : 'fpga -state' command is executed.
+13:33:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:33 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:33:33 INFO  : 'jtag frequency' command is executed.
+13:33:33 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:33:33 INFO  : Context for 'APU' is selected.
+13:33:33 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:33:33 INFO  : 'configparams force-mem-access 1' command is executed.
+13:33:33 INFO  : Context for 'APU' is selected.
+13:33:33 INFO  : 'stop' command is executed.
+13:33:33 INFO  : 'ps7_init' command is executed.
+13:33:33 INFO  : 'ps7_post_config' command is executed.
+13:33:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:33:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:34 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:33:34 INFO  : 'configparams force-mem-access 0' command is executed.
+13:33:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:33:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:34 INFO  : 'con' command is executed.
+13:33:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:33:34 INFO  : Disconnected from the channel tcfchan#17.
+13:33:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:33:45 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+13:33:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:33:55 INFO  : 'fpga -state' command is executed.
+13:33:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:33:56 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:33:56 INFO  : 'jtag frequency' command is executed.
+13:33:56 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:33:56 INFO  : Context for 'APU' is selected.
+13:33:56 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:33:56 INFO  : 'configparams force-mem-access 1' command is executed.
+13:33:56 INFO  : Context for 'APU' is selected.
+13:33:56 INFO  : 'stop' command is executed.
+13:33:57 INFO  : 'ps7_init' command is executed.
+13:33:57 INFO  : 'ps7_post_config' command is executed.
+13:33:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:33:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:57 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:33:57 INFO  : 'configparams force-mem-access 0' command is executed.
+13:33:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:33:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:33:57 INFO  : 'con' command is executed.
+13:33:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:33:57 INFO  : Disconnected from the channel tcfchan#18.
+13:34:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:34:14 INFO  : 'fpga -state' command is executed.
+13:34:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:34:14 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:34:14 INFO  : 'jtag frequency' command is executed.
+13:34:14 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:34:14 INFO  : Context for 'APU' is selected.
+13:34:14 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:34:14 INFO  : 'configparams force-mem-access 1' command is executed.
+13:34:14 INFO  : Context for 'APU' is selected.
+13:34:14 INFO  : 'stop' command is executed.
+13:34:15 INFO  : 'ps7_init' command is executed.
+13:34:15 INFO  : 'ps7_post_config' command is executed.
+13:34:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:34:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:15 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:34:15 INFO  : 'configparams force-mem-access 0' command is executed.
+13:34:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:34:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:34:15 INFO  : 'con' command is executed.
+13:34:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:34:15 INFO  : Disconnected from the channel tcfchan#19.
+13:40:38 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572871222547,  Project:1572870588556
+13:40:38 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:40:41 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+13:40:44 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:40:49 INFO  : 
+13:40:49 INFO  : Updating hardware inferred compiler options for Ex1.
+13:40:49 INFO  : Clearing existing target manager status.
+13:40:49 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+13:40:50 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:40:52 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:41:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:41:32 INFO  : 'fpga -state' command is executed.
+13:41:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:41:33 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:41:33 INFO  : 'jtag frequency' command is executed.
+13:41:33 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:41:33 INFO  : Context for 'APU' is selected.
+13:41:33 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:41:33 INFO  : 'configparams force-mem-access 1' command is executed.
+13:41:33 INFO  : Context for 'APU' is selected.
+13:41:33 INFO  : 'stop' command is executed.
+13:41:33 INFO  : 'ps7_init' command is executed.
+13:41:33 INFO  : 'ps7_post_config' command is executed.
+13:41:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:41:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:41:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:41:34 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:41:34 INFO  : 'configparams force-mem-access 0' command is executed.
+13:41:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:41:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:41:34 INFO  : 'con' command is executed.
+13:41:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:41:34 INFO  : Disconnected from the channel tcfchan#20.
+13:42:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:42:01 INFO  : 'fpga -state' command is executed.
+13:42:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:42:01 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:42:01 INFO  : 'jtag frequency' command is executed.
+13:42:01 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:42:01 INFO  : Context for 'APU' is selected.
+13:42:01 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:42:01 INFO  : 'configparams force-mem-access 1' command is executed.
+13:42:01 INFO  : Context for 'APU' is selected.
+13:42:01 INFO  : 'stop' command is executed.
+13:42:02 INFO  : 'ps7_init' command is executed.
+13:42:02 INFO  : 'ps7_post_config' command is executed.
+13:42:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:02 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:42:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:02 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:42:02 INFO  : 'configparams force-mem-access 0' command is executed.
+13:42:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:42:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:02 INFO  : 'con' command is executed.
+13:42:02 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:42:02 INFO  : Disconnected from the channel tcfchan#21.
+13:42:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:42:25 INFO  : 'fpga -state' command is executed.
+13:42:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:42:25 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:42:25 INFO  : 'jtag frequency' command is executed.
+13:42:25 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:42:25 INFO  : Context for 'APU' is selected.
+13:42:25 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:42:25 INFO  : 'configparams force-mem-access 1' command is executed.
+13:42:25 INFO  : Context for 'APU' is selected.
+13:42:25 INFO  : 'stop' command is executed.
+13:42:26 INFO  : 'ps7_init' command is executed.
+13:42:26 INFO  : 'ps7_post_config' command is executed.
+13:42:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:26 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:42:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:26 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:42:26 INFO  : 'configparams force-mem-access 0' command is executed.
+13:42:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:42:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:42:26 INFO  : 'con' command is executed.
+13:42:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:42:26 INFO  : Disconnected from the channel tcfchan#22.
+13:51:39 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572871836499,  Project:1572871222547
+13:51:39 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:51:42 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+13:51:45 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:51:47 INFO  : 
+13:51:48 INFO  : Updating hardware inferred compiler options for Ex1.
+13:51:48 INFO  : Clearing existing target manager status.
+13:51:48 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+13:51:49 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:51:50 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:52:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:52:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:52:03 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+13:52:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:52:32 INFO  : 'fpga -state' command is executed.
+13:52:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:52:33 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:52:33 INFO  : 'jtag frequency' command is executed.
+13:52:33 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:52:33 INFO  : Context for 'APU' is selected.
+13:52:33 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:52:33 INFO  : 'configparams force-mem-access 1' command is executed.
+13:52:33 INFO  : Context for 'APU' is selected.
+13:52:33 INFO  : 'stop' command is executed.
+13:52:33 INFO  : 'ps7_init' command is executed.
+13:52:33 INFO  : 'ps7_post_config' command is executed.
+13:52:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:33 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:52:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:34 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:52:34 INFO  : 'configparams force-mem-access 0' command is executed.
+13:52:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:52:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:52:34 INFO  : 'con' command is executed.
+13:52:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:52:34 INFO  : Disconnected from the channel tcfchan#23.
+13:53:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:53:02 INFO  : 'fpga -state' command is executed.
+13:53:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:53:02 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:53:02 INFO  : 'jtag frequency' command is executed.
+13:53:02 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:53:02 INFO  : Context for 'APU' is selected.
+13:53:03 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:53:03 INFO  : 'configparams force-mem-access 1' command is executed.
+13:53:03 INFO  : Context for 'APU' is selected.
+13:53:03 INFO  : 'stop' command is executed.
+13:53:03 INFO  : 'ps7_init' command is executed.
+13:53:03 INFO  : 'ps7_post_config' command is executed.
+13:53:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:03 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:53:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:03 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:53:03 INFO  : 'configparams force-mem-access 0' command is executed.
+13:53:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:53:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:03 INFO  : 'con' command is executed.
+13:53:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:53:03 INFO  : Disconnected from the channel tcfchan#24.
+13:53:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:53:28 INFO  : 'fpga -state' command is executed.
+13:53:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:53:29 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:53:29 INFO  : 'jtag frequency' command is executed.
+13:53:29 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:53:29 INFO  : Context for 'APU' is selected.
+13:53:29 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:53:29 INFO  : 'configparams force-mem-access 1' command is executed.
+13:53:29 INFO  : Context for 'APU' is selected.
+13:53:29 INFO  : 'stop' command is executed.
+13:53:29 INFO  : 'ps7_init' command is executed.
+13:53:29 INFO  : 'ps7_post_config' command is executed.
+13:53:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:29 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:53:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:29 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:53:29 INFO  : 'configparams force-mem-access 0' command is executed.
+13:53:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:53:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:30 INFO  : 'con' command is executed.
+13:53:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:53:30 INFO  : Disconnected from the channel tcfchan#25.
+13:53:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+13:53:54 INFO  : 'fpga -state' command is executed.
+13:53:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:53:54 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+13:53:54 INFO  : 'jtag frequency' command is executed.
+13:53:54 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+13:53:54 INFO  : Context for 'APU' is selected.
+13:53:54 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+13:53:54 INFO  : 'configparams force-mem-access 1' command is executed.
+13:53:54 INFO  : Context for 'APU' is selected.
+13:53:54 INFO  : 'stop' command is executed.
+13:53:55 INFO  : 'ps7_init' command is executed.
+13:53:55 INFO  : 'ps7_post_config' command is executed.
+13:53:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:55 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+13:53:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:55 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:53:55 INFO  : 'configparams force-mem-access 0' command is executed.
+13:53:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:53:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:53:55 INFO  : 'con' command is executed.
+13:53:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+13:53:55 INFO  : Disconnected from the channel tcfchan#26.
+13:59:09 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572872338960,  Project:1572871836499
+13:59:09 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:59:10 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+13:59:13 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:59:18 INFO  : 
+13:59:19 INFO  : Updating hardware inferred compiler options for Ex1.
+13:59:19 INFO  : Clearing existing target manager status.
+13:59:19 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+13:59:20 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:59:21 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:00:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+14:00:53 INFO  : 'fpga -state' command is executed.
+14:00:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:00:53 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:00:53 INFO  : 'jtag frequency' command is executed.
+14:00:53 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:00:53 INFO  : Context for 'APU' is selected.
+14:00:53 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+14:00:53 INFO  : 'configparams force-mem-access 1' command is executed.
+14:00:53 INFO  : Context for 'APU' is selected.
+14:00:53 INFO  : 'stop' command is executed.
+14:00:53 INFO  : 'ps7_init' command is executed.
+14:00:53 INFO  : 'ps7_post_config' command is executed.
+14:00:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:00:54 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:00:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:00:54 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:00:54 INFO  : 'configparams force-mem-access 0' command is executed.
+14:00:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:00:54 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:00:54 INFO  : 'con' command is executed.
+14:00:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+14:00:54 INFO  : Disconnected from the channel tcfchan#27.
+14:01:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:01:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+14:01:10 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+14:01:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+14:01:36 INFO  : 'fpga -state' command is executed.
+14:01:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:01:36 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:01:36 INFO  : 'jtag frequency' command is executed.
+14:01:36 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:01:36 INFO  : Context for 'APU' is selected.
+14:01:36 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+14:01:36 INFO  : 'configparams force-mem-access 1' command is executed.
+14:01:36 INFO  : Context for 'APU' is selected.
+14:01:36 INFO  : 'stop' command is executed.
+14:01:37 INFO  : 'ps7_init' command is executed.
+14:01:37 INFO  : 'ps7_post_config' command is executed.
+14:01:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:01:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:01:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:01:37 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:01:37 INFO  : 'configparams force-mem-access 0' command is executed.
+14:01:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:01:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:01:37 INFO  : 'con' command is executed.
+14:01:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+14:01:37 INFO  : Disconnected from the channel tcfchan#28.
+14:35:28 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572874489307,  Project:1572872338960
+14:35:28 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:35:32 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+14:35:39 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:35:48 INFO  : 
+14:35:49 INFO  : Updating hardware inferred compiler options for Ex1.
+14:35:49 INFO  : Clearing existing target manager status.
+14:35:49 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+14:35:50 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+14:35:53 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+14:36:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+14:36:05 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+14:53:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+14:53:09 INFO  : 'fpga -state' command is executed.
+14:53:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:53:09 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+14:53:09 INFO  : 'jtag frequency' command is executed.
+14:53:09 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+14:53:10 INFO  : Context for 'APU' is selected.
+14:53:10 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+14:53:10 INFO  : 'configparams force-mem-access 1' command is executed.
+14:53:10 INFO  : Context for 'APU' is selected.
+14:53:10 INFO  : 'stop' command is executed.
+14:53:10 INFO  : 'ps7_init' command is executed.
+14:53:10 INFO  : 'ps7_post_config' command is executed.
+14:53:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:53:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+14:53:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:53:10 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:53:10 INFO  : 'configparams force-mem-access 0' command is executed.
+14:53:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:53:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:53:10 INFO  : 'con' command is executed.
+14:53:10 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+14:53:10 INFO  : Disconnected from the channel tcfchan#29.
+15:03:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:03:26 INFO  : 'fpga -state' command is executed.
+15:03:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:03:26 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:03:26 INFO  : 'jtag frequency' command is executed.
+15:03:26 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:03:26 INFO  : Context for 'APU' is selected.
+15:03:26 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+15:03:26 INFO  : 'configparams force-mem-access 1' command is executed.
+15:03:26 INFO  : Context for 'APU' is selected.
+15:03:26 INFO  : 'stop' command is executed.
+15:03:26 INFO  : 'ps7_init' command is executed.
+15:03:26 INFO  : 'ps7_post_config' command is executed.
+15:03:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:03:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:27 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:03:27 INFO  : 'configparams force-mem-access 0' command is executed.
+15:03:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:03:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:03:27 INFO  : 'con' command is executed.
+15:03:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:03:27 INFO  : Disconnected from the channel tcfchan#30.
+15:24:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:24:40 INFO  : 'fpga -state' command is executed.
+15:24:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:24:40 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:24:40 INFO  : 'jtag frequency' command is executed.
+15:24:40 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:24:40 INFO  : Context for 'APU' is selected.
+15:24:40 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+15:24:40 INFO  : 'configparams force-mem-access 1' command is executed.
+15:24:40 INFO  : Context for 'APU' is selected.
+15:24:40 INFO  : 'stop' command is executed.
+15:24:40 INFO  : 'ps7_init' command is executed.
+15:24:41 INFO  : 'ps7_post_config' command is executed.
+15:24:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:24:41 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:24:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:24:41 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:24:41 INFO  : 'configparams force-mem-access 0' command is executed.
+15:24:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:24:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:24:41 INFO  : 'con' command is executed.
+15:24:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:24:41 INFO  : Disconnected from the channel tcfchan#31.
+15:26:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:26:56 INFO  : 'fpga -state' command is executed.
+15:26:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:56 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:26:56 INFO  : 'jtag frequency' command is executed.
+15:26:56 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:26:56 INFO  : Context for 'APU' is selected.
+15:26:56 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+15:26:56 INFO  : 'configparams force-mem-access 1' command is executed.
+15:26:56 INFO  : Context for 'APU' is selected.
+15:26:56 INFO  : 'stop' command is executed.
+15:26:57 INFO  : 'ps7_init' command is executed.
+15:26:57 INFO  : 'ps7_post_config' command is executed.
+15:26:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:26:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:57 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:26:57 INFO  : 'configparams force-mem-access 0' command is executed.
+15:26:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/Ex1/Debug/Ex1.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:26:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:57 INFO  : 'con' command is executed.
+15:26:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:26:57 INFO  : Disconnected from the channel tcfchan#32.
+15:29:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:29:16 INFO  : 'fpga -state' command is executed.
+15:29:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:29:16 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:29:16 INFO  : 'jtag frequency' command is executed.
+15:29:16 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:29:16 INFO  : Context for 'APU' is selected.
+15:29:16 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+15:29:16 INFO  : 'configparams force-mem-access 1' command is executed.
+15:29:16 INFO  : Context for 'APU' is selected.
+15:29:16 INFO  : 'stop' command is executed.
+15:29:16 INFO  : 'ps7_init' command is executed.
+15:29:16 INFO  : 'ps7_post_config' command is executed.
+15:29:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:17 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:29:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:17 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:29:17 INFO  : 'configparams force-mem-access 0' command is executed.
+15:29:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:29:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:17 INFO  : 'con' command is executed.
+15:29:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:29:17 INFO  : Disconnected from the channel tcfchan#33.
+15:52:56 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572879141897,  Project:1572874489307
+15:52:56 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+15:53:00 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+15:53:04 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+15:53:11 INFO  : 
+15:53:12 INFO  : Updating hardware inferred compiler options for PS.
+15:53:12 INFO  : Clearing existing target manager status.
+15:53:12 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+15:53:13 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+15:53:15 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+15:53:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:53:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:53:40 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+15:54:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+15:54:05 INFO  : 'fpga -state' command is executed.
+15:54:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:54:05 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+15:54:05 INFO  : 'jtag frequency' command is executed.
+15:54:05 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+15:54:05 INFO  : Context for 'APU' is selected.
+15:54:05 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+15:54:05 INFO  : 'configparams force-mem-access 1' command is executed.
+15:54:05 INFO  : Context for 'APU' is selected.
+15:54:06 INFO  : 'stop' command is executed.
+15:54:06 INFO  : 'ps7_init' command is executed.
+15:54:06 INFO  : 'ps7_post_config' command is executed.
+15:54:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:54:06 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+15:54:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:54:06 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:54:06 INFO  : 'configparams force-mem-access 0' command is executed.
+15:54:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:54:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:54:06 INFO  : 'con' command is executed.
+15:54:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+15:54:06 INFO  : Disconnected from the channel tcfchan#34.
+16:03:28 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1572879512968,  Project:1572879141897
+16:03:28 INFO  : Project design_ps_pl_wrapper_hw_platform_0's source hardware specification located at C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+16:03:30 INFO  : Copied contents of C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf into \design_ps_pl_wrapper_hw_platform_0\system.hdf.
+16:03:33 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+16:03:37 INFO  : 
+16:03:38 INFO  : Updating hardware inferred compiler options for PS.
+16:03:38 INFO  : Clearing existing target manager status.
+16:03:38 INFO  : Closing and re-opening the MSS file of ther project Ex1_bsp
+16:03:38 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+16:03:40 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+16:03:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:03:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+16:03:59 INFO  : FPGA configured successfully with bitstream "C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/design_ps_pl_wrapper.bit"
+16:04:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+16:04:20 INFO  : 'fpga -state' command is executed.
+16:04:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:04:20 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+16:04:20 INFO  : 'jtag frequency' command is executed.
+16:04:20 INFO  : Sourcing of 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+16:04:20 INFO  : Context for 'APU' is selected.
+16:04:20 INFO  : Hardware design information is loaded from 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+16:04:20 INFO  : 'configparams force-mem-access 1' command is executed.
+16:04:20 INFO  : Context for 'APU' is selected.
+16:04:20 INFO  : 'stop' command is executed.
+16:04:21 INFO  : 'ps7_init' command is executed.
+16:04:21 INFO  : 'ps7_post_config' command is executed.
+16:04:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:04:21 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+16:04:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:04:21 INFO  : The application 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:04:21 INFO  : 'configparams force-mem-access 0' command is executed.
+16:04:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow C:/Avnet/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:04:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:04:21 INFO  : 'con' command is executed.
+16:04:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+16:04:21 INFO  : Disconnected from the channel tcfchan#35.
+12:07:45 INFO  : Launching XSCT server: xsct -n -interactive /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/temp_xsdb_launch_script.tcl
+12:07:47 INFO  : XSCT server has started successfully.
+12:07:47 INFO  : Successfully done setting XSCT server connection channel  
+12:07:47 INFO  : Successfully done setting SDK workspace  
+12:07:51 INFO  : Registering command handlers for SDK TCF services
+12:07:51 INFO  : Processing command line option -hwspec /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf.
+12:09:42 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1576494275000,  Project:1572879512000
+12:09:42 INFO  : Project design_ps_pl_wrapper_hw_platform_1's source hardware specification located at /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+12:10:00 INFO  : Project design_ps_pl_wrapper_hw_platform_1's source hardware specification location will not be monitored anymore.
+12:10:18 INFO  : Launching XSCT server: xsct -n -interactive /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/temp_xsdb_launch_script.tcl
+12:10:20 INFO  : XSCT server has started successfully.
+12:10:20 INFO  : Successfully done setting XSCT server connection channel  
+12:10:22 INFO  : Successfully done setting SDK workspace  
+12:10:23 INFO  : Registering command handlers for SDK TCF services
+12:10:25 INFO  : Processing command line option -hwspec /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf.
+12:13:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:13:15 INFO  : 'fpga -state' command is executed.
+12:13:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:13:15 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:13:15 INFO  : 'jtag frequency' command is executed.
+12:13:15 INFO  : Sourcing of '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:13:15 INFO  : Context for 'APU' is selected.
+12:13:15 INFO  : Hardware design information is loaded from '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:13:15 INFO  : 'configparams force-mem-access 1' command is executed.
+12:13:16 INFO  : Context for 'APU' is selected.
+12:13:16 INFO  : 'stop' command is executed.
+12:13:16 INFO  : 'ps7_init' command is executed.
+12:13:16 INFO  : 'ps7_post_config' command is executed.
+12:13:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:16 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:13:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:16 INFO  : The application '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:13:16 INFO  : 'configparams force-mem-access 0' command is executed.
+12:13:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:13:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:17 INFO  : 'con' command is executed.
+12:13:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:13:17 INFO  : Disconnected from the channel tcfchan#1.
+12:13:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:13:37 INFO  : 'fpga -state' command is executed.
+12:13:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:13:37 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:13:37 INFO  : 'jtag frequency' command is executed.
+12:13:37 INFO  : Sourcing of '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:13:37 INFO  : Context for 'APU' is selected.
+12:13:37 INFO  : Hardware design information is loaded from '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:13:37 INFO  : 'configparams force-mem-access 1' command is executed.
+12:13:37 INFO  : Context for 'APU' is selected.
+12:13:37 INFO  : 'stop' command is executed.
+12:13:37 INFO  : 'ps7_init' command is executed.
+12:13:37 INFO  : 'ps7_post_config' command is executed.
+12:13:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:13:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:38 INFO  : The application '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:13:38 INFO  : 'configparams force-mem-access 0' command is executed.
+12:13:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:13:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:13:38 INFO  : 'con' command is executed.
+12:13:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:13:38 INFO  : Disconnected from the channel tcfchan#2.
+12:25:40 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1576495516000,  Project:1576494275000
+12:25:40 INFO  : Project design_ps_pl_wrapper_hw_platform_2's source hardware specification located at /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+12:25:53 INFO  : Project design_ps_pl_wrapper_hw_platform_2's source hardware specification location will not be monitored anymore.
+12:26:10 INFO  : Registering command handlers for SDK TCF services
+12:26:12 INFO  : Launching XSCT server: xsct -n -interactive /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/temp_xsdb_launch_script.tcl
+12:26:14 INFO  : XSCT server has started successfully.
+12:26:14 INFO  : Successfully done setting XSCT server connection channel  
+12:26:14 INFO  : Successfully done setting SDK workspace  
+12:26:14 INFO  : Processing command line option -hwspec /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper.hdf.
+12:26:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:26:36 INFO  : 'fpga -state' command is executed.
+12:26:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:26:37 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:26:37 INFO  : 'jtag frequency' command is executed.
+12:26:37 INFO  : Sourcing of '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:26:37 INFO  : Context for 'APU' is selected.
+12:26:37 INFO  : Hardware design information is loaded from '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:26:37 INFO  : 'configparams force-mem-access 1' command is executed.
+12:26:37 INFO  : Context for 'APU' is selected.
+12:26:37 INFO  : 'stop' command is executed.
+12:26:37 INFO  : 'ps7_init' command is executed.
+12:26:37 INFO  : 'ps7_post_config' command is executed.
+12:26:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:37 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:26:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:37 INFO  : The application '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:26:37 INFO  : 'configparams force-mem-access 0' command is executed.
+12:26:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:26:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:37 INFO  : 'con' command is executed.
+12:26:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:26:37 INFO  : Disconnected from the channel tcfchan#1.
+12:26:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:26:51 INFO  : 'fpga -state' command is executed.
+12:26:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:26:51 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:26:51 INFO  : 'jtag frequency' command is executed.
+12:26:51 INFO  : Sourcing of '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:26:51 INFO  : Context for 'APU' is selected.
+12:26:51 INFO  : Hardware design information is loaded from '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:26:51 INFO  : 'configparams force-mem-access 1' command is executed.
+12:26:51 INFO  : Context for 'APU' is selected.
+12:26:51 INFO  : 'stop' command is executed.
+12:26:51 INFO  : 'ps7_init' command is executed.
+12:26:51 INFO  : 'ps7_post_config' command is executed.
+12:26:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:51 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:26:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:51 INFO  : The application '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:26:51 INFO  : 'configparams force-mem-access 0' command is executed.
+12:26:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:26:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:26:51 INFO  : 'con' command is executed.
+12:26:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:26:51 INFO  : Disconnected from the channel tcfchan#2.
+12:28:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:28:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:28:17 INFO  : FPGA configured successfully with bitstream "/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_3/design_ps_pl_wrapper.bit"
+12:28:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx TUL 1234-tulA" && level==0} -index 1' command is executed.
+12:28:27 INFO  : 'fpga -state' command is executed.
+12:28:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:28:27 INFO  : Jtag cable 'Xilinx TUL 1234-tulA' is selected.
+12:28:27 INFO  : 'jtag frequency' command is executed.
+12:28:27 INFO  : Sourcing of '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl' is done.
+12:28:27 INFO  : Context for 'APU' is selected.
+12:28:27 INFO  : Hardware design information is loaded from '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf'.
+12:28:27 INFO  : 'configparams force-mem-access 1' command is executed.
+12:28:27 INFO  : Context for 'APU' is selected.
+12:28:27 INFO  : 'stop' command is executed.
+12:28:27 INFO  : 'ps7_init' command is executed.
+12:28:27 INFO  : 'ps7_post_config' command is executed.
+12:28:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:27 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+12:28:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:28 INFO  : The application '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf' is downloaded to processor 'ps7_cortexa9_0'.
+12:28:28 INFO  : 'configparams force-mem-access 0' command is executed.
+12:28:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+loadhw -hw /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/design_ps_pl_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+dow /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/PS/Debug/PS.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+12:28:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+12:28:28 INFO  : 'con' command is executed.
+12:28:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Xilinx TUL 1234-tulA"} -index 0
+con
+----------------End of Script----------------
+
+12:28:28 INFO  : Disconnected from the channel tcfchan#3.

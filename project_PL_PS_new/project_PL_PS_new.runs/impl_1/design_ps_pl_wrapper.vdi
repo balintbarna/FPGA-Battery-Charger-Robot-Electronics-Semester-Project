@@ -1,0 +1,77 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Dec 16 12:24:42 2019
+# Process ID: 14746
+# Current directory: /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1
+# Command line: vivado -log design_ps_pl_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_ps_pl_wrapper.tcl -notrace
+# Log file: /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper.vdi
+# Journal file: /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source design_ps_pl_wrapper.tcl -notrace
+Command: open_checkpoint design_ps_pl_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1399.758 ; gain = 0.000 ; free physical = 3778 ; free virtual = 10513
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Constraints 18-5435] Cannot read file, the software version for the checkpoint (2019.1.1.2580384) does not match the current software version (2019.1.2552052).
+  File : /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper.xbdc.
+Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper_board.xdc]
+Finished Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper_board.xdc]
+Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper_early.xdc]
+Finished Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper_early.xdc]
+Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper.xdc]
+Finished Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper.xdc]
+Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper_late.xdc]
+Finished Parsing XDC File [/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/design_ps_pl_wrapper_routed/design_ps_pl_wrapper_late.xdc]
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.29 . Memory (MB): peak = 1682.688 ; gain = 0.000 ; free physical = 3405 ; free virtual = 10141
+Restored from archive | CPU: 0.280000 secs | Memory: 3.535072 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.29 . Memory (MB): peak = 1682.688 ; gain = 0.000 ; free physical = 3405 ; free virtual = 10141
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1692.594 ; gain = 0.000 ; free physical = 3406 ; free virtual = 10142
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 25 instances were transformed.
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 25 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1.1 (64-bit) build 2580384
+open_checkpoint: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1692.594 ; gain = 292.836 ; free physical = 3405 ; free virtual = 10141
+INFO: [Memdata 28-167] Found XPM memory block design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_w_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_r_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+INFO: [Memdata 28-167] Found XPM memory block design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst with a P_MEMORY_PRIMITIVE property set to distributed. A value of block is required. You will not be able to use the updatemem program to update the bitstream with new data for the design_ps_pl_i/PS_BRAM/axi_smc/inst/s00_nodes/s00_ar_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory/xpm_memory_base_inst block.
+Command: write_bitstream -force design_ps_pl_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/johan/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_ps_pl_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Dec 16 12:25:16 2019. For additional details about this file, please refer to the WebTalk help file at /home/johan/tools/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+26 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 2142.934 ; gain = 447.371 ; free physical = 3352 ; free virtual = 10092
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 16 12:25:16 2019...

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Ex1/src/helloworld.c&apos; to &apos;BRAM_PS_PL.c&apos;" description="Rename resource &apos;helloworld.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/helloworld.c" name="BRAM_PS_PL.c" stamp="1572877604480" updateReferences="true"/>
+</session>

@@ -1,0 +1,30 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port BRAM_PORTB_0 -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 3 -x 850 -y 120 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 3 -x 850 -y 140 -defaultsOSRD
+preplace port sys_clk -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace portBus data_led -pg 1 -lvl 3 -x 850 -y 260 -defaultsOSRD
+preplace inst PS_BRAM -pg 1 -lvl 2 -x 660 -y 130 -defaultsOSRD
+preplace inst PL_BRAM_read -pg 1 -lvl 1 -x 240 -y 210 -defaultsOSRD
+preplace netloc ps_BRAM_PORTB_0_dout 1 0 2 20 320 480J
+preplace netloc PL_0_BRAM_PORTB_0_addr 1 1 1 460 80n
+preplace netloc clk_125MHz_0_1 1 0 2 20 100 NJ
+preplace netloc BRAM_PORTB_0_we_1 1 1 1 490 200n
+preplace netloc PL_0_data_out 1 1 2 NJ 260 NJ
+preplace netloc PL_0_BRAM_PORTB_0_en 1 1 1 N 160
+preplace netloc BRAM_PORTB_0_din_1 1 1 1 470 120n
+preplace netloc BRAM_PORTB_0_rst_1 1 1 1 N 180
+preplace netloc BRAM_PORTB_0_1 1 0 2 NJ 60 NJ
+preplace netloc processing_system7_0_DDR 1 2 1 NJ 120
+preplace netloc processing_system7_0_FIXED_IO 1 2 1 NJ 140
+levelinfo -pg 1 0 240 660 850
+pagesize -pg 1 -db -bbox -sgen -170 0 990 330
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_ps7_cnt":"1"
+}
