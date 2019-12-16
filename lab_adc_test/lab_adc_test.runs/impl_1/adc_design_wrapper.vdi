@@ -1,0 +1,64 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Dec 16 11:23:48 2019
+# Process ID: 4801
+# Current directory: /home/johan/Downloads/lab_adc_test/lab_adc_test.runs/impl_1
+# Command line: vivado -log adc_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source adc_design_wrapper.tcl -notrace
+# Log file: /home/johan/Downloads/lab_adc_test/lab_adc_test.runs/impl_1/adc_design_wrapper.vdi
+# Journal file: /home/johan/Downloads/lab_adc_test/lab_adc_test.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source adc_design_wrapper.tcl -notrace
+Command: open_checkpoint adc_design_wrapper_routed.dcp
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1399.758 ; gain = 0.000 ; free physical = 7929 ; free virtual = 13288
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 19 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2019.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2192.180 ; gain = 5.938 ; free physical = 7084 ; free virtual = 12508
+Restored from archive | CPU: 0.280000 secs | Memory: 2.639381 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00.24 ; elapsed = 00:00:00.28 . Memory (MB): peak = 2192.180 ; gain = 5.938 ; free physical = 7084 ; free virtual = 12508
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2192.180 ; gain = 0.000 ; free physical = 7084 ; free virtual = 12508
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2019.1 (64-bit) build 2552052
+open_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2192.180 ; gain = 792.422 ; free physical = 7083 ; free virtual = 12507
+Command: write_bitstream -force adc_design_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/johan/tools/Xilinx/Vivado/2019.1/data/ip'.
+INFO: [DRC 23-27] Running DRC with 8 threads
+INFO: [Vivado 12-3199] DRC finished with 0 Errors
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 8 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./adc_design_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] '/home/johan/Downloads/lab_adc_test/lab_adc_test.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Mon Dec 16 11:24:26 2019. For additional details about this file, please refer to the WebTalk help file at /home/johan/tools/Xilinx/Vivado/2019.1/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:12 ; elapsed = 00:00:22 . Memory (MB): peak = 2641.520 ; gain = 449.340 ; free physical = 6991 ; free virtual = 12428
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 16 11:24:26 2019...
