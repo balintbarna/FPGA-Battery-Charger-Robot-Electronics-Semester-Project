@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Mon Dec 16 13:29:18 2019
+# Process ID: 29190
+# Current directory: /home/rasmus/Documents/RobTek/RE/lab_ps_pl_test/lab_ps_pl_test.runs/impl_1
+# Command line: vivado -log bram_reader.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source bram_reader.tcl -notrace
+# Log file: /home/rasmus/Documents/RobTek/RE/lab_ps_pl_test/lab_ps_pl_test.runs/impl_1/bram_reader.vdi
+# Journal file: /home/rasmus/Documents/RobTek/RE/lab_ps_pl_test/lab_ps_pl_test.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source bram_reader.tcl -notrace
