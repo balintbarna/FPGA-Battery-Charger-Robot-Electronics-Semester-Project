@@ -171,6 +171,10 @@ entity adc_design_xadc_wiz_0_0_xadc_core_drp is
      ----------------  sysmon macro interface  -------------------
      vauxp1                 : in  STD_LOGIC;                         -- Auxiliary Channel 1
      vauxn1                 : in  STD_LOGIC;
+     vauxp6                 : in  STD_LOGIC;                         -- Auxiliary Channel 6
+     vauxn6                 : in  STD_LOGIC;
+     vauxp9                 : in  STD_LOGIC;                         -- Auxiliary Channel 9
+     vauxn9                 : in  STD_LOGIC;
      busy_out               : out  STD_LOGIC;                        -- ADC Busy signal
      channel_out            : out  STD_LOGIC_VECTOR (4 downto 0);    -- Channel Selection Outputs
      eoc_out                : out  STD_LOGIC;                        -- End of Conversion Signal
@@ -935,8 +939,8 @@ alarm_out <= alarm_reg(8 downto 1);-- updated from 2 downto 1 to 8 downto 1 for 
         aux_channel_p(5) <= '0';
         aux_channel_n(5) <= '0';
 
-        aux_channel_p(6) <= '0';
-        aux_channel_n(6) <= '0';
+        aux_channel_p(6) <= vauxp6;
+        aux_channel_n(6) <= vauxn6;
 
         aux_channel_p(7) <= '0';
         aux_channel_n(7) <= '0';
@@ -944,8 +948,8 @@ alarm_out <= alarm_reg(8 downto 1);-- updated from 2 downto 1 to 8 downto 1 for 
         aux_channel_p(8) <= '0';
         aux_channel_n(8) <= '0';
 
-        aux_channel_p(9) <= '0';
-        aux_channel_n(9) <= '0';
+        aux_channel_p(9) <= vauxp9;
+        aux_channel_n(9) <= vauxn9;
 
         aux_channel_p(10) <= '0';
         aux_channel_n(10) <= '0';
@@ -967,11 +971,11 @@ alarm_out <= alarm_reg(8 downto 1);-- updated from 2 downto 1 to 8 downto 1 for 
 
  XADC_INST : XADC
      generic map(
-        INIT_40 => X"1011", -- config reg 0
-        INIT_41 => X"312F", -- config reg 1
+        INIT_40 => X"1000", -- config reg 0
+        INIT_41 => X"212F", -- config reg 1
         INIT_42 => X"0400", -- config reg 2
-        INIT_48 => X"0100", -- Sequencer channel selection
-        INIT_49 => X"0000", -- Sequencer channel selection
+        INIT_48 => X"0800", -- Sequencer channel selection
+        INIT_49 => X"0242", -- Sequencer channel selection
         INIT_4A => X"0000", -- Sequencer Average selection
         INIT_4B => X"0000", -- Sequencer Average selection
         INIT_4C => X"0000", -- Sequencer Bipolar selection

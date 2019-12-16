@@ -118,11 +118,27 @@ int XAdcPolledPrintfExample(u16 XAdcDeviceId)
 	 * Read the AD14 input Voltage Data from the
 	 * ADC data registers.
 	 */
+	//a0
 	VccPdroRawData = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_AUX_MIN+1);
 	VccPintData = XAdcPs_ExternalRawToVoltage(VccPdroRawData);
-	printf("\r\nThe Voltage on Channel 1 is %0d.%03d Volts. \r\n",
+	printf("\r\nThe Voltage on pin a0 is %0d.%03d Volts. \r\n",
 			(int)(VccPintData), XAdcFractionToInt(VccPintData));
 
+
+	//a1
+	VccPdroRawData = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_AUX_MIN+9);
+	VccPintData = XAdcPs_ExternalRawToVoltage(VccPdroRawData);
+	printf("\r\nThe Voltage on pin a1 is %0d.%03d Volts. \r\n",
+			(int)(VccPintData), XAdcFractionToInt(VccPintData));
+
+
+	//a2
+	VccPdroRawData = XAdcPs_GetAdcData(XAdcInstPtr, XADCPS_CH_AUX_MIN+6);
+	VccPintData = XAdcPs_ExternalRawToVoltage(VccPdroRawData);
+	printf("\r\nThe Voltage on pin a2 is %0d.%03d Volts. \r\n",
+			(int)(VccPintData), XAdcFractionToInt(VccPintData));
+
+	//done
 	printf("\r\nExiting the XAdc Polled Example. \r\n");
 
 	return XST_SUCCESS;

@@ -160,7 +160,11 @@ proc create_root_design { parentCell } {
 
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
-  set Vaux1_0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux1_0 ]
+  set Vaux1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux1 ]
+
+  set Vaux6 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux6 ]
+
+  set Vaux9 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:diff_analog_io_rtl:1.0 Vaux9 ]
 
 
   # Create ports
@@ -951,19 +955,41 @@ proc create_root_design { parentCell } {
   set xadc_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xadc_wiz:3.3 xadc_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CHANNEL_AVERAGING {16} \
+   CONFIG.CHANNEL_ENABLE_VAUXP0_VAUXN0 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP10_VAUXN10 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP11_VAUXN11 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP12_VAUXN12 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP13_VAUXN13 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP14_VAUXN14 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP15_VAUXN15 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP1_VAUXN1 {true} \
+   CONFIG.CHANNEL_ENABLE_VAUXP2_VAUXN2 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP3_VAUXN3 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP4_VAUXN4 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP5_VAUXN5 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP6_VAUXN6 {true} \
+   CONFIG.CHANNEL_ENABLE_VAUXP7_VAUXN7 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP8_VAUXN8 {false} \
+   CONFIG.CHANNEL_ENABLE_VAUXP9_VAUXN9 {true} \
+   CONFIG.CHANNEL_ENABLE_VP_VN {true} \
    CONFIG.ENABLE_VCCDDRO_ALARM {false} \
    CONFIG.ENABLE_VCCPAUX_ALARM {false} \
    CONFIG.ENABLE_VCCPINT_ALARM {false} \
+   CONFIG.EXTERNAL_MUX_CHANNEL {VP_VN} \
    CONFIG.OT_ALARM {false} \
    CONFIG.SENSOR_OFFSET_AND_GAIN_CALIBRATION {false} \
+   CONFIG.SEQUENCER_MODE {Continuous} \
    CONFIG.SINGLE_CHANNEL_SELECTION {VAUXP1_VAUXN1} \
    CONFIG.USER_TEMP_ALARM {false} \
    CONFIG.VCCAUX_ALARM {false} \
    CONFIG.VCCINT_ALARM {false} \
+   CONFIG.XADC_STARUP_SELECTION {channel_sequencer} \
  ] $xadc_wiz_0
 
   # Create interface connections
-  connect_bd_intf_net -intf_net Vaux1_0_1 [get_bd_intf_ports Vaux1_0] [get_bd_intf_pins xadc_wiz_0/Vaux1]
+  connect_bd_intf_net -intf_net Vaux1_1 [get_bd_intf_ports Vaux1] [get_bd_intf_pins xadc_wiz_0/Vaux1]
+  connect_bd_intf_net -intf_net Vaux6_1 [get_bd_intf_ports Vaux6] [get_bd_intf_pins xadc_wiz_0/Vaux6]
+  connect_bd_intf_net -intf_net Vaux9_1 [get_bd_intf_ports Vaux9] [get_bd_intf_pins xadc_wiz_0/Vaux9]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]

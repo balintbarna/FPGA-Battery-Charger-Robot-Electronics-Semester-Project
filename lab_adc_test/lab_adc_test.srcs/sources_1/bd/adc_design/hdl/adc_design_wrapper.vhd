@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
---Date        : Thu Dec  5 16:03:29 2019
---Host        : Lenovo-Ideapad running 64-bit Ubuntu 16.04.6 LTS
+--Date        : Mon Dec 16 15:51:56 2019
+--Host        : laptopJBO running 64-bit Ubuntu 18.04.3 LTS
 --Command     : generate_target adc_design_wrapper.bd
 --Design      : adc_design_wrapper
 --Purpose     : IP block netlist
@@ -34,8 +34,12 @@ entity adc_design_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
-    Vaux1_0_v_n : in STD_LOGIC;
-    Vaux1_0_v_p : in STD_LOGIC
+    Vaux1_v_n : in STD_LOGIC;
+    Vaux1_v_p : in STD_LOGIC;
+    Vaux6_v_n : in STD_LOGIC;
+    Vaux6_v_p : in STD_LOGIC;
+    Vaux9_v_n : in STD_LOGIC;
+    Vaux9_v_p : in STD_LOGIC
   );
 end adc_design_wrapper;
 
@@ -63,8 +67,12 @@ architecture STRUCTURE of adc_design_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    Vaux1_0_v_n : in STD_LOGIC;
-    Vaux1_0_v_p : in STD_LOGIC
+    Vaux6_v_n : in STD_LOGIC;
+    Vaux6_v_p : in STD_LOGIC;
+    Vaux9_v_n : in STD_LOGIC;
+    Vaux9_v_p : in STD_LOGIC;
+    Vaux1_v_n : in STD_LOGIC;
+    Vaux1_v_p : in STD_LOGIC
   );
   end component adc_design;
 begin
@@ -91,7 +99,11 @@ adc_design_i: component adc_design
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
-      Vaux1_0_v_n => Vaux1_0_v_n,
-      Vaux1_0_v_p => Vaux1_0_v_p
+      Vaux1_v_n => Vaux1_v_n,
+      Vaux1_v_p => Vaux1_v_p,
+      Vaux6_v_n => Vaux6_v_n,
+      Vaux6_v_p => Vaux6_v_p,
+      Vaux9_v_n => Vaux9_v_n,
+      Vaux9_v_p => Vaux9_v_p
     );
 end STRUCTURE;

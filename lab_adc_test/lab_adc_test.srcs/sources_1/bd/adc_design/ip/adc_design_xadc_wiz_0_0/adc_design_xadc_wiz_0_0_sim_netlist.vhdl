@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
--- Date        : Thu Dec  5 16:04:45 2019
--- Host        : Lenovo-Ideapad running 64-bit Ubuntu 16.04.6 LTS
+-- Date        : Mon Dec 16 15:38:39 2019
+-- Host        : laptopJBO running 64-bit Ubuntu 18.04.3 LTS
 -- Command     : write_vhdl -force -mode funcsim
---               /home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_sim_netlist.vhdl
+--               /home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_sim_netlist.vhdl
 -- Design      : adc_design_xadc_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -3311,8 +3311,8 @@ entity adc_design_xadc_wiz_0_0_adc_design_xadc_wiz_0_0_xadc_core_drp is
     vn_in : in STD_LOGIC;
     vp_in : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    vauxn1 : in STD_LOGIC;
-    vauxp1 : in STD_LOGIC;
+    VAUXN : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    VAUXP : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \status_reg_reg[7]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     reset2ip_reset : in STD_LOGIC;
     local_reg_wrack_d1_reg_0 : in STD_LOGIC;
@@ -3470,16 +3470,16 @@ begin
     );
 XADC_INST: unisim.vcomponents.XADC
     generic map(
-      INIT_40 => X"1011",
-      INIT_41 => X"312F",
+      INIT_40 => X"1000",
+      INIT_41 => X"212F",
       INIT_42 => X"0400",
       INIT_43 => X"0000",
       INIT_44 => X"0000",
       INIT_45 => X"0000",
       INIT_46 => X"0000",
       INIT_47 => X"0000",
-      INIT_48 => X"0100",
-      INIT_49 => X"0000",
+      INIT_48 => X"0800",
+      INIT_49 => X"0242",
       INIT_4A => X"0000",
       INIT_4B => X"0000",
       INIT_4C => X"0000",
@@ -3531,11 +3531,19 @@ XADC_INST: unisim.vcomponents.XADC
       MUXADDR(4 downto 0) => NLW_XADC_INST_MUXADDR_UNCONNECTED(4 downto 0),
       OT => \^s_axi_aclk_0\(0),
       RESET => RESET,
-      VAUXN(15 downto 2) => B"00000000000000",
-      VAUXN(1) => vauxn1,
+      VAUXN(15 downto 10) => B"000000",
+      VAUXN(9) => VAUXN(2),
+      VAUXN(8 downto 7) => B"00",
+      VAUXN(6) => VAUXN(1),
+      VAUXN(5 downto 2) => B"0000",
+      VAUXN(1) => VAUXN(0),
       VAUXN(0) => '0',
-      VAUXP(15 downto 2) => B"00000000000000",
-      VAUXP(1) => vauxp1,
+      VAUXP(15 downto 10) => B"000000",
+      VAUXP(9) => VAUXP(2),
+      VAUXP(8 downto 7) => B"00",
+      VAUXP(6) => VAUXP(1),
+      VAUXP(5 downto 2) => B"0000",
+      VAUXP(1) => VAUXP(0),
       VAUXP(0) => '0',
       VN => vn_in,
       VP => vp_in
@@ -5279,6 +5287,10 @@ entity adc_design_xadc_wiz_0_0_adc_design_xadc_wiz_0_0_axi_xadc is
     ip2intc_irpt : out STD_LOGIC;
     vauxp1 : in STD_LOGIC;
     vauxn1 : in STD_LOGIC;
+    vauxp6 : in STD_LOGIC;
+    vauxn6 : in STD_LOGIC;
+    vauxp9 : in STD_LOGIC;
+    vauxn9 : in STD_LOGIC;
     busy_out : out STD_LOGIC;
     channel_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
     eoc_out : out STD_LOGIC;
@@ -5621,6 +5633,12 @@ AXI_XADC_CORE_I: entity work.adc_design_xadc_wiz_0_0_adc_design_xadc_wiz_0_0_xad
       \INTR_CTRLR_GEN_I.ip2bus_error_reg_0\ => \INTR_CTRLR_GEN_I.ip2bus_error_i_3_n_0\,
       Q(8 downto 1) => \^alarm_out\(7 downto 0),
       Q(0) => alarm_reg(0),
+      VAUXN(2) => vauxn9,
+      VAUXN(1) => vauxn6,
+      VAUXN(0) => vauxn1,
+      VAUXP(2) => vauxp9,
+      VAUXP(1) => vauxp6,
+      VAUXP(0) => vauxp1,
       bus2ip_rdce(1) => bus2ip_rdce(23),
       bus2ip_rdce(0) => bus2ip_rdce(0),
       bus2ip_reset_active_high => bus2ip_reset_active_high,
@@ -5671,8 +5689,6 @@ AXI_XADC_CORE_I: entity work.adc_design_xadc_wiz_0_0_adc_design_xadc_wiz_0_0_xad
       status_reg_rdack_d1 => status_reg_rdack_d1,
       \status_reg_reg[10]_0\(10 downto 0) => status_reg(10 downto 0),
       \status_reg_reg[7]_0\(2 downto 0) => bus2ip_addr(6 downto 4),
-      vauxn1 => vauxn1,
-      vauxp1 => vauxp1,
       vn_in => vn_in,
       vp_in => vp_in
     );
@@ -6118,6 +6134,10 @@ entity adc_design_xadc_wiz_0_0 is
     ip2intc_irpt : out STD_LOGIC;
     vauxp1 : in STD_LOGIC;
     vauxn1 : in STD_LOGIC;
+    vauxp6 : in STD_LOGIC;
+    vauxn6 : in STD_LOGIC;
+    vauxp9 : in STD_LOGIC;
+    vauxn9 : in STD_LOGIC;
     busy_out : out STD_LOGIC;
     channel_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
     eoc_out : out STD_LOGIC;
@@ -6180,7 +6200,11 @@ U0: entity work.adc_design_xadc_wiz_0_0_adc_design_xadc_wiz_0_0_axi_xadc
       s_axi_wstrb(3 downto 0) => s_axi_wstrb(3 downto 0),
       s_axi_wvalid => s_axi_wvalid,
       vauxn1 => vauxn1,
+      vauxn6 => vauxn6,
+      vauxn9 => vauxn9,
       vauxp1 => vauxp1,
+      vauxp6 => vauxp6,
+      vauxp9 => vauxp9,
       vn_in => vn_in,
       vp_in => vp_in
     );

@@ -15,26 +15,26 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12473 
+INFO: Helper process launched with PID 4671 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1715.285 ; gain = 152.684 ; free physical = 128 ; free virtual = 11555
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1725.938 ; gain = 153.715 ; free physical = 4253 ; free virtual = 11343
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.vhd:98]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.vhd:102]
 	Parameter C_INSTANCE bound to: adc_design_xadc_wiz_0_0_axi_xadc - type: string 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_INCLUDE_INTR bound to: 1 - type: integer 
 	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
-INFO: [Synth 8-3491] module 'adc_design_xadc_wiz_0_0_axi_xadc' declared at '/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:143' bound to instance 'U0' of component 'adc_design_xadc_wiz_0_0_axi_xadc' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.vhd:172]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_axi_xadc' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:236]
+INFO: [Synth 8-3491] module 'adc_design_xadc_wiz_0_0_axi_xadc' declared at '/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:143' bound to instance 'U0' of component 'adc_design_xadc_wiz_0_0_axi_xadc' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_axi_xadc' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:240]
 	Parameter C_INSTANCE bound to: adc_design_xadc_wiz_0_0_axi_xadc - type: string 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_INCLUDE_INTR bound to: 1 - type: integer 
 	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_axi_lite_ipif' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_axi_lite_ipif.vhd:241]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_axi_lite_ipif' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_axi_lite_ipif.vhd:241]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000001111111111 
@@ -43,7 +43,7 @@ INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_axi_lite_ipif' 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000000001 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_slave_attachment' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_slave_attachment.vhd:227]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_slave_attachment' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_slave_attachment.vhd:227]
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000000001 
 	Parameter C_IPIF_ABUS_WIDTH bound to: 11 - type: integer 
@@ -52,178 +52,178 @@ INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_slave_attachmen
 	Parameter C_USE_WSTRB bound to: 1 - type: integer 
 	Parameter C_DPHASE_TIMEOUT bound to: 64 - type: integer 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_address_decoder' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_address_decoder.vhd:176]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_address_decoder' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_address_decoder.vhd:176]
 	Parameter C_BUS_AWIDTH bound to: 10 - type: integer 
 	Parameter C_S_AXI_MIN_SIZE bound to: 1023 - type: integer 
 	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111111 
 	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000000001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 5 - type: integer 
 	Parameter C_AW bound to: 10 - type: integer 
 	Parameter C_BAR bound to: 10'b0000000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized0' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized0' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized0' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized1' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized0' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized1' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized1' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized2' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized1' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized2' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized2' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized3' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized2' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized3' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized3' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized4' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized3' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized4' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized4' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized5' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized4' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized5' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized5' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized6' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized5' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized6' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized6' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized7' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized6' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized7' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 3 - type: integer 
 	Parameter C_AW bound to: 3 - type: integer 
 	Parameter C_BAR bound to: 3'b111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized7' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized8' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized7' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized8' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 10 - type: integer 
 	Parameter C_BAR bound to: 10'b0001000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized8' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized9' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized8' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized9' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized9' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized10' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized9' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized10' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized10' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized11' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized10' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized11' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized11' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized12' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized11' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized12' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized12' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized13' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized12' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized13' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized13' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized14' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized13' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized14' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized14' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized15' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized14' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized15' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized15' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized16' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized15' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized16' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b0111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized16' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized17' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized16' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized17' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized17' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized18' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized17' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized18' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1001 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized18' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized19' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized18' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized19' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1010 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized19' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized20' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized19' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized20' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1011 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized20' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized21' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized20' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized21' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1100 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized21' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized22' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized21' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized22' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1101 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized22' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized23' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized22' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized23' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1110 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized23' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized24' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized23' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized24' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 4 - type: integer 
 	Parameter C_AW bound to: 4 - type: integer 
 	Parameter C_BAR bound to: 4'b1111 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized24' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized25' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized24' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized25' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
 	Parameter C_AB bound to: 1 - type: integer 
 	Parameter C_AW bound to: 10 - type: integer 
 	Parameter C_BAR bound to: 10'b1000000000 
 	Parameter C_FAMILY bound to: nofamily - type: string 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized25' (1#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_address_decoder' (2#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_address_decoder.vhd:176]
-INFO: [Synth 8-226] default block is never used [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_slave_attachment.vhd:381]
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_slave_attachment' (3#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_slave_attachment.vhd:227]
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_axi_lite_ipif' (4#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_axi_lite_ipif.vhd:241]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_pselect_f__parameterized25' (1#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_address_decoder' (2#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_address_decoder.vhd:176]
+INFO: [Synth 8-226] default block is never used [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_slave_attachment.vhd:381]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_slave_attachment' (3#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_slave_attachment.vhd:227]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_axi_lite_ipif' (4#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_axi_lite_ipif.vhd:241]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
@@ -231,8 +231,8 @@ INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_axi_lite_i
 	Parameter IP_INTR_NUM bound to: 17 - type: integer 
 	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
 	Parameter MUX_ADDR_NO bound to: 5 - type: integer 
-INFO: [Synth 8-3491] module 'adc_design_xadc_wiz_0_0_xadc_core_drp' declared at '/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:141' bound to instance 'AXI_XADC_CORE_I' of component 'adc_design_xadc_wiz_0_0_xadc_core_drp' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:691]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_xadc_core_drp' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:187]
+INFO: [Synth 8-3491] module 'adc_design_xadc_wiz_0_0_xadc_core_drp' declared at '/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:141' bound to instance 'AXI_XADC_CORE_I' of component 'adc_design_xadc_wiz_0_0_xadc_core_drp' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:699]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_xadc_core_drp' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:191]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_FAMILY bound to: virtex7 - type: string 
@@ -240,16 +240,16 @@ INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_xadc_core_drp' 
 	Parameter IP_INTR_NUM bound to: 17 - type: integer 
 	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
 	Parameter MUX_ADDR_NO bound to: 5 - type: integer 
-	Parameter INIT_40 bound to: 16'b0001000000010001 
-	Parameter INIT_41 bound to: 16'b0011000100101111 
+	Parameter INIT_40 bound to: 16'b0001000000000000 
+	Parameter INIT_41 bound to: 16'b0010000100101111 
 	Parameter INIT_42 bound to: 16'b0000010000000000 
 	Parameter INIT_43 bound to: 16'b0000000000000000 
 	Parameter INIT_44 bound to: 16'b0000000000000000 
 	Parameter INIT_45 bound to: 16'b0000000000000000 
 	Parameter INIT_46 bound to: 16'b0000000000000000 
 	Parameter INIT_47 bound to: 16'b0000000000000000 
-	Parameter INIT_48 bound to: 16'b0000000100000000 
-	Parameter INIT_49 bound to: 16'b0000000000000000 
+	Parameter INIT_48 bound to: 16'b0000100000000000 
+	Parameter INIT_49 bound to: 16'b0000001001000010 
 	Parameter INIT_4A bound to: 16'b0000000000000000 
 	Parameter INIT_4B bound to: 16'b0000000000000000 
 	Parameter INIT_4C bound to: 16'b0000000000000000 
@@ -276,10 +276,10 @@ INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_xadc_core_drp' 
 	Parameter IS_DCLK_INVERTED bound to: 1'b0 
 	Parameter SIM_DEVICE bound to: ZYNQ - type: string 
 	Parameter SIM_MONITOR_FILE bound to: design.txt - type: string 
-INFO: [Synth 8-113] binding component instance 'XADC_INST' to cell 'XADC' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:968]
-WARNING: [Synth 8-6014] Unused sequential element convst_reg_input_reg was removed.  [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:499]
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_xadc_core_drp' (5#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:187]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_soft_reset' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:142]
+INFO: [Synth 8-113] binding component instance 'XADC_INST' to cell 'XADC' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:972]
+WARNING: [Synth 8-6014] Unused sequential element convst_reg_input_reg was removed.  [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:503]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_xadc_core_drp' (5#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_xadc_core_drp.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_soft_reset' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:142]
 	Parameter C_SIPIF_DWIDTH bound to: 32 - type: integer 
 	Parameter C_RESET_WIDTH bound to: 16 - type: integer 
 	Parameter INIT bound to: 1'b0 
@@ -288,130 +288,130 @@ INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_soft_reset' [/h
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:273]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_CE_INVERTED bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:296]
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_soft_reset' (6#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:142]
-INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_interrupt_control' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:240]
+INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:296]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_soft_reset' (6#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_soft_reset.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'adc_design_xadc_wiz_0_0_interrupt_control' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:240]
 	Parameter C_NUM_CE bound to: 16 - type: integer 
 	Parameter C_NUM_IPIF_IRPT_SRC bound to: 1 - type: integer 
 	Parameter C_IP_INTR_MODE_ARRAY bound to: 544'b0000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101 
 	Parameter C_INCLUDE_DEV_PENCODER bound to: 0 - type: bool 
 	Parameter C_INCLUDE_DEV_ISC bound to: 0 - type: bool 
 	Parameter C_IPIF_DWIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_interrupt_control' (7#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:240]
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_axi_xadc' (8#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:236]
-INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0' (9#1) [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.vhd:98]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_interrupt_control' (7#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0_axi_xadc' (8#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'adc_design_xadc_wiz_0_0' (9#1) [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.vhd:102]
 WARNING: [Synth 8-3331] design adc_design_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[1]
 WARNING: [Synth 8-3331] design adc_design_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[2]
 WARNING: [Synth 8-3331] design adc_design_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[3]
@@ -514,7 +514,7 @@ WARNING: [Synth 8-3331] design adc_design_xadc_wiz_0_0_xadc_core_drp has unconne
 WARNING: [Synth 8-3331] design adc_design_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[10]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1795.066 ; gain = 232.465 ; free physical = 278 ; free virtual = 11520
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1804.750 ; gain = 232.527 ; free physical = 4263 ; free virtual = 11354
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -527,10 +527,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1803.973 ; gain = 241.371 ; free physical = 262 ; free virtual = 11504
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1813.656 ; gain = 241.434 ; free physical = 4265 ; free virtual = 11355
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1803.973 ; gain = 241.371 ; free physical = 262 ; free virtual = 11504
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1813.656 ; gain = 241.434 ; free physical = 4265 ; free virtual = 11355
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -538,36 +538,36 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.xdc] for cell 'U0'
-Parsing XDC File [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.xdc] for cell 'U0'
+Parsing XDC File [/home/johan/Downloads/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/johan/Downloads/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1966.754 ; gain = 0.000 ; free physical = 125 ; free virtual = 11306
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1973.406 ; gain = 0.000 ; free physical = 4174 ; free virtual = 11265
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 17 instances were transformed.
   FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 1966.754 ; gain = 0.000 ; free physical = 130 ; free virtual = 11312
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 1973.406 ; gain = 0.000 ; free physical = 4174 ; free virtual = 11265
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 294 ; free virtual = 11189
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4250 ; free virtual = 11341
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 295 ; free virtual = 11190
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4250 ; free virtual = 11341
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/johan/Downloads/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 297 ; free virtual = 11193
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4250 ; free virtual = 11341
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'adc_design_xadc_wiz_0_0_slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -580,7 +580,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'adc_d
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'adc_design_xadc_wiz_0_0_slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 878 ; free virtual = 11776
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4241 ; free virtual = 11332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -790,11 +790,11 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[15].GEN_POS_EDGE_DETECT.irpt_dly1_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly1_reg' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:638]
-INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[15].GEN_POS_EDGE_DETECT.irpt_dly2_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly2_reg' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:639]
-INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[16].GEN_POS_EDGE_DETECT.irpt_dly1_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly1_reg' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:638]
-INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[16].GEN_POS_EDGE_DETECT.irpt_dly2_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly2_reg' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:639]
-INFO: [Synth 8-4471] merging register 'bus2ip_reset_active_high_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:639]
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[15].GEN_POS_EDGE_DETECT.irpt_dly1_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly1_reg' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:638]
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[15].GEN_POS_EDGE_DETECT.irpt_dly2_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly2_reg' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:639]
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[16].GEN_POS_EDGE_DETECT.irpt_dly1_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly1_reg' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:638]
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[16].GEN_POS_EDGE_DETECT.irpt_dly2_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly2_reg' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/adc_design_xadc_wiz_0_0_interrupt_control.vhd:639]
+INFO: [Synth 8-4471] merging register 'bus2ip_reset_active_high_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [/home/johan/Downloads/lab_adc_test/lab_adc_test.srcs/sources_1/bd/adc_design/ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0_axi_xadc.vhd:647]
 INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[13]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[12]'
 INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[12]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[11]'
 INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[11]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[10]'
@@ -823,7 +823,7 @@ INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_a
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 831 ; free virtual = 11734
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4225 ; free virtual = 11319
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -835,13 +835,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1523 ; free virtual = 12429
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4103 ; free virtual = 11197
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1532 ; free virtual = 12438
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4095 ; free virtual = 11189
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -853,7 +853,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1532 ; free virtual = 12438
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -877,7 +877,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1533 ; free virtual = 12439
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -890,7 +890,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1533 ; free virtual = 12439
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -902,25 +902,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1533 ; free virtual = 12439
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1533 ; free virtual = 12439
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1529 ; free virtual = 12435
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1528 ; free virtual = 12434
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -961,34 +961,34 @@ Report Instance Areas:
 |8     |    SOFT_RESET_I                           |adc_design_xadc_wiz_0_0_soft_reset        |    36|
 +------+-------------------------------------------+------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1527 ; free virtual = 12433
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4096 ; free virtual = 11190
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1966.754 ; gain = 241.371 ; free physical = 1586 ; free virtual = 12492
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 1966.754 ; gain = 404.152 ; free physical = 1586 ; free virtual = 12492
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 1973.406 ; gain = 241.434 ; free physical = 4151 ; free virtual = 11245
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1973.406 ; gain = 401.184 ; free physical = 4151 ; free virtual = 11245
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1966.754 ; gain = 0.000 ; free physical = 1529 ; free virtual = 12436
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1973.406 ; gain = 0.000 ; free physical = 4094 ; free virtual = 11188
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 139 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1966.754 ; gain = 531.500 ; free physical = 1630 ; free virtual = 12537
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1966.754 ; gain = 0.000 ; free physical = 1630 ; free virtual = 12537
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1973.406 ; gain = 571.633 ; free physical = 4195 ; free virtual = 11289
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1973.406 ; gain = 0.000 ; free physical = 4196 ; free virtual = 11290
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/adc_design_xadc_wiz_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/johan/Downloads/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/adc_design_xadc_wiz_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP adc_design_xadc_wiz_0_0, cache-ID = 3f0d9a092030b261
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP adc_design_xadc_wiz_0_0, cache-ID = d54261b67979dbb6
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1990.766 ; gain = 0.000 ; free physical = 1631 ; free virtual = 12538
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1997.418 ; gain = 0.000 ; free physical = 4194 ; free virtual = 11289
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/adc_design_xadc_wiz_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/johan/Downloads/lab_adc_test/lab_adc_test.runs/adc_design_xadc_wiz_0_0_synth_1/adc_design_xadc_wiz_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file adc_design_xadc_wiz_0_0_utilization_synth.rpt -pb adc_design_xadc_wiz_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec  5 16:04:45 2019...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 16 15:38:39 2019...

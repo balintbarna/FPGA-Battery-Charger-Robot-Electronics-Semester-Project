@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Dec 16 11:23:48 2019
-# Process ID: 4801
+# Start of session at: Mon Dec 16 15:55:59 2019
+# Process ID: 11867
 # Current directory: /home/johan/Downloads/lab_adc_test/lab_adc_test.runs/impl_1
 # Command line: vivado -log adc_design_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source adc_design_wrapper.tcl -notrace
 # Log file: /home/johan/Downloads/lab_adc_test/lab_adc_test.runs/impl_1/adc_design_wrapper.vdi

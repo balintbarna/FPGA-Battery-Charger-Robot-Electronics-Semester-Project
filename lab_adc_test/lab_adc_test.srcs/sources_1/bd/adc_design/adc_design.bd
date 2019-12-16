@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1F25AA8951332B14",
+      "boundary_crc": "0x41D3FDFA5A81CAB5",
       "device": "xc7z020clg400-1",
       "name": "adc_design",
       "synth_flow_mode": "Hierarchical",
@@ -83,7 +83,15 @@
           }
         }
       },
-      "Vaux1_0": {
+      "Vaux6": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
+      },
+      "Vaux9": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
+      },
+      "Vaux1": {
         "mode": "Slave",
         "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
       }
@@ -1677,6 +1685,57 @@
           "CHANNEL_AVERAGING": {
             "value": "16"
           },
+          "CHANNEL_ENABLE_VAUXP0_VAUXN0": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP10_VAUXN10": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP11_VAUXN11": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP12_VAUXN12": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP13_VAUXN13": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP14_VAUXN14": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP15_VAUXN15": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP1_VAUXN1": {
+            "value": "true"
+          },
+          "CHANNEL_ENABLE_VAUXP2_VAUXN2": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP3_VAUXN3": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP4_VAUXN4": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP5_VAUXN5": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP6_VAUXN6": {
+            "value": "true"
+          },
+          "CHANNEL_ENABLE_VAUXP7_VAUXN7": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP8_VAUXN8": {
+            "value": "false"
+          },
+          "CHANNEL_ENABLE_VAUXP9_VAUXN9": {
+            "value": "true"
+          },
+          "CHANNEL_ENABLE_VP_VN": {
+            "value": "true"
+          },
           "ENABLE_VCCDDRO_ALARM": {
             "value": "false"
           },
@@ -1686,11 +1745,17 @@
           "ENABLE_VCCPINT_ALARM": {
             "value": "false"
           },
+          "EXTERNAL_MUX_CHANNEL": {
+            "value": "VP_VN"
+          },
           "OT_ALARM": {
             "value": "false"
           },
           "SENSOR_OFFSET_AND_GAIN_CALIBRATION": {
             "value": "false"
+          },
+          "SEQUENCER_MODE": {
+            "value": "Continuous"
           },
           "SINGLE_CHANNEL_SELECTION": {
             "value": "VAUXP1_VAUXN1"
@@ -1703,6 +1768,9 @@
           },
           "VCCINT_ALARM": {
             "value": "false"
+          },
+          "XADC_STARUP_SELECTION": {
+            "value": "channel_sequencer"
           }
         }
       },
@@ -1862,16 +1930,16 @@
           }
         },
         "interface_nets": {
-          "s00_couplers_to_ps7_0_axi_periph": {
-            "interface_ports": [
-              "M00_AXI",
-              "s00_couplers/M_AXI"
-            ]
-          },
           "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
+            ]
+          },
+          "s00_couplers_to_ps7_0_axi_periph": {
+            "interface_ports": [
+              "M00_AXI",
+              "s00_couplers/M_AXI"
             ]
           }
         },
@@ -1914,18 +1982,6 @@
           "processing_system7_0/DDR"
         ]
       },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "Vaux1_0_1": {
-        "interface_ports": [
-          "Vaux1_0",
-          "xadc_wiz_0/Vaux1"
-        ]
-      },
       "ps7_0_axi_periph_M00_AXI": {
         "interface_ports": [
           "ps7_0_axi_periph/M00_AXI",
@@ -1936,6 +1992,30 @@
         "interface_ports": [
           "processing_system7_0/M_AXI_GP0",
           "ps7_0_axi_periph/S00_AXI"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "processing_system7_0/FIXED_IO"
+        ]
+      },
+      "Vaux9_1": {
+        "interface_ports": [
+          "Vaux9",
+          "xadc_wiz_0/Vaux9"
+        ]
+      },
+      "Vaux6_1": {
+        "interface_ports": [
+          "Vaux6",
+          "xadc_wiz_0/Vaux6"
+        ]
+      },
+      "Vaux1_1": {
+        "interface_ports": [
+          "Vaux1",
+          "xadc_wiz_0/Vaux1"
         ]
       }
     },

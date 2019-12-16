@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/rasmus/apps/Xilinx/SDK/2019.1/bin:/home/rasmus/apps/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/rasmus/apps/Xilinx/Vivado/2019.1/bin
+  PATH=/home/johan/tools/Xilinx/SDK/2019.1/bin:/home/johan/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/johan/tools/Xilinx/Vivado/2019.1/bin
 else
-  PATH=/home/rasmus/apps/Xilinx/SDK/2019.1/bin:/home/rasmus/apps/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/rasmus/apps/Xilinx/Vivado/2019.1/bin:$PATH
+  PATH=/home/johan/tools/Xilinx/SDK/2019.1/bin:/home/johan/tools/Xilinx/Vivado/2019.1/ids_lite/ISE/bin/lin64:/home/johan/tools/Xilinx/Vivado/2019.1/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/rasmus/Documents/RobTek/RE/lab_adc_test/lab_adc_test.runs/adc_design_auto_pc_0_synth_1'
+HD_PWD='/home/johan/Downloads/lab_adc_test/lab_adc_test.runs/adc_design_auto_pc_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

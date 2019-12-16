@@ -192,6 +192,10 @@ entity adc_design_xadc_wiz_0_0_axi_xadc is
     -- Conversion start control signal for Event driven mode
     vauxp1          : in  STD_LOGIC;                         -- Auxiliary Channel 1
     vauxn1          : in  STD_LOGIC;
+    vauxp6          : in  STD_LOGIC;                         -- Auxiliary Channel 6
+    vauxn6          : in  STD_LOGIC;
+    vauxp9          : in  STD_LOGIC;                         -- Auxiliary Channel 9
+    vauxn9          : in  STD_LOGIC;
     busy_out        : out  STD_LOGIC;                        -- ADC Busy signal
     channel_out     : out  STD_LOGIC_VECTOR (4 downto 0);    -- Channel Selection Outputs
     eoc_out         : out  STD_LOGIC;                        -- End of Conversion Signal
@@ -268,6 +272,10 @@ component adc_design_xadc_wiz_0_0_xadc_core_drp
      ----------------  sysmon macro interface  -------------------
      vauxp1                 : in  STD_LOGIC;                         -- Auxiliary Channel 1
      vauxn1                 : in  STD_LOGIC;
+     vauxp6                 : in  STD_LOGIC;                         -- Auxiliary Channel 6
+     vauxn6                 : in  STD_LOGIC;
+     vauxp9                 : in  STD_LOGIC;                         -- Auxiliary Channel 9
+     vauxn9                 : in  STD_LOGIC;
      busy_out               : out  STD_LOGIC;                        -- ADC Busy signal
      channel_out            : out  STD_LOGIC_VECTOR (4 downto 0);    -- Channel Selection Outputs
      eoc_out                : out  STD_LOGIC;                        -- End of Conversion Signal
@@ -719,6 +727,10 @@ AXI_XADC_CORE_I : adc_design_xadc_wiz_0_0_xadc_core_drp
     --- external interface signals ------------------
     vauxp1                       => vauxp1,
     vauxn1                       => vauxn1,
+    vauxp6                       => vauxp6,
+    vauxn6                       => vauxn6,
+    vauxp9                       => vauxp9,
+    vauxn9                       => vauxn9,
     busy_out                     => busy_out,
     channel_out                  => channel_out,
     eoc_out                      => eoc_out,

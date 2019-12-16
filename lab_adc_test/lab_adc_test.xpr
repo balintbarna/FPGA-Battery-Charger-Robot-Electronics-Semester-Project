@@ -67,14 +67,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="adc_design.bd" FileRelPathName="ip/adc_design_processing_system7_0_0/adc_design_processing_system7_0_0.xci">
-          <Proxy FileSetName="adc_design_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="adc_design.bd" FileRelPathName="ip/adc_design_rst_ps7_0_100M_0/adc_design_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="adc_design_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="adc_design.bd" FileRelPathName="ip/adc_design_xadc_wiz_0_0/adc_design_xadc_wiz_0_0.xci">
           <Proxy FileSetName="adc_design_xadc_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="adc_design.bd" FileRelPathName="ip/adc_design_rst_ps7_0_100M_0/adc_design_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="adc_design_rst_ps7_0_100M_0"/>
+        <CompFileExtendedInfo CompFileName="adc_design.bd" FileRelPathName="ip/adc_design_processing_system7_0_0/adc_design_processing_system7_0_0.xci">
+          <Proxy FileSetName="adc_design_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="adc_design.bd" FileRelPathName="ip/adc_design_auto_pc_0/adc_design_auto_pc_0.xci">
           <Proxy FileSetName="adc_design_auto_pc_0"/>
@@ -94,16 +94,14 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
       <Filter Type="Constrs"/>
-      <File Path="$PSRCDIR/constrs_1/imports/lab_adc_test/adc_constraints.xdc">
+      <File Path="$PSRCDIR/constrs_1/new/three_ADC_constraints.xdc">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/adc_constraints.xdc"/>
-          <Attr Name="ImportTime" Val="1573782680"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/lab_adc_test/adc_constraints.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/three_ADC_constraints.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -137,15 +135,15 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="adc_design_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/adc_design_auto_pc_0">
-      <Config>
-        <Option Name="TopModule" Val="adc_design_auto_pc_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="adc_design_processing_system7_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/adc_design_processing_system7_0_0">
       <Config>
         <Option Name="TopModule" Val="adc_design_processing_system7_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="adc_design_auto_pc_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/adc_design_auto_pc_0">
+      <Config>
+        <Option Name="TopModule" Val="adc_design_auto_pc_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -202,7 +200,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="adc_design_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="adc_design_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="adc_design_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/adc_design_auto_pc_0_synth_1" IncludeInArchive="true">
+    <Run Id="adc_design_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="adc_design_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="adc_design_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/adc_design_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
         <Step Id="synth_design"/>
@@ -211,9 +209,11 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="adc_design_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="adc_design_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="adc_design_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/adc_design_processing_system7_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="adc_design_auto_pc_0_synth_1" Type="Ft3:Synth" SrcSet="adc_design_auto_pc_0" Part="xc7z020clg400-1" ConstrsSet="adc_design_auto_pc_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/adc_design_auto_pc_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -269,7 +269,7 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="adc_design_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="adc_design_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="adc_design_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="adc_design_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="adc_design_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="adc_design_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
         <Step Id="init_design"/>
@@ -285,9 +285,11 @@
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2019"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="adc_design_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="adc_design_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="adc_design_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
+    <Run Id="adc_design_auto_pc_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="adc_design_auto_pc_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="adc_design_auto_pc_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
