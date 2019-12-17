@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2019.1.1 (win64) Build 2580384 Sat Jun 29 08:12:21 MDT 2019
---Date        : Mon Nov  4 15:54:33 2019
---Host        : TEK-CB-ESME-02 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+--Date        : Tue Dec 17 14:09:44 2019
+--Host        : laptopJBO running 64-bit Ubuntu 18.04.3 LTS
 --Command     : generate_target design_ps_pl_wrapper.bd
 --Design      : design_ps_pl_wrapper
 --Purpose     : IP block netlist
@@ -34,6 +34,12 @@ entity design_ps_pl_wrapper is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    Vaux1_v_n : in STD_LOGIC;
+    Vaux1_v_p : in STD_LOGIC;
+    Vaux6_v_n : in STD_LOGIC;
+    Vaux6_v_p : in STD_LOGIC;
+    Vaux9_v_n : in STD_LOGIC;
+    Vaux9_v_p : in STD_LOGIC;
     data_led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sys_clk : in STD_LOGIC
   );
@@ -42,6 +48,8 @@ end design_ps_pl_wrapper;
 architecture STRUCTURE of design_ps_pl_wrapper is
   component design_ps_pl is
   port (
+    sys_clk : in STD_LOGIC;
+    data_led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -63,8 +71,12 @@ architecture STRUCTURE of design_ps_pl_wrapper is
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    sys_clk : in STD_LOGIC;
-    data_led : out STD_LOGIC_VECTOR ( 3 downto 0 )
+    Vaux6_v_n : in STD_LOGIC;
+    Vaux6_v_p : in STD_LOGIC;
+    Vaux9_v_n : in STD_LOGIC;
+    Vaux9_v_p : in STD_LOGIC;
+    Vaux1_v_n : in STD_LOGIC;
+    Vaux1_v_p : in STD_LOGIC
   );
   end component design_ps_pl;
 begin
@@ -91,6 +103,12 @@ design_ps_pl_i: component design_ps_pl
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
       FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      Vaux1_v_n => Vaux1_v_n,
+      Vaux1_v_p => Vaux1_v_p,
+      Vaux6_v_n => Vaux6_v_n,
+      Vaux6_v_p => Vaux6_v_p,
+      Vaux9_v_n => Vaux9_v_n,
+      Vaux9_v_p => Vaux9_v_p,
       data_led(3 downto 0) => data_led(3 downto 0),
       sys_clk => sys_clk
     );

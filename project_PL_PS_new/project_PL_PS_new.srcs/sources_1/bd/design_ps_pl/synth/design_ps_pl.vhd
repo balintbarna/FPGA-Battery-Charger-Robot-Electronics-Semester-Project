@@ -1,8 +1,8 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2019.1.1 (win64) Build 2580384 Sat Jun 29 08:12:21 MDT 2019
---Date        : Mon Nov  4 15:54:33 2019
---Host        : TEK-CB-ESME-02 running 64-bit major release  (build 9200)
+--Tool Version: Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
+--Date        : Tue Dec 17 14:09:44 2019
+--Host        : laptopJBO running 64-bit Ubuntu 18.04.3 LTS
 --Command     : generate_target design_ps_pl.bd
 --Design      : design_ps_pl
 --Purpose     : IP block netlist
@@ -40,7 +40,13 @@ entity PS_BRAM_imp_1XS9KR3 is
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    Vaux1_v_n : in STD_LOGIC;
+    Vaux1_v_p : in STD_LOGIC;
+    Vaux6_v_n : in STD_LOGIC;
+    Vaux6_v_p : in STD_LOGIC;
+    Vaux9_v_n : in STD_LOGIC;
+    Vaux9_v_p : in STD_LOGIC
   );
 end PS_BRAM_imp_1XS9KR3;
 
@@ -163,7 +169,26 @@ architecture STRUCTURE of PS_BRAM_imp_1XS9KR3 is
     M00_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     M00_AXI_rlast : in STD_LOGIC;
     M00_AXI_rvalid : in STD_LOGIC;
-    M00_AXI_rready : out STD_LOGIC
+    M00_AXI_rready : out STD_LOGIC;
+    M01_AXI_awaddr : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    M01_AXI_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M01_AXI_awvalid : out STD_LOGIC;
+    M01_AXI_awready : in STD_LOGIC;
+    M01_AXI_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    M01_AXI_wvalid : out STD_LOGIC;
+    M01_AXI_wready : in STD_LOGIC;
+    M01_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M01_AXI_bvalid : in STD_LOGIC;
+    M01_AXI_bready : out STD_LOGIC;
+    M01_AXI_araddr : out STD_LOGIC_VECTOR ( 10 downto 0 );
+    M01_AXI_arprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    M01_AXI_arvalid : out STD_LOGIC;
+    M01_AXI_arready : in STD_LOGIC;
+    M01_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    M01_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    M01_AXI_rvalid : in STD_LOGIC;
+    M01_AXI_rready : out STD_LOGIC
   );
   end component design_ps_pl_axi_smc_0;
   component design_ps_pl_processing_system7_0_0 is
@@ -269,6 +294,43 @@ architecture STRUCTURE of PS_BRAM_imp_1XS9KR3 is
     peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_ps_pl_rst_ps7_0_100M_0;
+  component design_ps_pl_xadc_wiz_0_0 is
+  port (
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC;
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awready : out STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_wready : out STD_LOGIC;
+    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bvalid : out STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 10 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    s_axi_arready : out STD_LOGIC;
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_rvalid : out STD_LOGIC;
+    s_axi_rready : in STD_LOGIC;
+    ip2intc_irpt : out STD_LOGIC;
+    vp_in : in STD_LOGIC;
+    vn_in : in STD_LOGIC;
+    vauxp1 : in STD_LOGIC;
+    vauxn1 : in STD_LOGIC;
+    vauxp6 : in STD_LOGIC;
+    vauxn6 : in STD_LOGIC;
+    vauxp9 : in STD_LOGIC;
+    vauxn9 : in STD_LOGIC;
+    channel_out : out STD_LOGIC_VECTOR ( 4 downto 0 );
+    eoc_out : out STD_LOGIC;
+    alarm_out : out STD_LOGIC;
+    eos_out : out STD_LOGIC;
+    busy_out : out STD_LOGIC
+  );
+  end component design_ps_pl_xadc_wiz_0_0;
   signal BRAM_PORTB_0_1_ADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal BRAM_PORTB_0_1_CLK : STD_LOGIC;
   signal BRAM_PORTB_0_1_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -276,6 +338,12 @@ architecture STRUCTURE of PS_BRAM_imp_1XS9KR3 is
   signal BRAM_PORTB_0_1_EN : STD_LOGIC;
   signal BRAM_PORTB_0_1_RST : STD_LOGIC;
   signal BRAM_PORTB_0_1_WE : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Conn1_V_N : STD_LOGIC;
+  signal Conn1_V_P : STD_LOGIC;
+  signal Conn2_V_N : STD_LOGIC;
+  signal Conn2_V_P : STD_LOGIC;
+  signal Conn3_V_N : STD_LOGIC;
+  signal Conn3_V_P : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_ADDR : STD_LOGIC_VECTOR ( 12 downto 0 );
   signal axi_bram_ctrl_0_BRAM_PORTA_CLK : STD_LOGIC;
   signal axi_bram_ctrl_0_BRAM_PORTA_DIN : STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -314,6 +382,23 @@ architecture STRUCTURE of PS_BRAM_imp_1XS9KR3 is
   signal axi_smc_M00_AXI_WREADY : STD_LOGIC;
   signal axi_smc_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal axi_smc_M00_AXI_WVALID : STD_LOGIC;
+  signal axi_smc_M01_AXI_ARADDR : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal axi_smc_M01_AXI_ARREADY : STD_LOGIC;
+  signal axi_smc_M01_AXI_ARVALID : STD_LOGIC;
+  signal axi_smc_M01_AXI_AWADDR : STD_LOGIC_VECTOR ( 10 downto 0 );
+  signal axi_smc_M01_AXI_AWREADY : STD_LOGIC;
+  signal axi_smc_M01_AXI_AWVALID : STD_LOGIC;
+  signal axi_smc_M01_AXI_BREADY : STD_LOGIC;
+  signal axi_smc_M01_AXI_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal axi_smc_M01_AXI_BVALID : STD_LOGIC;
+  signal axi_smc_M01_AXI_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_smc_M01_AXI_RREADY : STD_LOGIC;
+  signal axi_smc_M01_AXI_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal axi_smc_M01_AXI_RVALID : STD_LOGIC;
+  signal axi_smc_M01_AXI_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal axi_smc_M01_AXI_WREADY : STD_LOGIC;
+  signal axi_smc_M01_AXI_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal axi_smc_M01_AXI_WVALID : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal processing_system7_0_DDR_CAS_N : STD_LOGIC;
@@ -378,6 +463,8 @@ architecture STRUCTURE of PS_BRAM_imp_1XS9KR3 is
   signal rst_ps7_0_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_axi_smc_M00_AXI_arqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_axi_smc_M00_AXI_awqos_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_axi_smc_M01_AXI_arprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal NLW_axi_smc_M01_AXI_awprot_UNCONNECTED : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal NLW_blk_mem_gen_0_rsta_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_blk_mem_gen_0_rstb_busy_UNCONNECTED : STD_LOGIC;
   signal NLW_processing_system7_0_USB0_VBUS_PWRSELECT_UNCONNECTED : STD_LOGIC;
@@ -386,6 +473,12 @@ architecture STRUCTURE of PS_BRAM_imp_1XS9KR3 is
   signal NLW_rst_ps7_0_100M_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_xadc_wiz_0_alarm_out_UNCONNECTED : STD_LOGIC;
+  signal NLW_xadc_wiz_0_busy_out_UNCONNECTED : STD_LOGIC;
+  signal NLW_xadc_wiz_0_eoc_out_UNCONNECTED : STD_LOGIC;
+  signal NLW_xadc_wiz_0_eos_out_UNCONNECTED : STD_LOGIC;
+  signal NLW_xadc_wiz_0_ip2intc_irpt_UNCONNECTED : STD_LOGIC;
+  signal NLW_xadc_wiz_0_channel_out_UNCONNECTED : STD_LOGIC_VECTOR ( 4 downto 0 );
   attribute BMM_INFO_ADDRESS_SPACE : string;
   attribute BMM_INFO_ADDRESS_SPACE of axi_bram_ctrl_0 : label is "byte  0x40000000 32 > design_ps_pl PS_BRAM/blk_mem_gen_0";
   attribute KEEP_HIERARCHY : string;
@@ -401,6 +494,12 @@ begin
   BRAM_PORTB_0_1_RST <= BRAM_PORTB_0_rst;
   BRAM_PORTB_0_1_WE(3 downto 0) <= BRAM_PORTB_0_we(3 downto 0);
   BRAM_PORTB_0_dout(31 downto 0) <= BRAM_PORTB_0_1_DOUT(31 downto 0);
+  Conn1_V_N <= Vaux1_v_n;
+  Conn1_V_P <= Vaux1_v_p;
+  Conn2_V_N <= Vaux6_v_n;
+  Conn2_V_P <= Vaux6_v_p;
+  Conn3_V_N <= Vaux9_v_n;
+  Conn3_V_P <= Vaux9_v_p;
 axi_bram_ctrl_0: component design_ps_pl_axi_bram_ctrl_0_0
      port map (
       bram_addr_a(12 downto 0) => axi_bram_ctrl_0_BRAM_PORTA_ADDR(12 downto 0),
@@ -479,6 +578,25 @@ axi_smc: component design_ps_pl_axi_smc_0
       M00_AXI_wready => axi_smc_M00_AXI_WREADY,
       M00_AXI_wstrb(3 downto 0) => axi_smc_M00_AXI_WSTRB(3 downto 0),
       M00_AXI_wvalid => axi_smc_M00_AXI_WVALID,
+      M01_AXI_araddr(10 downto 0) => axi_smc_M01_AXI_ARADDR(10 downto 0),
+      M01_AXI_arprot(2 downto 0) => NLW_axi_smc_M01_AXI_arprot_UNCONNECTED(2 downto 0),
+      M01_AXI_arready => axi_smc_M01_AXI_ARREADY,
+      M01_AXI_arvalid => axi_smc_M01_AXI_ARVALID,
+      M01_AXI_awaddr(10 downto 0) => axi_smc_M01_AXI_AWADDR(10 downto 0),
+      M01_AXI_awprot(2 downto 0) => NLW_axi_smc_M01_AXI_awprot_UNCONNECTED(2 downto 0),
+      M01_AXI_awready => axi_smc_M01_AXI_AWREADY,
+      M01_AXI_awvalid => axi_smc_M01_AXI_AWVALID,
+      M01_AXI_bready => axi_smc_M01_AXI_BREADY,
+      M01_AXI_bresp(1 downto 0) => axi_smc_M01_AXI_BRESP(1 downto 0),
+      M01_AXI_bvalid => axi_smc_M01_AXI_BVALID,
+      M01_AXI_rdata(31 downto 0) => axi_smc_M01_AXI_RDATA(31 downto 0),
+      M01_AXI_rready => axi_smc_M01_AXI_RREADY,
+      M01_AXI_rresp(1 downto 0) => axi_smc_M01_AXI_RRESP(1 downto 0),
+      M01_AXI_rvalid => axi_smc_M01_AXI_RVALID,
+      M01_AXI_wdata(31 downto 0) => axi_smc_M01_AXI_WDATA(31 downto 0),
+      M01_AXI_wready => axi_smc_M01_AXI_WREADY,
+      M01_AXI_wstrb(3 downto 0) => axi_smc_M01_AXI_WSTRB(3 downto 0),
+      M01_AXI_wvalid => axi_smc_M01_AXI_WVALID,
       S00_AXI_araddr(31 downto 0) => processing_system7_0_M_AXI_GP0_ARADDR(31 downto 0),
       S00_AXI_arburst(1 downto 0) => processing_system7_0_M_AXI_GP0_ARBURST(1 downto 0),
       S00_AXI_arcache(3 downto 0) => processing_system7_0_M_AXI_GP0_ARCACHE(3 downto 0),
@@ -621,6 +739,42 @@ rst_ps7_0_100M: component design_ps_pl_rst_ps7_0_100M_0
       peripheral_reset(0) => NLW_rst_ps7_0_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => processing_system7_0_FCLK_CLK0
     );
+xadc_wiz_0: component design_ps_pl_xadc_wiz_0_0
+     port map (
+      alarm_out => NLW_xadc_wiz_0_alarm_out_UNCONNECTED,
+      busy_out => NLW_xadc_wiz_0_busy_out_UNCONNECTED,
+      channel_out(4 downto 0) => NLW_xadc_wiz_0_channel_out_UNCONNECTED(4 downto 0),
+      eoc_out => NLW_xadc_wiz_0_eoc_out_UNCONNECTED,
+      eos_out => NLW_xadc_wiz_0_eos_out_UNCONNECTED,
+      ip2intc_irpt => NLW_xadc_wiz_0_ip2intc_irpt_UNCONNECTED,
+      s_axi_aclk => processing_system7_0_FCLK_CLK0,
+      s_axi_araddr(10 downto 0) => axi_smc_M01_AXI_ARADDR(10 downto 0),
+      s_axi_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),
+      s_axi_arready => axi_smc_M01_AXI_ARREADY,
+      s_axi_arvalid => axi_smc_M01_AXI_ARVALID,
+      s_axi_awaddr(10 downto 0) => axi_smc_M01_AXI_AWADDR(10 downto 0),
+      s_axi_awready => axi_smc_M01_AXI_AWREADY,
+      s_axi_awvalid => axi_smc_M01_AXI_AWVALID,
+      s_axi_bready => axi_smc_M01_AXI_BREADY,
+      s_axi_bresp(1 downto 0) => axi_smc_M01_AXI_BRESP(1 downto 0),
+      s_axi_bvalid => axi_smc_M01_AXI_BVALID,
+      s_axi_rdata(31 downto 0) => axi_smc_M01_AXI_RDATA(31 downto 0),
+      s_axi_rready => axi_smc_M01_AXI_RREADY,
+      s_axi_rresp(1 downto 0) => axi_smc_M01_AXI_RRESP(1 downto 0),
+      s_axi_rvalid => axi_smc_M01_AXI_RVALID,
+      s_axi_wdata(31 downto 0) => axi_smc_M01_AXI_WDATA(31 downto 0),
+      s_axi_wready => axi_smc_M01_AXI_WREADY,
+      s_axi_wstrb(3 downto 0) => axi_smc_M01_AXI_WSTRB(3 downto 0),
+      s_axi_wvalid => axi_smc_M01_AXI_WVALID,
+      vauxn1 => Conn1_V_N,
+      vauxn6 => Conn2_V_N,
+      vauxn9 => Conn3_V_N,
+      vauxp1 => Conn1_V_P,
+      vauxp6 => Conn2_V_P,
+      vauxp9 => Conn3_V_P,
+      vn_in => '0',
+      vp_in => '0'
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -649,11 +803,17 @@ entity design_ps_pl is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    Vaux1_v_n : in STD_LOGIC;
+    Vaux1_v_p : in STD_LOGIC;
+    Vaux6_v_n : in STD_LOGIC;
+    Vaux6_v_p : in STD_LOGIC;
+    Vaux9_v_n : in STD_LOGIC;
+    Vaux9_v_p : in STD_LOGIC;
     data_led : out STD_LOGIC_VECTOR ( 3 downto 0 );
     sys_clk : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_ps_pl : entity is "design_ps_pl,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ps_pl,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=7,numReposBlks=6,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_ps_pl : entity is "design_ps_pl,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_ps_pl,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=8,numReposBlks=7,numNonXlnxBlks=0,numHierBlks=1,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=1,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_ps_pl : entity is "design_ps_pl.hwdef";
 end design_ps_pl;
@@ -677,6 +837,12 @@ architecture STRUCTURE of design_ps_pl is
   signal PL_0_BRAM_PORTB_0_addr : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal PL_0_BRAM_PORTB_0_en : STD_LOGIC;
   signal PL_0_data_out : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Vaux1_1_V_N : STD_LOGIC;
+  signal Vaux1_1_V_P : STD_LOGIC;
+  signal Vaux6_1_V_N : STD_LOGIC;
+  signal Vaux6_1_V_P : STD_LOGIC;
+  signal Vaux9_1_V_N : STD_LOGIC;
+  signal Vaux9_1_V_P : STD_LOGIC;
   signal clk_125MHz_0_1 : STD_LOGIC;
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
   signal processing_system7_0_DDR_BA : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -717,6 +883,12 @@ architecture STRUCTURE of design_ps_pl is
   attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute X_INTERFACE_INFO of Vaux1_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux1 V_N";
+  attribute X_INTERFACE_INFO of Vaux1_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux1 V_P";
+  attribute X_INTERFACE_INFO of Vaux6_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux6 V_N";
+  attribute X_INTERFACE_INFO of Vaux6_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux6 V_P";
+  attribute X_INTERFACE_INFO of Vaux9_v_n : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux9 V_N";
+  attribute X_INTERFACE_INFO of Vaux9_v_p : signal is "xilinx.com:interface:diff_analog_io:1.0 Vaux9 V_P";
   attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
@@ -726,6 +898,12 @@ architecture STRUCTURE of design_ps_pl is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
+  Vaux1_1_V_N <= Vaux1_v_n;
+  Vaux1_1_V_P <= Vaux1_v_p;
+  Vaux6_1_V_N <= Vaux6_v_n;
+  Vaux6_1_V_P <= Vaux6_v_p;
+  Vaux9_1_V_N <= Vaux9_v_n;
+  Vaux9_1_V_P <= Vaux9_v_p;
   clk_125MHz_0_1 <= sys_clk;
   data_led(3 downto 0) <= PL_0_data_out(3 downto 0);
 PL_BRAM_read: component design_ps_pl_PL_0_0
@@ -768,6 +946,12 @@ PS_BRAM: entity work.PS_BRAM_imp_1XS9KR3
       FIXED_IO_mio(53 downto 0) => FIXED_IO_mio(53 downto 0),
       FIXED_IO_ps_clk => FIXED_IO_ps_clk,
       FIXED_IO_ps_porb => FIXED_IO_ps_porb,
-      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb
+      FIXED_IO_ps_srstb => FIXED_IO_ps_srstb,
+      Vaux1_v_n => Vaux1_1_V_N,
+      Vaux1_v_p => Vaux1_1_V_P,
+      Vaux6_v_n => Vaux6_1_V_N,
+      Vaux6_v_p => Vaux6_1_V_P,
+      Vaux9_v_n => Vaux9_1_V_N,
+      Vaux9_v_p => Vaux9_1_V_P
     );
 end STRUCTURE;

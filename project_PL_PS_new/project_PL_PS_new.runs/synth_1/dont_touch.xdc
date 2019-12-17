@@ -24,4 +24,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_rs
 # IP: bd/design_ps_pl/ip/design_ps_pl_PL_0_0/design_ps_pl_PL_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_PL_0_0 || ORIG_REF_NAME==design_ps_pl_PL_0_0} -quiet] -quiet
 
+# IP: bd/design_ps_pl/ip/design_ps_pl_xadc_wiz_0_0/design_ps_pl_xadc_wiz_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_xadc_wiz_0_0 || ORIG_REF_NAME==design_ps_pl_xadc_wiz_0_0} -quiet] -quiet
+
 # XDC: bd/design_ps_pl/design_ps_pl_ooc.xdc

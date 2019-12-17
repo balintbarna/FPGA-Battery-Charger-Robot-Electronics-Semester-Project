@@ -1,11 +1,11 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xC05F76B6CA50C545",
+      "boundary_crc": "0x7EDC2E6CBDE72F1F",
       "device": "xc7z020clg400-1",
       "name": "design_ps_pl",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1.1",
+      "tool_version": "2019.1",
       "validated": "true"
     },
     "design_tree": {
@@ -14,7 +14,8 @@
         "axi_smc": "",
         "processing_system7_0": "",
         "blk_mem_gen_0": "",
-        "rst_ps7_0_100M": ""
+        "rst_ps7_0_100M": "",
+        "xadc_wiz_0": ""
       },
       "PL_BRAM_read": ""
     },
@@ -107,6 +108,18 @@
             "value_src": "default"
           }
         }
+      },
+      "Vaux1": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
+      },
+      "Vaux6": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
+      },
+      "Vaux9": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
       }
     },
     "ports": {
@@ -133,6 +146,18 @@
           "BRAM_PORTB_0": {
             "mode": "Slave",
             "vlnv": "xilinx.com:interface:bram_rtl:1.0"
+          },
+          "Vaux1": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
+          },
+          "Vaux6": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
+          },
+          "Vaux9": {
+            "mode": "Slave",
+            "vlnv": "xilinx.com:interface:diff_analog_io_rtl:1.0"
           }
         },
         "components": {
@@ -159,6 +184,9 @@
             "vlnv": "xilinx.com:ip:smartconnect:1.0",
             "xci_name": "design_ps_pl_axi_smc_0",
             "parameters": {
+              "NUM_MI": {
+                "value": "2"
+              },
               "NUM_SI": {
                 "value": "1"
               }
@@ -168,10 +196,15 @@
                 "mode": "Slave",
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
                 "bridges": [
-                  "M00_AXI"
+                  "M00_AXI",
+                  "M01_AXI"
                 ]
               },
               "M00_AXI": {
+                "mode": "Master",
+                "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
+              },
+              "M01_AXI": {
                 "mode": "Master",
                 "vlnv": "xilinx.com:interface:aximm_rtl:1.0"
               }
@@ -1795,19 +1828,73 @@
           "rst_ps7_0_100M": {
             "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
             "xci_name": "design_ps_pl_rst_ps7_0_100M_0"
+          },
+          "xadc_wiz_0": {
+            "vlnv": "xilinx.com:ip:xadc_wiz:3.3",
+            "xci_name": "design_ps_pl_xadc_wiz_0_0",
+            "parameters": {
+              "CHANNEL_AVERAGING": {
+                "value": "16"
+              },
+              "CHANNEL_ENABLE_VAUXP1_VAUXN1": {
+                "value": "true"
+              },
+              "CHANNEL_ENABLE_VAUXP6_VAUXN6": {
+                "value": "true"
+              },
+              "CHANNEL_ENABLE_VAUXP9_VAUXN9": {
+                "value": "true"
+              },
+              "CHANNEL_ENABLE_VP_VN": {
+                "value": "true"
+              },
+              "ENABLE_VCCDDRO_ALARM": {
+                "value": "false"
+              },
+              "ENABLE_VCCPAUX_ALARM": {
+                "value": "false"
+              },
+              "ENABLE_VCCPINT_ALARM": {
+                "value": "false"
+              },
+              "EXTERNAL_MUX_CHANNEL": {
+                "value": "VP_VN"
+              },
+              "OT_ALARM": {
+                "value": "false"
+              },
+              "SEQUENCER_MODE": {
+                "value": "Continuous"
+              },
+              "SINGLE_CHANNEL_SELECTION": {
+                "value": "TEMPERATURE"
+              },
+              "USER_TEMP_ALARM": {
+                "value": "false"
+              },
+              "VCCAUX_ALARM": {
+                "value": "false"
+              },
+              "VCCINT_ALARM": {
+                "value": "false"
+              },
+              "XADC_STARUP_SELECTION": {
+                "value": "channel_sequencer"
+              }
+            }
           }
         },
         "interface_nets": {
-          "axi_bram_ctrl_0_BRAM_PORTA": {
+          "Conn3": {
             "interface_ports": [
-              "axi_bram_ctrl_0/BRAM_PORTA",
-              "blk_mem_gen_0/BRAM_PORTA"
+              "Vaux9",
+              "xadc_wiz_0/Vaux9"
             ]
           },
-          "processing_system7_0_M_AXI_GP0": {
+          "axi_smc_M01_AXI": {
             "interface_ports": [
-              "processing_system7_0/M_AXI_GP0",
-              "axi_smc/S00_AXI"
+              "axi_smc/M01_AXI",
+              "xadc_wiz_0/s_axi_lite"
             ]
           },
           "axi_smc_M00_AXI": {
@@ -1820,6 +1907,30 @@
             "interface_ports": [
               "DDR",
               "processing_system7_0/DDR"
+            ]
+          },
+          "processing_system7_0_M_AXI_GP0": {
+            "interface_ports": [
+              "processing_system7_0/M_AXI_GP0",
+              "axi_smc/S00_AXI"
+            ]
+          },
+          "axi_bram_ctrl_0_BRAM_PORTA": {
+            "interface_ports": [
+              "axi_bram_ctrl_0/BRAM_PORTA",
+              "blk_mem_gen_0/BRAM_PORTA"
+            ]
+          },
+          "Conn1": {
+            "interface_ports": [
+              "Vaux1",
+              "xadc_wiz_0/Vaux1"
+            ]
+          },
+          "Conn2": {
+            "interface_ports": [
+              "Vaux6",
+              "xadc_wiz_0/Vaux6"
             ]
           },
           "processing_system7_0_FIXED_IO": {
@@ -1842,14 +1953,16 @@
               "processing_system7_0/M_AXI_GP0_ACLK",
               "axi_smc/aclk",
               "axi_bram_ctrl_0/s_axi_aclk",
-              "rst_ps7_0_100M/slowest_sync_clk"
+              "rst_ps7_0_100M/slowest_sync_clk",
+              "xadc_wiz_0/s_axi_aclk"
             ]
           },
           "rst_ps7_0_100M_peripheral_aresetn": {
             "ports": [
               "rst_ps7_0_100M/peripheral_aresetn",
               "axi_bram_ctrl_0/s_axi_aresetn",
-              "axi_smc/aresetn"
+              "axi_smc/aresetn",
+              "xadc_wiz_0/s_axi_aresetn"
             ]
           },
           "processing_system7_0_FCLK_RESET0_N": {
@@ -1908,22 +2021,40 @@
       }
     },
     "interface_nets": {
-      "BRAM_PORTB_0_1": {
-        "interface_ports": [
-          "BRAM_PORTB_0",
-          "PS_BRAM/BRAM_PORTB_0"
-        ]
-      },
       "processing_system7_0_DDR": {
         "interface_ports": [
           "DDR",
           "PS_BRAM/DDR"
         ]
       },
+      "Vaux6_1": {
+        "interface_ports": [
+          "Vaux6",
+          "PS_BRAM/Vaux6"
+        ]
+      },
+      "BRAM_PORTB_0_1": {
+        "interface_ports": [
+          "BRAM_PORTB_0",
+          "PS_BRAM/BRAM_PORTB_0"
+        ]
+      },
       "processing_system7_0_FIXED_IO": {
         "interface_ports": [
           "FIXED_IO",
           "PS_BRAM/FIXED_IO"
+        ]
+      },
+      "Vaux9_1": {
+        "interface_ports": [
+          "Vaux9",
+          "PS_BRAM/Vaux9"
+        ]
+      },
+      "Vaux1_1": {
+        "interface_ports": [
+          "Vaux1",
+          "PS_BRAM/Vaux1"
         ]
       }
     },
@@ -1989,6 +2120,11 @@
                 "address_block": "/PS_BRAM/axi_bram_ctrl_0/S_AXI/Mem0",
                 "offset": "0x40000000",
                 "range": "8K"
+              },
+              "SEG_xadc_wiz_0_Reg": {
+                "address_block": "/PS_BRAM/xadc_wiz_0/s_axi_lite/Reg",
+                "offset": "0x43C00000",
+                "range": "64K"
               }
             }
           }

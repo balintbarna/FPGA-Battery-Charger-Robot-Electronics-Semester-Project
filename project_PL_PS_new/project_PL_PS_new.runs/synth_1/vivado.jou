@@ -1,12 +1,12 @@
 #-----------------------------------------------------------
-# Vivado v2019.1.1 (64-bit)
-# SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
-# IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
-# Start of session at: Mon Nov  4 15:55:24 2019
-# Process ID: 64104
-# Current directory: C:/Avnet/project_PL_PS_new/project_PL_PS_new.runs/synth_1
-# Command line: vivado.exe -log design_ps_pl_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ps_pl_wrapper.tcl
-# Log file: C:/Avnet/project_PL_PS_new/project_PL_PS_new.runs/synth_1/design_ps_pl_wrapper.vds
-# Journal file: C:/Avnet/project_PL_PS_new/project_PL_PS_new.runs/synth_1\vivado.jou
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Dec 17 14:19:36 2019
+# Process ID: 2476
+# Current directory: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1
+# Command line: vivado -log design_ps_pl_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ps_pl_wrapper.tcl
+# Log file: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/design_ps_pl_wrapper.vds
+# Journal file: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_ps_pl_wrapper.tcl -notrace

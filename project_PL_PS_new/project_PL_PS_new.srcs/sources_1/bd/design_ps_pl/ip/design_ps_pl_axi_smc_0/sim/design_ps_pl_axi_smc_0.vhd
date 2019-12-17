@@ -127,7 +127,26 @@ ENTITY design_ps_pl_axi_smc_0 IS
     M00_AXI_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     M00_AXI_rlast : IN STD_LOGIC;
     M00_AXI_rvalid : IN STD_LOGIC;
-    M00_AXI_rready : OUT STD_LOGIC
+    M00_AXI_rready : OUT STD_LOGIC;
+    M01_AXI_awaddr : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+    M01_AXI_awprot : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    M01_AXI_awvalid : OUT STD_LOGIC;
+    M01_AXI_awready : IN STD_LOGIC;
+    M01_AXI_wdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    M01_AXI_wstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    M01_AXI_wvalid : OUT STD_LOGIC;
+    M01_AXI_wready : IN STD_LOGIC;
+    M01_AXI_bresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    M01_AXI_bvalid : IN STD_LOGIC;
+    M01_AXI_bready : OUT STD_LOGIC;
+    M01_AXI_araddr : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+    M01_AXI_arprot : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+    M01_AXI_arvalid : OUT STD_LOGIC;
+    M01_AXI_arready : IN STD_LOGIC;
+    M01_AXI_rdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    M01_AXI_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+    M01_AXI_rvalid : IN STD_LOGIC;
+    M01_AXI_rready : OUT STD_LOGIC
   );
 END design_ps_pl_axi_smc_0;
 
@@ -208,11 +227,51 @@ ARCHITECTURE design_ps_pl_axi_smc_0_arch OF design_ps_pl_axi_smc_0 IS
       M00_AXI_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       M00_AXI_rlast : IN STD_LOGIC;
       M00_AXI_rvalid : IN STD_LOGIC;
-      M00_AXI_rready : OUT STD_LOGIC
+      M00_AXI_rready : OUT STD_LOGIC;
+      M01_AXI_awaddr : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+      M01_AXI_awprot : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+      M01_AXI_awvalid : OUT STD_LOGIC;
+      M01_AXI_awready : IN STD_LOGIC;
+      M01_AXI_wdata : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      M01_AXI_wstrb : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      M01_AXI_wvalid : OUT STD_LOGIC;
+      M01_AXI_wready : IN STD_LOGIC;
+      M01_AXI_bresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+      M01_AXI_bvalid : IN STD_LOGIC;
+      M01_AXI_bready : OUT STD_LOGIC;
+      M01_AXI_araddr : OUT STD_LOGIC_VECTOR(10 DOWNTO 0);
+      M01_AXI_arprot : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+      M01_AXI_arvalid : OUT STD_LOGIC;
+      M01_AXI_arready : IN STD_LOGIC;
+      M01_AXI_rdata : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      M01_AXI_rresp : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
+      M01_AXI_rvalid : IN STD_LOGIC;
+      M01_AXI_rready : OUT STD_LOGIC
     );
   END COMPONENT bd_de28;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI RREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI RVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_rresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI RRESP";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_rdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI RDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_arready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI ARREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_arvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI ARVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_arprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI ARPROT";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_araddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI ARADDR";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_bready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI BREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_bvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI BVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_bresp: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI BRESP";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_wready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI WREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_wvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI WVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_wstrb: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI WSTRB";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_wdata: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI WDATA";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_awready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI AWREADY";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_awvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI AWVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_awprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI AWPROT";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF M01_AXI_awaddr: SIGNAL IS "XIL_INTERFACENAME M01_AXI, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 11, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 1, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 8, NUM_WRITE_OUTSTANDING 8, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_ps_pl_processing_system7_0_0_FCLK_CLK0, NUM_READ_" & 
+"THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF M01_AXI_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 M01_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_INFO OF M00_AXI_rready: SIGNAL IS "xilinx.com:interface:aximm:1.0 M00_AXI RREADY";
   ATTRIBUTE X_INTERFACE_INFO OF M00_AXI_rvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 M00_AXI RVALID";
   ATTRIBUTE X_INTERFACE_INFO OF M00_AXI_rlast: SIGNAL IS "xilinx.com:interface:aximm:1.0 M00_AXI RLAST";
@@ -290,7 +349,7 @@ ARCHITECTURE design_ps_pl_axi_smc_0_arch OF design_ps_pl_axi_smc_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF S00_AXI_awid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWID";
   ATTRIBUTE X_INTERFACE_PARAMETER OF aresetn: SIGNAL IS "XIL_INTERFACENAME RST.aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF aresetn: SIGNAL IS "xilinx.com:signal:reset:1.0 RST.aresetn RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF aclk: SIGNAL IS "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_ps_pl_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF M00_AXI:S00_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN s_sc_aclken";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF aclk: SIGNAL IS "XIL_INTERFACENAME CLK.aclk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_ps_pl_processing_system7_0_0_FCLK_CLK0, ASSOCIATED_BUSIF M00_AXI:M01_AXI:S00_AXI, INSERT_VIP 0, ASSOCIATED_CLKEN m_sc_aclken";
   ATTRIBUTE X_INTERFACE_INFO OF aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 CLK.aclk CLK";
 BEGIN
   U0 : bd_de28
@@ -367,6 +426,25 @@ BEGIN
       M00_AXI_rresp => M00_AXI_rresp,
       M00_AXI_rlast => M00_AXI_rlast,
       M00_AXI_rvalid => M00_AXI_rvalid,
-      M00_AXI_rready => M00_AXI_rready
+      M00_AXI_rready => M00_AXI_rready,
+      M01_AXI_awaddr => M01_AXI_awaddr,
+      M01_AXI_awprot => M01_AXI_awprot,
+      M01_AXI_awvalid => M01_AXI_awvalid,
+      M01_AXI_awready => M01_AXI_awready,
+      M01_AXI_wdata => M01_AXI_wdata,
+      M01_AXI_wstrb => M01_AXI_wstrb,
+      M01_AXI_wvalid => M01_AXI_wvalid,
+      M01_AXI_wready => M01_AXI_wready,
+      M01_AXI_bresp => M01_AXI_bresp,
+      M01_AXI_bvalid => M01_AXI_bvalid,
+      M01_AXI_bready => M01_AXI_bready,
+      M01_AXI_araddr => M01_AXI_araddr,
+      M01_AXI_arprot => M01_AXI_arprot,
+      M01_AXI_arvalid => M01_AXI_arvalid,
+      M01_AXI_arready => M01_AXI_arready,
+      M01_AXI_rdata => M01_AXI_rdata,
+      M01_AXI_rresp => M01_AXI_rresp,
+      M01_AXI_rvalid => M01_AXI_rvalid,
+      M01_AXI_rready => M01_AXI_rready
     );
 END design_ps_pl_axi_smc_0_arch;
