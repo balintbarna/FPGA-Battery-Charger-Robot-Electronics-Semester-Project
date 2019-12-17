@@ -62,7 +62,11 @@ ENTITY design_ps_pl_PL_0_0 IS
     BRAM_PORTB_0_din : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     BRAM_PORTB_0_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     BRAM_PORTB_0_we : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    PID_forward : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    enable : OUT STD_LOGIC;
+    now_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    set_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END design_ps_pl_PL_0_0;
 
@@ -78,7 +82,11 @@ ARCHITECTURE design_ps_pl_PL_0_0_arch OF design_ps_pl_PL_0_0 IS
       BRAM_PORTB_0_din : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       BRAM_PORTB_0_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       BRAM_PORTB_0_we : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+      data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      PID_forward : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+      enable : OUT STD_LOGIC;
+      now_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      set_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT PL;
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
@@ -97,6 +105,10 @@ BEGIN
       BRAM_PORTB_0_din => BRAM_PORTB_0_din,
       BRAM_PORTB_0_addr => BRAM_PORTB_0_addr,
       BRAM_PORTB_0_we => BRAM_PORTB_0_we,
-      data_out => data_out
+      data_out => data_out,
+      PID_forward => PID_forward,
+      enable => enable,
+      now_current => now_current,
+      set_current => set_current
     );
 END design_ps_pl_PL_0_0_arch;

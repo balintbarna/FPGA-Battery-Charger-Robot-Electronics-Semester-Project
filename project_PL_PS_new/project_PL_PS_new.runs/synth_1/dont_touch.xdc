@@ -27,4 +27,25 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_PL
 # IP: bd/design_ps_pl/ip/design_ps_pl_xadc_wiz_0_0/design_ps_pl_xadc_wiz_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_xadc_wiz_0_0 || ORIG_REF_NAME==design_ps_pl_xadc_wiz_0_0} -quiet] -quiet
 
+# IP: bd/design_ps_pl/ip/design_ps_pl_PID_0_0/design_ps_pl_PID_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_PID_0_0 || ORIG_REF_NAME==design_ps_pl_PID_0_0} -quiet] -quiet
+
+# IP: bd/design_ps_pl/ip/design_ps_pl_xlconstant_0_0/design_ps_pl_xlconstant_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_xlconstant_0_0 || ORIG_REF_NAME==design_ps_pl_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/design_ps_pl/ip/design_ps_pl_xlconstant_1_0/design_ps_pl_xlconstant_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_xlconstant_1_0 || ORIG_REF_NAME==design_ps_pl_xlconstant_1_0} -quiet] -quiet
+
+# IP: bd/design_ps_pl/ip/design_ps_pl_counter_12_0_1/design_ps_pl_counter_12_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_counter_12_0_1 || ORIG_REF_NAME==design_ps_pl_counter_12_0_1} -quiet] -quiet
+
+# IP: bd/design_ps_pl/ip/design_ps_pl_inverter_0_2/design_ps_pl_inverter_0_2.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_inverter_0_2 || ORIG_REF_NAME==design_ps_pl_inverter_0_2} -quiet] -quiet
+
+# IP: bd/design_ps_pl/ip/design_ps_pl_comparator_12_0_1/design_ps_pl_comparator_12_0_1.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_comparator_12_0_1 || ORIG_REF_NAME==design_ps_pl_comparator_12_0_1} -quiet] -quiet
+
+# IP: bd/design_ps_pl/ip/design_ps_pl_read_clk_0_0/design_ps_pl_read_clk_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_ps_pl_read_clk_0_0 || ORIG_REF_NAME==design_ps_pl_read_clk_0_0} -quiet] -quiet
+
 # XDC: bd/design_ps_pl/design_ps_pl_ooc.xdc

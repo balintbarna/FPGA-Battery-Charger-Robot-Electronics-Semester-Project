@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# PL
+# PID, PL, read_clk, comparator_12, counter_12, inverter
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -128,6 +128,91 @@ if { $nRet != 0 } {
 # DESIGN PROCs
 ##################################################################
 
+
+# Hierarchical cell: PWM_12_mod
+proc create_hier_cell_PWM_12_mod { parentCell nameHier } {
+
+  variable script_folder
+
+  if { $parentCell eq "" || $nameHier eq "" } {
+     catch {common::send_msg_id "BD_TCL-102" "ERROR" "create_hier_cell_PWM_12_mod() - Empty argument(s)!"}
+     return
+  }
+
+  # Get object for parentCell
+  set parentObj [get_bd_cells $parentCell]
+  if { $parentObj == "" } {
+     catch {common::send_msg_id "BD_TCL-100" "ERROR" "Unable to find parent cell <$parentCell>!"}
+     return
+  }
+
+  # Make sure parentObj is hier blk
+  set parentType [get_property TYPE $parentObj]
+  if { $parentType ne "hier" } {
+     catch {common::send_msg_id "BD_TCL-101" "ERROR" "Parent <$parentObj> has TYPE = <$parentType>. Expected to be <hier>."}
+     return
+  }
+
+  # Save current instance; Restore later
+  set oldCurInst [current_bd_instance .]
+
+  # Set parent object as current
+  current_bd_instance $parentObj
+
+  # Create cell and set as current instance
+  set hier_obj [create_bd_cell -type hier $nameHier]
+  current_bd_instance $hier_obj
+
+  # Create interface pins
+
+  # Create pins
+  create_bd_pin -dir I -from 11 -to 0 b
+  create_bd_pin -dir O duty_signal
+  create_bd_pin -dir I -type clk sys_clk
+
+  # Create instance: comparator_12_0, and set properties
+  set block_name comparator_12
+  set block_cell_name comparator_12_0
+  if { [catch {set comparator_12_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $comparator_12_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: counter_12_0, and set properties
+  set block_name counter_12
+  set block_cell_name counter_12_0
+  if { [catch {set counter_12_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $counter_12_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: inverter_0, and set properties
+  set block_name inverter
+  set block_cell_name inverter_0
+  if { [catch {set inverter_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $inverter_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create port connections
+  connect_bd_net -net PID_0_outp [get_bd_pins b] [get_bd_pins comparator_12_0/b]
+  connect_bd_net -net clk_125MHz_0_1 [get_bd_pins sys_clk] [get_bd_pins counter_12_0/sys_clk]
+  connect_bd_net -net comparator_12_0_c [get_bd_pins comparator_12_0/c] [get_bd_pins inverter_0/a]
+  connect_bd_net -net counter_12_0_count [get_bd_pins comparator_12_0/a] [get_bd_pins counter_12_0/count]
+  connect_bd_net -net inverter_0_b [get_bd_pins duty_signal] [get_bd_pins inverter_0/b]
+
+  # Restore current instance
+  current_bd_instance $oldCurInst
+}
 
 # Hierarchical cell: PS_BRAM
 proc create_hier_cell_PS_BRAM { parentCell nameHier } {
@@ -1072,9 +1157,22 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
+  set clk_out_0 [ create_bd_port -dir O clk_out_0 ]
   set data_led [ create_bd_port -dir O -from 3 -to 0 data_led ]
+  set duty_signal [ create_bd_port -dir O duty_signal ]
   set sys_clk [ create_bd_port -dir I sys_clk ]
 
+  # Create instance: PID_0, and set properties
+  set block_name PID
+  set block_cell_name PID_0
+  if { [catch {set PID_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $PID_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create instance: PL_BRAM_read, and set properties
   set block_name PL
   set block_cell_name PL_BRAM_read
@@ -1089,6 +1187,29 @@ proc create_root_design { parentCell } {
   # Create instance: PS_BRAM
   create_hier_cell_PS_BRAM [current_bd_instance .] PS_BRAM
 
+  # Create instance: PWM_12_mod
+  create_hier_cell_PWM_12_mod [current_bd_instance .] PWM_12_mod
+
+  # Create instance: const_high, and set properties
+  set const_high [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 const_high ]
+
+  # Create instance: const_low, and set properties
+  set const_low [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 const_low ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+ ] $const_low
+
+  # Create instance: read_clk_0, and set properties
+  set block_name read_clk
+  set block_cell_name read_clk_0
+  if { [catch {set read_clk_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $read_clk_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
   # Create interface connections
   connect_bd_intf_net -intf_net BRAM_PORTB_0_1 [get_bd_intf_ports BRAM_PORTB_0] [get_bd_intf_pins PS_BRAM/BRAM_PORTB_0]
   connect_bd_intf_net -intf_net Vaux1_1 [get_bd_intf_ports Vaux1] [get_bd_intf_pins PS_BRAM/Vaux1]
@@ -1101,11 +1222,19 @@ proc create_root_design { parentCell } {
   connect_bd_net -net BRAM_PORTB_0_din_1 [get_bd_pins PL_BRAM_read/BRAM_PORTB_0_din] [get_bd_pins PS_BRAM/BRAM_PORTB_0_din]
   connect_bd_net -net BRAM_PORTB_0_rst_1 [get_bd_pins PL_BRAM_read/BRAM_PORTB_0_rst] [get_bd_pins PS_BRAM/BRAM_PORTB_0_rst]
   connect_bd_net -net BRAM_PORTB_0_we_1 [get_bd_pins PL_BRAM_read/BRAM_PORTB_0_we] [get_bd_pins PS_BRAM/BRAM_PORTB_0_we]
+  connect_bd_net -net PID_0_outp [get_bd_pins PID_0/outp] [get_bd_pins PL_BRAM_read/PID_forward] [get_bd_pins PWM_12_mod/b]
   connect_bd_net -net PL_0_BRAM_PORTB_0_addr [get_bd_pins PL_BRAM_read/BRAM_PORTB_0_addr] [get_bd_pins PS_BRAM/BRAM_PORTB_0_addr]
   connect_bd_net -net PL_0_BRAM_PORTB_0_en [get_bd_pins PL_BRAM_read/BRAM_PORTB_0_en] [get_bd_pins PS_BRAM/BRAM_PORTB_0_en]
   connect_bd_net -net PL_0_data_out [get_bd_ports data_led] [get_bd_pins PL_BRAM_read/data_out]
-  connect_bd_net -net clk_125MHz_0_1 [get_bd_ports sys_clk] [get_bd_pins PL_BRAM_read/clk_125MHz] [get_bd_pins PS_BRAM/BRAM_PORTB_0_clk]
+  connect_bd_net -net PL_BRAM_read_enable [get_bd_pins PID_0/en] [get_bd_pins PL_BRAM_read/enable]
+  connect_bd_net -net PL_BRAM_read_now_current [get_bd_pins PID_0/inp] [get_bd_pins PL_BRAM_read/now_current]
+  connect_bd_net -net PL_BRAM_read_set_current [get_bd_pins PID_0/sp] [get_bd_pins PL_BRAM_read/set_current]
+  connect_bd_net -net clk_125MHz_0_1 [get_bd_ports sys_clk] [get_bd_pins PID_0/clk] [get_bd_pins PL_BRAM_read/clk_125MHz] [get_bd_pins PS_BRAM/BRAM_PORTB_0_clk] [get_bd_pins PWM_12_mod/sys_clk] [get_bd_pins read_clk_0/clk_in]
+  connect_bd_net -net const_high_dout [get_bd_pins PID_0/i_en] [get_bd_pins const_high/dout]
+  connect_bd_net -net inverter_0_b [get_bd_ports duty_signal] [get_bd_pins PWM_12_mod/duty_signal]
   connect_bd_net -net ps_BRAM_PORTB_0_dout [get_bd_pins PL_BRAM_read/BRAM_PORTB_0_dout] [get_bd_pins PS_BRAM/BRAM_PORTB_0_dout]
+  connect_bd_net -net read_clk_0_clk_out [get_bd_ports clk_out_0] [get_bd_pins read_clk_0/clk_out]
+  connect_bd_net -net xlconstant_1_dout [get_bd_pins PID_0/d_en] [get_bd_pins PID_0/p_en] [get_bd_pins const_low/dout]
 
   # Create address segments
   create_bd_addr_seg -range 0x00002000 -offset 0x40000000 [get_bd_addr_spaces PS_BRAM/processing_system7_0/Data] [get_bd_addr_segs PS_BRAM/axi_bram_ctrl_0/S_AXI/Mem0] SEG_axi_bram_ctrl_0_Mem0

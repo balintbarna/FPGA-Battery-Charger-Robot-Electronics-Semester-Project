@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (lin64) Build 2552052 Fri May 24 14:47:09 MDT 2019
-| Date         : Tue Dec 17 14:21:41 2019
+| Date         : Tue Dec 17 21:45:05 2019
 | Host         : laptopJBO running 64-bit Ubuntu 18.04.3 LTS
 | Command      : report_methodology -file design_ps_pl_wrapper_methodology_drc_routed.rpt -pb design_ps_pl_wrapper_methodology_drc_routed.pb -rpx design_ps_pl_wrapper_methodology_drc_routed.rpx
 | Design       : design_ps_pl_wrapper
@@ -23,39 +23,114 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 5
-+-----------+----------+------------------------------------------------------------------+------------+
-| Rule      | Severity | Description                                                      | Violations |
-+-----------+----------+------------------------------------------------------------------+------------+
-| CKLD-2    | Warning  | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
-| TIMING-18 | Warning  | Missing input or output delay                                    | 4          |
-+-----------+----------+------------------------------------------------------------------+------------+
+             Violations found: 20
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| TIMING-16 | Warning  | Large setup violation         | 19         |
+| TIMING-18 | Warning  | Missing input or output delay | 1          |
++-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-CKLD-2#1 Warning
-Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net sys_clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): sys_clk_IBUF_inst/O, design_ps_pl_i/sys_clk
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -11.083 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[0]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -12.234 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[1]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -12.354 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[2]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -12.475 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[3]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -12.544 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[5]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -12.581 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[4]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -12.648 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[9]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -12.669 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[7]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -12.763 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[12]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -12.769 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[13]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -12.772 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[10]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -12.788 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[6]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -12.791 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[8]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -12.792 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[15]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -12.801 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[11]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -12.883 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[14]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#17 Warning
+Large setup violation  
+There is a large setup violation of -12.883 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[16]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#18 Warning
+Large setup violation  
+There is a large setup violation of -12.883 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[17]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#19 Warning
+Large setup violation  
+There is a large setup violation of -13.075 ns between design_ps_pl_i/PID_0/U0/integral_reg[0]/C (clocked by sys_clk_pin) and design_ps_pl_i/PID_0/U0/i_reg[31]/D (clocked by sys_clk_pin). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An output delay is missing on data_led[0] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#2 Warning
-Missing input or output delay  
-An output delay is missing on data_led[1] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#3 Warning
-Missing input or output delay  
-An output delay is missing on data_led[2] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#4 Warning
-Missing input or output delay  
-An output delay is missing on data_led[3] relative to clock(s) sys_clk_pin
+An output delay is missing on duty_signal relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 

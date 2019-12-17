@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # 
-# Start of session at: Mon Dec 16 12:25:59 2019
-# Process ID: 14923
-# Current directory: /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/webtalk
+# Start of session at: Tue Dec 17 16:53:12 2019
+# Process ID: 5775
+# Current directory: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.sdk/webtalk
 # Command line: wbtcv -mode batch -source sdk_webtalk.tcl
-# Log file: /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/webtalk/webtalk.log
-# Journal file: /home/johan/rob_ele/misc/project_PL_PS_new/project_PL_PS_new.sdk/webtalk/webtalk.jou
+# Log file: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.sdk/webtalk/webtalk.log
+# Journal file: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.sdk/webtalk/webtalk.jou
 #-----------------------------------------------------------
 source sdk_webtalk.tcl

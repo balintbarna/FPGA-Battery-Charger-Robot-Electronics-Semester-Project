@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1576588774">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1576615291">
   <File Type="VDS-TIMINGSUMMARY" Name="design_ps_pl_wrapper_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="design_ps_pl_wrapper.dcp"/>
   <File Type="RDS-UTIL-PB" Name="design_ps_pl_wrapper_utilization_synth.pb"/>
@@ -12,6 +12,36 @@
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/PL.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../PidController/pid.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/counter_12.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/inverter.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/comparator_12.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/read_clk.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -59,11 +89,16 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_PID_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_counter_12_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_comparator_12_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_PL_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_xadc_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_axi_smc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_PL_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_blk_mem_gen_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_read_clk_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_inverter_0_2"/>
   <BlockFileSet Type="BlockSrcs" Name="design_ps_pl_axi_bram_ctrl_0_0"/>
 </GenRun>

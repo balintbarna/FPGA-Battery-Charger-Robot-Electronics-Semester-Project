@@ -62,7 +62,11 @@ ENTITY design_ps_pl_PL_0_0 IS
     BRAM_PORTB_0_din : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     BRAM_PORTB_0_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     BRAM_PORTB_0_we : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-    data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+    data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+    PID_forward : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+    enable : OUT STD_LOGIC;
+    now_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    set_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
   );
 END design_ps_pl_PL_0_0;
 
@@ -78,15 +82,19 @@ ARCHITECTURE design_ps_pl_PL_0_0_arch OF design_ps_pl_PL_0_0 IS
       BRAM_PORTB_0_din : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       BRAM_PORTB_0_addr : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       BRAM_PORTB_0_we : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-      data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
+      data_out : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+      PID_forward : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+      enable : OUT STD_LOGIC;
+      now_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      set_current : OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
     );
   END COMPONENT PL;
   ATTRIBUTE X_CORE_INFO : STRING;
-  ATTRIBUTE X_CORE_INFO OF design_ps_pl_PL_0_0_arch: ARCHITECTURE IS "PL,Vivado 2019.1.1";
+  ATTRIBUTE X_CORE_INFO OF design_ps_pl_PL_0_0_arch: ARCHITECTURE IS "PL,Vivado 2019.1";
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_ps_pl_PL_0_0_arch : ARCHITECTURE IS "design_ps_pl_PL_0_0,PL,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_ps_pl_PL_0_0_arch: ARCHITECTURE IS "design_ps_pl_PL_0_0,PL,{x_ipProduct=Vivado 2019.1.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=PL,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_ps_pl_PL_0_0_arch: ARCHITECTURE IS "design_ps_pl_PL_0_0,PL,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=PL,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_ps_pl_PL_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -103,6 +111,10 @@ BEGIN
       BRAM_PORTB_0_din => BRAM_PORTB_0_din,
       BRAM_PORTB_0_addr => BRAM_PORTB_0_addr,
       BRAM_PORTB_0_we => BRAM_PORTB_0_we,
-      data_out => data_out
+      data_out => data_out,
+      PID_forward => PID_forward,
+      enable => enable,
+      now_current => now_current,
+      set_current => set_current
     );
 END design_ps_pl_PL_0_0_arch;

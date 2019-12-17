@@ -9,8 +9,8 @@ ENTITY PID IS
 		i_en : IN std_logic; --determines if i term is needed
 		d_en : IN std_logic; --determines if d term is needed
 		sp : IN std_logic_vector(11 DOWNTO 0); -- Setpoint: user input reference
-		input : IN std_logic_vector(11 DOWNTO 0); --feedback value from sensor
-		output : OUT std_logic_vector(11 DOWNTO 0) --output of controller
+		inp : IN std_logic_vector(11 DOWNTO 0); --feedback value from sensor
+		outp : OUT std_logic_vector(11 DOWNTO 0) --output of controller
 	);
 END PID;
 ARCHITECTURE Behavioral OF PID IS
@@ -20,7 +20,7 @@ ARCHITECTURE Behavioral OF PID IS
 	CONSTANT kp : INTEGER := 100; --proportional constant
 	CONSTANT kp_den : INTEGER := 100;
 	CONSTANT ki : INTEGER := 10; --integral constant
-	CONSTANT ki_den : INTEGER := 100;
+	CONSTANT ki_den : INTEGER := 10;
 	CONSTANT kd : INTEGER := 10; --differential constant
 	CONSTANT kd_den : INTEGER := 100;
 	-- Specify controller freq
@@ -33,7 +33,7 @@ ARCHITECTURE Behavioral OF PID IS
 	SIGNAL output_int, output_buffer : INTEGER := 0;
 	
 BEGIN
-PROCESS (p_en, d_en, i_en, clk, input, error, sp, i, p, d)
+PROCESS (p_en, d_en, i_en, clk, inp, error, sp, i, p, d)
 BEGIN
 IF rising_edge(clk) then
     IF en = '0' THEN --functions as an on/off switch and sets all main variables to null
@@ -54,7 +54,7 @@ IF rising_edge(clk) then
 	ELSE
 	    -- Conversion
 	    sp_int <= to_integer(unsigned(sp));
-	    input_int <= to_integer(unsigned(input));
+	    input_int <= to_integer(unsigned(inp));
 	    -- Calc current state
 	    error <= (sp_int - input_int);
         integral <= integral + error;
@@ -89,5 +89,5 @@ IF rising_edge(clk) then
     END IF;
 END IF;
 END PROCESS; --end of process
-output <= std_logic_vector(to_unsigned(output_int, 12));
+outp <= std_logic_vector(to_unsigned(output_int, 12));
 END Behavioral; --end of Architecture

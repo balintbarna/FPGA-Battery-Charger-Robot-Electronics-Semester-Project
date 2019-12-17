@@ -3,9 +3,9 @@
     with args -log design_ps_pl_PL_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ps_pl_PL_0_0.tcl
 
 
-****** Vivado v2019.1.1 (64-bit)
-  **** SW Build 2580384 on Sat Jun 29 08:12:21 MDT 2019
-  **** IP Build 2579722 on Sat Jun 29 11:35:40 MDT 2019
+****** Vivado v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
     ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 
 source design_ps_pl_PL_0_0.tcl -notrace
@@ -17,47 +17,34 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 72216 
+INFO: Helper process launched with PID 17208 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 738.969 ; gain = 177.684
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1724.840 ; gain = 152.715 ; free physical = 3906 ; free virtual = 9574
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_PL_0_0' [c:/Avnet/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PL_0_0/synth/design_ps_pl_PL_0_0.vhd:69]
-INFO: [Synth 8-3491] module 'PL' declared at 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:34' bound to instance 'U0' of component 'PL' [c:/Avnet/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PL_0_0/synth/design_ps_pl_PL_0_0.vhd:97]
-INFO: [Synth 8-638] synthesizing module 'PL' [C:/Avnet/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:47]
-WARNING: [Synth 8-614] signal 'BRAM_PORTB_0_dout' is read in the process but is not in the sensitivity list [C:/Avnet/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:50]
-INFO: [Synth 8-256] done synthesizing module 'PL' (1#1) [C:/Avnet/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:47]
-INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_PL_0_0' (2#1) [c:/Avnet/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PL_0_0/synth/design_ps_pl_PL_0_0.vhd:69]
-WARNING: [Synth 8-3331] design PL has unconnected port clk_125MHz
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[31]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[30]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[29]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[28]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[27]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[26]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[25]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[24]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[23]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[22]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[21]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[20]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[19]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[18]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[17]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[16]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[15]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[14]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[13]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[12]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[11]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[10]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[9]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[8]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[7]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[6]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[5]
-WARNING: [Synth 8-3331] design PL has unconnected port BRAM_PORTB_0_dout[4]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_PL_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PL_0_0/synth/design_ps_pl_PL_0_0.vhd:73]
+INFO: [Synth 8-3491] module 'PL' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:35' bound to instance 'U0' of component 'PL' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PL_0_0/synth/design_ps_pl_PL_0_0.vhd:105]
+INFO: [Synth 8-638] synthesizing module 'PL' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:54]
+WARNING: [Synth 8-3848] Net data_out in module/entity PL does not have driver. [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:44]
+INFO: [Synth 8-256] done synthesizing module 'PL' (1#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/PL.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_PL_0_0' (2#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PL_0_0/synth/design_ps_pl_PL_0_0.vhd:73]
+WARNING: [Synth 8-3331] design PL has unconnected port data_out[3]
+WARNING: [Synth 8-3331] design PL has unconnected port data_out[2]
+WARNING: [Synth 8-3331] design PL has unconnected port data_out[1]
+WARNING: [Synth 8-3331] design PL has unconnected port data_out[0]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[11]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[10]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[9]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[8]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[7]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[6]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[5]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[4]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[3]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[2]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[1]
+WARNING: [Synth 8-3331] design PL has unconnected port PID_forward[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 807.676 ; gain = 246.391
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1782.559 ; gain = 210.434 ; free physical = 3929 ; free virtual = 9597
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -70,10 +57,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 807.676 ; gain = 246.391
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1788.496 ; gain = 216.371 ; free physical = 3927 ; free virtual = 9595
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 807.676 ; gain = 246.391
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1788.496 ; gain = 216.371 ; free physical = 3927 ; free virtual = 9595
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -81,31 +68,36 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 831.223 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1954.215 ; gain = 0.000 ; free physical = 3838 ; free virtual = 9507
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 832.246 ; gain = 1.023
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.10 . Memory (MB): peak = 1954.215 ; gain = 0.000 ; free physical = 3838 ; free virtual = 9506
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 832.246 ; gain = 270.961
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3902 ; free virtual = 9571
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 832.246 ; gain = 270.961
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3902 ; free virtual = 9571
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 832.246 ; gain = 270.961
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3902 ; free virtual = 9571
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "BRAM_PORTB_0_addr" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "BRAM_PORTB_0_we" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "enable_sig" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "now_current_sig" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "set_current_sig" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 832.246 ; gain = 270.961
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3894 ; free virtual = 9563
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -117,6 +109,19 @@ Report RTL Partitions:
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	  10 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -124,6 +129,21 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module PL 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	  10 Input     32 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -140,108 +160,89 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-WARNING: [Synth 8-3330] design design_ps_pl_PL_0_0 has an empty top module
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_en driven by constant 1
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_rst driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[31] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[30] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[29] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[28] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[27] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[26] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[25] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[24] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[23] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[22] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[21] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[20] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[19] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[18] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[17] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[16] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[15] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[14] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[13] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[12] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[11] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[10] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[9] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[8] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[7] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[6] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[5] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[4] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[3] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[2] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[1] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_din[0] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[31] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[30] driven by constant 1
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[29] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[28] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[27] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[26] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[25] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[24] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[23] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[22] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[21] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[20] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[19] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[18] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[17] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[16] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[15] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[14] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[13] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[12] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[11] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[10] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[9] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[8] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[7] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[6] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[5] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[4] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[3] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[2] driven by constant 1
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[1] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_addr[0] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_we[3] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_we[2] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_we[1] driven by constant 0
-INFO: [Synth 8-3917] design design_ps_pl_PL_0_0 has port BRAM_PORTB_0_we[0] driven by constant 0
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port clk_125MHz
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[31]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[30]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[29]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[28]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[27]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[26]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[25]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[24]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[23]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[22]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[21]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[20]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[19]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[18]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[17]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[16]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[15]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[14]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[13]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[12]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[11]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[10]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[9]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[8]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[7]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[6]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[5]
-WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port BRAM_PORTB_0_dout[4]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port data_out[3]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port data_out[2]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port data_out[1]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port data_out[0]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[11]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[10]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[9]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[8]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[7]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[6]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[5]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[4]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[3]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[2]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[1]
+WARNING: [Synth 8-3331] design design_ps_pl_PL_0_0 has unconnected port PID_forward[0]
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_we_reg[0]' (FDE) to 'U0/BRAM_PORTB_0_we_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_we_reg[1]' (FDE) to 'U0/BRAM_PORTB_0_we_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_we_reg[2]' (FDE) to 'U0/BRAM_PORTB_0_we_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[0]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[1]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[5]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[6]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[7]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[8]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[9]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[10]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[11]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[12]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[13]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[14]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[15]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[16]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[17]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[18]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[19]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[20]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[21]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[22]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[23]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[24]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[25]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[26]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[27]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[28]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[29]' (FDE) to 'U0/BRAM_PORTB_0_addr_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[30]' (FDE) to 'U0/BRAM_PORTB_0_en_reg'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[31]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[0]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[1]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[2]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[3]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[4]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[5]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[6]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[7]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[8]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[9]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[11]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[12]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[13]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[14]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[15]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[16]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[17]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[18]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[19]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[20]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[21]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[22]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[23]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[24]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[25]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[26]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[27]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[28]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[29]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[30]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[30]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_din_reg[31]' (FDE) to 'U0/BRAM_PORTB_0_rst_reg'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\U0/BRAM_PORTB_0_rst_reg )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\U0/BRAM_PORTB_0_en_reg )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 832.246 ; gain = 270.961
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3882 ; free virtual = 9553
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -253,13 +254,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 879.813 ; gain = 318.527
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3755 ; free virtual = 9426
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 879.813 ; gain = 318.527
+Finished Timing Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3755 ; free virtual = 9426
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -270,8 +271,9 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-3886] merging instance 'U0/BRAM_PORTB_0_addr_reg[4]' (FDE) to 'U0/BRAM_PORTB_0_din_reg[10]'
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 889.336 ; gain = 328.051
+Finished Technology Mapping : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -295,7 +297,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -308,7 +310,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -320,25 +322,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -351,42 +353,53 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+-+-----+------+
-| |Cell |Count |
-+-+-----+------+
-+-+-----+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT1   |     1|
+|3     |LUT2   |     3|
+|4     |LUT3   |     2|
+|5     |LUT4   |     7|
+|6     |LUT5   |     3|
+|7     |LUT6   |     7|
+|8     |FDRE   |   101|
++------+-------+------+
 
 Report Instance Areas: 
 +------+---------+-------+------+
 |      |Instance |Module |Cells |
 +------+---------+-------+------+
-|1     |top      |       |     0|
+|1     |top      |       |   132|
+|2     |  U0     |PL     |   132|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3754 ; free virtual = 9425
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 30 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 905.207 ; gain = 319.352
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 905.207 ; gain = 343.922
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1954.215 ; gain = 216.371 ; free physical = 3809 ; free virtual = 9480
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1954.215 ; gain = 382.090 ; free physical = 3809 ; free virtual = 9480
 INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 925.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1954.215 ; gain = 0.000 ; free physical = 3753 ; free virtual = 9425
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-84 Infos, 62 Warnings, 0 Critical Warnings and 0 Errors encountered.
+87 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 930.340 ; gain = 628.293
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.340 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1954.215 ; gain = 552.445 ; free physical = 3851 ; free virtual = 9523
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1954.215 ; gain = 0.000 ; free physical = 3851 ; free virtual = 9523
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.runs/design_ps_pl_PL_0_0_synth_1/design_ps_pl_PL_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/design_ps_pl_PL_0_0_synth_1/design_ps_pl_PL_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 930.340 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1978.227 ; gain = 0.000 ; free physical = 3851 ; free virtual = 9522
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'C:/Avnet/project_PL_PS_new/project_PL_PS_new.runs/design_ps_pl_PL_0_0_synth_1/design_ps_pl_PL_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/design_ps_pl_PL_0_0_synth_1/design_ps_pl_PL_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_ps_pl_PL_0_0_utilization_synth.rpt -pb design_ps_pl_PL_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Nov  4 15:55:22 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 20:46:00 2019...

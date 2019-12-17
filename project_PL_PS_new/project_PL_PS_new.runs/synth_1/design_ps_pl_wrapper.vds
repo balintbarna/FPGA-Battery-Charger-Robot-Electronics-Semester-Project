@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Dec 17 14:19:36 2019
-# Process ID: 2476
+# Start of session at: Tue Dec 17 21:42:18 2019
+# Process ID: 6946
 # Current directory: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1
 # Command line: vivado -log design_ps_pl_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ps_pl_wrapper.tcl
 # Log file: /home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/design_ps_pl_wrapper.vds
@@ -13,39 +13,66 @@ source design_ps_pl_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/johan/tools/Xilinx/Vivado/2019.1/data/ip'.
+add_files: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 1532.191 ; gain = 120.059 ; free physical = 3753 ; free virtual = 9554
 Command: synth_design -top design_ps_pl_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2540 
+INFO: Helper process launched with PID 7104 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1780.004 ; gain = 149.684 ; free physical = 4346 ; free virtual = 11512
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1780.461 ; gain = 152.715 ; free physical = 3361 ; free virtual = 9162
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_wrapper' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.vhd:48]
-INFO: [Synth 8-3491] module 'design_ps_pl' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:783' bound to instance 'design_ps_pl_i' of component 'design_ps_pl' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.vhd:83]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:821]
-INFO: [Synth 8-3491] module 'design_ps_pl_PL_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_PL_0_0_stub.vhdl:5' bound to instance 'PL_BRAM_read' of component 'design_ps_pl_PL_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:909]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_PL_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_PL_0_0_stub.vhdl:19]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_wrapper' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.vhd:50]
+INFO: [Synth 8-3491] module 'design_ps_pl' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:841' bound to instance 'design_ps_pl_i' of component 'design_ps_pl' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:881]
+INFO: [Synth 8-3491] module 'design_ps_pl_PID_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_PID_0_0_stub.vhdl:5' bound to instance 'PID_0' of component 'design_ps_pl_PID_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:1011]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_PID_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_PID_0_0_stub.vhdl:19]
+INFO: [Synth 8-3491] module 'design_ps_pl_PL_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_PL_0_0_stub.vhdl:5' bound to instance 'PL_BRAM_read' of component 'design_ps_pl_PL_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:1022]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_PL_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_PL_0_0_stub.vhdl:23]
 INFO: [Synth 8-638] synthesizing module 'PS_BRAM_imp_1XS9KR3' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:53]
-INFO: [Synth 8-3491] module 'design_ps_pl_axi_bram_ctrl_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_ps_pl_axi_bram_ctrl_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:503]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_axi_bram_ctrl_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_axi_bram_ctrl_0_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'design_ps_pl_axi_smc_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_ps_pl_axi_smc_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:546]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_axi_smc_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_axi_smc_0_stub.vhdl:103]
-INFO: [Synth 8-3491] module 'design_ps_pl_blk_mem_gen_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'design_ps_pl_blk_mem_gen_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:641]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_blk_mem_gen_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_blk_mem_gen_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_ps_pl_processing_system7_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_ps_pl_processing_system7_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:661]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_processing_system7_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_processing_system7_0_0_stub.vhdl:76]
-INFO: [Synth 8-3491] module 'design_ps_pl_rst_ps7_0_100M_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_ps_pl_rst_ps7_0_100M_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:729]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_rst_ps7_0_100M_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_rst_ps7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_ps_pl_xadc_wiz_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'design_ps_pl_xadc_wiz_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:742]
-INFO: [Synth 8-638] synthesizing module 'design_ps_pl_xadc_wiz_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-2476-laptopJBO/realtime/design_ps_pl_xadc_wiz_0_0_stub.vhdl:44]
+INFO: [Synth 8-3491] module 'design_ps_pl_axi_bram_ctrl_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_ps_pl_axi_bram_ctrl_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:503]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_axi_bram_ctrl_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_axi_bram_ctrl_0_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_ps_pl_axi_smc_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_ps_pl_axi_smc_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:546]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_axi_smc_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_axi_smc_0_stub.vhdl:103]
+INFO: [Synth 8-3491] module 'design_ps_pl_blk_mem_gen_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'design_ps_pl_blk_mem_gen_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:641]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_blk_mem_gen_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_blk_mem_gen_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_ps_pl_processing_system7_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_ps_pl_processing_system7_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:661]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_processing_system7_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_processing_system7_0_0_stub.vhdl:76]
+INFO: [Synth 8-3491] module 'design_ps_pl_rst_ps7_0_100M_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_ps_pl_rst_ps7_0_100M_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:729]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_rst_ps7_0_100M_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_ps_pl_xadc_wiz_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'design_ps_pl_xadc_wiz_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:742]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_xadc_wiz_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_xadc_wiz_0_0_stub.vhdl:44]
 INFO: [Synth 8-256] done synthesizing module 'PS_BRAM_imp_1XS9KR3' (1#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:53]
-INFO: [Synth 8-256] done synthesizing module 'design_ps_pl' (2#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:821]
-INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_wrapper' (3#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.vhd:48]
+INFO: [Synth 8-638] synthesizing module 'PWM_12_mod_imp_AU48WB' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:791]
+INFO: [Synth 8-3491] module 'design_ps_pl_comparator_12_0_1' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_comparator_12_0_1_stub.vhdl:5' bound to instance 'comparator_12_0' of component 'design_ps_pl_comparator_12_0_1' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:820]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_comparator_12_0_1' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_comparator_12_0_1_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_ps_pl_counter_12_0_1' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_counter_12_0_1_stub.vhdl:5' bound to instance 'counter_12_0' of component 'design_ps_pl_counter_12_0_1' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:826]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_counter_12_0_1' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_counter_12_0_1_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_ps_pl_inverter_0_2' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_inverter_0_2_stub.vhdl:5' bound to instance 'inverter_0' of component 'design_ps_pl_inverter_0_2' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:831]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_inverter_0_2' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_inverter_0_2_stub.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'PWM_12_mod_imp_AU48WB' (2#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:791]
+INFO: [Synth 8-3491] module 'design_ps_pl_xlconstant_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xlconstant_0_0/synth/design_ps_pl_xlconstant_0_0.v:57' bound to instance 'const_high' of component 'design_ps_pl_xlconstant_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:1080]
+INFO: [Synth 8-6157] synthesizing module 'design_ps_pl_xlconstant_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xlconstant_0_0/synth/design_ps_pl_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (3#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_ps_pl_xlconstant_0_0' (4#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xlconstant_0_0/synth/design_ps_pl_xlconstant_0_0.v:57]
+INFO: [Synth 8-3491] module 'design_ps_pl_xlconstant_1_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xlconstant_1_0/synth/design_ps_pl_xlconstant_1_0.v:57' bound to instance 'const_low' of component 'design_ps_pl_xlconstant_1_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:1084]
+INFO: [Synth 8-6157] synthesizing module 'design_ps_pl_xlconstant_1_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xlconstant_1_0/synth/design_ps_pl_xlconstant_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 0 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (4#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_ps_pl_xlconstant_1_0' (5#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xlconstant_1_0/synth/design_ps_pl_xlconstant_1_0.v:57]
+INFO: [Synth 8-3491] module 'design_ps_pl_read_clk_0_0' declared at '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_read_clk_0_0_stub.vhdl:5' bound to instance 'read_clk_0' of component 'design_ps_pl_read_clk_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:1088]
+INFO: [Synth 8-638] synthesizing module 'design_ps_pl_read_clk_0_0' [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/.Xil/Vivado-6946-laptopJBO/realtime/design_ps_pl_read_clk_0_0_stub.vhdl:13]
+INFO: [Synth 8-256] done synthesizing module 'design_ps_pl' (6#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/synth/design_ps_pl.vhd:881]
+INFO: [Synth 8-256] done synthesizing module 'design_ps_pl_wrapper' (7#1) [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/hdl/design_ps_pl_wrapper.vhd:50]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1839.723 ; gain = 209.402 ; free physical = 4299 ; free virtual = 11494
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1840.180 ; gain = 212.434 ; free physical = 3380 ; free virtual = 9181
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -58,10 +85,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1842.691 ; gain = 212.371 ; free physical = 4296 ; free virtual = 11490
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1844.148 ; gain = 216.402 ; free physical = 3379 ; free virtual = 9181
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1842.691 ; gain = 212.371 ; free physical = 4296 ; free virtual = 11490
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1844.148 ; gain = 216.402 ; free physical = 3379 ; free virtual = 9181
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -81,6 +108,16 @@ Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/
 Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PL_0_0/design_ps_pl_PL_0_0/design_ps_pl_PL_0_0_in_context.xdc] for cell 'design_ps_pl_i/PL_BRAM_read'
 Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xadc_wiz_0_0/design_ps_pl_xadc_wiz_0_0/design_ps_pl_xadc_wiz_0_0_in_context.xdc] for cell 'design_ps_pl_i/PS_BRAM/xadc_wiz_0'
 Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_xadc_wiz_0_0/design_ps_pl_xadc_wiz_0_0/design_ps_pl_xadc_wiz_0_0_in_context.xdc] for cell 'design_ps_pl_i/PS_BRAM/xadc_wiz_0'
+Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PID_0_0/design_ps_pl_PID_0_0/design_ps_pl_PID_0_0_in_context.xdc] for cell 'design_ps_pl_i/PID_0'
+Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_PID_0_0/design_ps_pl_PID_0_0/design_ps_pl_PID_0_0_in_context.xdc] for cell 'design_ps_pl_i/PID_0'
+Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_counter_12_0_1/design_ps_pl_counter_12_0_1/design_ps_pl_counter_12_0_1_in_context.xdc] for cell 'design_ps_pl_i/PWM_12_mod/counter_12_0'
+Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_counter_12_0_1/design_ps_pl_counter_12_0_1/design_ps_pl_counter_12_0_1_in_context.xdc] for cell 'design_ps_pl_i/PWM_12_mod/counter_12_0'
+Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_inverter_0_2/design_ps_pl_inverter_0_2/design_ps_pl_inverter_0_2_in_context.xdc] for cell 'design_ps_pl_i/PWM_12_mod/inverter_0'
+Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_inverter_0_2/design_ps_pl_inverter_0_2/design_ps_pl_inverter_0_2_in_context.xdc] for cell 'design_ps_pl_i/PWM_12_mod/inverter_0'
+Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_comparator_12_0_1/design_ps_pl_comparator_12_0_1/design_ps_pl_comparator_12_0_1_in_context.xdc] for cell 'design_ps_pl_i/PWM_12_mod/comparator_12_0'
+Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_comparator_12_0_1/design_ps_pl_comparator_12_0_1/design_ps_pl_comparator_12_0_1_in_context.xdc] for cell 'design_ps_pl_i/PWM_12_mod/comparator_12_0'
+Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_read_clk_0_0/design_ps_pl_read_clk_0_0/design_ps_pl_read_clk_0_0_in_context.xdc] for cell 'design_ps_pl_i/read_clk_0'
+Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ip/design_ps_pl_read_clk_0_0/design_ps_pl_read_clk_0_0/design_ps_pl_read_clk_0_0_in_context.xdc] for cell 'design_ps_pl_i/read_clk_0'
 Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/constrs_1/new/const.xdc]
 Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/constrs_1/new/const.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/constrs_1/new/const.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_ps_pl_wrapper_propImpl.xdc].
@@ -89,21 +126,21 @@ Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/
 Finished Parsing XDC File [/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1930.301 ; gain = 0.000 ; free physical = 4002 ; free virtual = 11220
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1935.789 ; gain = 0.000 ; free physical = 3280 ; free virtual = 9081
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1930.301 ; gain = 0.000 ; free physical = 4005 ; free virtual = 11223
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 1935.789 ; gain = 0.000 ; free physical = 3280 ; free virtual = 9081
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_ps_pl_i/PS_BRAM/blk_mem_gen_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4120 ; free virtual = 11330
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3353 ; free virtual = 9155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4120 ; free virtual = 11330
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3353 ; free virtual = 9155
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -376,11 +413,18 @@ Applied set_property DONT_TOUCH = true for design_ps_pl_i/PS_BRAM/blk_mem_gen_0.
 Applied set_property DONT_TOUCH = true for design_ps_pl_i/PS_BRAM/rst_ps7_0_100M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_ps_pl_i/PL_BRAM_read. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_ps_pl_i/PS_BRAM/xadc_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_ps_pl_i/PID_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_ps_pl_i/const_high. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_ps_pl_i/const_low. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_ps_pl_i/PWM_12_mod/counter_12_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_ps_pl_i/PWM_12_mod/inverter_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_ps_pl_i/PWM_12_mod/comparator_12_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_ps_pl_i/read_clk_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4122 ; free virtual = 11332
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3353 ; free virtual = 9154
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4120 ; free virtual = 11331
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3354 ; free virtual = 9156
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -416,7 +460,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4121 ; free virtual = 11330
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3350 ; free virtual = 9154
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -431,13 +475,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_ps_pl_i/PS_BRAM/ax
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_ps_pl_i/PS_BRAM/processing_system7_0/FCLK_CLK0' to pin 'design_ps_pl_i/PS_BRAM/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4021 ; free virtual = 11230
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3225 ; free virtual = 9029
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4021 ; free virtual = 11230
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3225 ; free virtual = 9029
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -449,7 +493,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4019 ; free virtual = 11229
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3223 ; free virtual = 9028
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -473,7 +517,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4031 ; free virtual = 11241
+Finished IO Insertion : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3221 ; free virtual = 9026
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -486,7 +530,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4031 ; free virtual = 11241
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3221 ; free virtual = 9026
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -498,25 +542,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4031 ; free virtual = 11241
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3221 ; free virtual = 9026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4031 ; free virtual = 11241
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3221 ; free virtual = 9026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4031 ; free virtual = 11241
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3221 ; free virtual = 9026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4031 ; free virtual = 11241
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3221 ; free virtual = 9026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -526,58 +570,71 @@ Report BlackBoxes:
 +------+------------------------------------+----------+
 |      |BlackBox name                       |Instances |
 +------+------------------------------------+----------+
-|1     |design_ps_pl_PL_0_0                 |         1|
-|2     |design_ps_pl_axi_bram_ctrl_0_0      |         1|
-|3     |design_ps_pl_axi_smc_0              |         1|
-|4     |design_ps_pl_blk_mem_gen_0_0        |         1|
-|5     |design_ps_pl_processing_system7_0_0 |         1|
-|6     |design_ps_pl_rst_ps7_0_100M_0       |         1|
-|7     |design_ps_pl_xadc_wiz_0_0           |         1|
+|1     |design_ps_pl_PID_0_0                |         1|
+|2     |design_ps_pl_PL_0_0                 |         1|
+|3     |design_ps_pl_read_clk_0_0           |         1|
+|4     |design_ps_pl_axi_bram_ctrl_0_0      |         1|
+|5     |design_ps_pl_axi_smc_0              |         1|
+|6     |design_ps_pl_blk_mem_gen_0_0        |         1|
+|7     |design_ps_pl_processing_system7_0_0 |         1|
+|8     |design_ps_pl_rst_ps7_0_100M_0       |         1|
+|9     |design_ps_pl_xadc_wiz_0_0           |         1|
+|10    |design_ps_pl_comparator_12_0_1      |         1|
+|11    |design_ps_pl_counter_12_0_1         |         1|
+|12    |design_ps_pl_inverter_0_2           |         1|
 +------+------------------------------------+----------+
 
 Report Cell Usage: 
 +------+-------------------------------------------+------+
 |      |Cell                                       |Count |
 +------+-------------------------------------------+------+
-|1     |design_ps_pl_PL_0_0_bbox_0                 |     1|
-|2     |design_ps_pl_axi_bram_ctrl_0_0_bbox_1      |     1|
-|3     |design_ps_pl_axi_smc_0_bbox_2              |     1|
-|4     |design_ps_pl_blk_mem_gen_0_0_bbox_3        |     1|
-|5     |design_ps_pl_processing_system7_0_0_bbox_4 |     1|
-|6     |design_ps_pl_rst_ps7_0_100M_0_bbox_5       |     1|
-|7     |design_ps_pl_xadc_wiz_0_0_bbox_6           |     1|
-|8     |IBUF                                       |     7|
-|9     |OBUF                                       |     4|
+|1     |design_ps_pl_PID_0_0_bbox_0                |     1|
+|2     |design_ps_pl_PL_0_0_bbox_1                 |     1|
+|3     |design_ps_pl_axi_bram_ctrl_0_0_bbox_2      |     1|
+|4     |design_ps_pl_axi_smc_0_bbox_3              |     1|
+|5     |design_ps_pl_blk_mem_gen_0_0_bbox_4        |     1|
+|6     |design_ps_pl_comparator_12_0_1_bbox_8      |     1|
+|7     |design_ps_pl_counter_12_0_1_bbox_9         |     1|
+|8     |design_ps_pl_inverter_0_2_bbox_10          |     1|
+|9     |design_ps_pl_processing_system7_0_0_bbox_5 |     1|
+|10    |design_ps_pl_read_clk_0_0_bbox_11          |     1|
+|11    |design_ps_pl_rst_ps7_0_100M_0_bbox_6       |     1|
+|12    |design_ps_pl_xadc_wiz_0_0_bbox_7           |     1|
+|13    |IBUF                                       |     7|
+|14    |OBUF                                       |     6|
 +------+-------------------------------------------+------+
 
 Report Instance Areas: 
-+------+-----------------+--------------------+------+
-|      |Instance         |Module              |Cells |
-+------+-----------------+--------------------+------+
-|1     |top              |                    |   745|
-|2     |  design_ps_pl_i |design_ps_pl        |   734|
-|3     |    PS_BRAM      |PS_BRAM_imp_1XS9KR3 |   660|
-+------+-----------------+--------------------+------+
++------+-----------------+----------------------------+------+
+|      |Instance         |Module                      |Cells |
++------+-----------------+----------------------------+------+
+|1     |top              |                            |   839|
+|2     |  design_ps_pl_i |design_ps_pl                |   826|
+|3     |    const_high   |design_ps_pl_xlconstant_0_0 |     0|
+|4     |    const_low    |design_ps_pl_xlconstant_1_0 |     0|
+|5     |    PS_BRAM      |PS_BRAM_imp_1XS9KR3         |   660|
+|6     |    PWM_12_mod   |PWM_12_mod_imp_AU48WB       |    14|
++------+-----------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4031 ; free virtual = 11241
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3221 ; free virtual = 9026
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1934.270 ; gain = 212.371 ; free physical = 4086 ; free virtual = 11296
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1934.270 ; gain = 303.949 ; free physical = 4091 ; free virtual = 11301
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1939.758 ; gain = 216.402 ; free physical = 3278 ; free virtual = 9082
+Synthesis Optimization Complete : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1939.758 ; gain = 312.012 ; free physical = 3289 ; free virtual = 9094
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1934.270 ; gain = 0.000 ; free physical = 4013 ; free virtual = 11229
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1939.758 ; gain = 0.000 ; free physical = 3224 ; free virtual = 9029
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-37 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+59 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1934.270 ; gain = 412.441 ; free physical = 4106 ; free virtual = 11322
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1934.270 ; gain = 0.000 ; free physical = 4106 ; free virtual = 11322
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1939.758 ; gain = 407.566 ; free physical = 3315 ; free virtual = 9119
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1939.758 ; gain = 0.000 ; free physical = 3315 ; free virtual = 9119
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/synth_1/design_ps_pl_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_ps_pl_wrapper_utilization_synth.rpt -pb design_ps_pl_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 14:20:09 2019...
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 17 21:42:51 2019...

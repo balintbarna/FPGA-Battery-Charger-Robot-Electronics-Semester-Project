@@ -2848,3 +2848,1091 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+16:54:03 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95388	   2664	  23424	 121476	  1da84	PS.elf
+Finished building: PS.elf.size
+ 
+16:54:09 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95388	   2664	  23424	 121476	  1da84	PS.elf
+Finished building: PS.elf.size
+ 
+16:54:27 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:55:11 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95388	   2664	  23424	 121476	  1da84	PS.elf
+Finished building: PS.elf.size
+ 
+18:40:04 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:141:22: warning: initialization of 'int' from 'int (*)()' makes integer from pointer without a cast [-Wint-conversion]
+  int battery_act_v = measure_battery_voltage;
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95548	   2664	  23424	 121636	  1db24	PS.elf
+Finished building: PS.elf.size
+ 
+18:40:40 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:141:22: warning: initialization of 'int' from 'int (*)()' makes integer from pointer without a cast [-Wint-conversion]
+  int battery_act_v = measure_battery_voltage;
+                      ^~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95636	   2664	  23424	 121724	  1db7c	PS.elf
+Finished building: PS.elf.size
+ 
+18:41:12 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95652	   2664	  23424	 121740	  1db8c	PS.elf
+Finished building: PS.elf.size
+ 
+18:41:36 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95652	   2664	  23424	 121740	  1db8c	PS.elf
+Finished building: PS.elf.size
+ 
+18:50:02 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95708	   2664	  23424	 121796	  1dbc4	PS.elf
+Finished building: PS.elf.size
+ 
+18:52:44 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:54:51 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95716	   2664	  23424	 121804	  1dbcc	PS.elf
+Finished building: PS.elf.size
+ 
+18:54:56 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:55:54 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95716	   2664	  23424	 121804	  1dbcc	PS.elf
+Finished building: PS.elf.size
+ 
+18:55:59 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:57:15 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95716	   2664	  23424	 121804	  1dbcc	PS.elf
+Finished building: PS.elf.size
+ 
+18:57:28 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95716	   2664	  23424	 121804	  1dbcc	PS.elf
+Finished building: PS.elf.size
+ 
+18:57:39 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:58:21 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95972	   2664	  23424	 122060	  1dccc	PS.elf
+Finished building: PS.elf.size
+ 
+18:58:51 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95780	   2664	  23424	 121868	  1dc0c	PS.elf
+Finished building: PS.elf.size
+ 
+18:59:16 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95780	   2664	  23424	 121868	  1dc0c	PS.elf
+Finished building: PS.elf.size
+ 
+18:59:22 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:59:48 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95780	   2664	  23424	 121868	  1dc0c	PS.elf
+Finished building: PS.elf.size
+ 
+18:59:52 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:00:10 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95780	   2664	  23424	 121868	  1dc0c	PS.elf
+Finished building: PS.elf.size
+ 
+19:00:16 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:00:37 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95772	   2664	  23424	 121860	  1dc04	PS.elf
+Finished building: PS.elf.size
+ 
+19:00:42 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:01:57 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:13:43 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95772	   2664	  23424	 121860	  1dc04	PS.elf
+Finished building: PS.elf.size
+ 
+19:13:47 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:19:59 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:23:22 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:26:41 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95772	   2664	  23424	 121860	  1dc04	PS.elf
+Finished building: PS.elf.size
+ 
+19:29:26 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95772	   2664	  23424	 121860	  1dc04	PS.elf
+Finished building: PS.elf.size
+ 
+19:29:33 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:44:47 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:45:41 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:46:22 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:47:08 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95772	   2664	  23424	 121860	  1dc04	PS.elf
+Finished building: PS.elf.size
+ 
+19:47:23 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:47:43 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:51:17 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:51:45 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:52:05 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:52:40 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:04:30 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:05:06 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:05:27 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:06:24 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:06:41 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:22:06 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:192:20: warning: implicit declaration of function 'func'; did you mean 'sync'? [-Wimplicit-function-declaration]
+    int PID_value = func();
+                    ^~~~
+                    sync
+../src/BRAM_PS_PL.c:193:38: error: expected expression before ')' token
+    xil_printf("PID outputs %d \r\n", )
+                                      ^
+../src/BRAM_PS_PL.c:192:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = func();
+        ^~~~~~~~~
+make: *** [src/BRAM_PS_PL.o] Error 1
+src/subdir.mk:24: recipe for target 'src/BRAM_PS_PL.o' failed
+20:23:57 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'setup_ADC':
+../src/BRAM_PS_PL.c:50:12: warning: assignment to 'XBram_Config *' {aka 'struct <anonymous> *'} from incompatible pointer type 'XAdcPs_Config *' {aka 'struct <anonymous> *'} [-Wincompatible-pointer-types]
+  ConfigPtr = XAdcPs_LookupConfig(XADC_DEVICE_ID);
+            ^
+../src/BRAM_PS_PL.c:56:16: error: 'XBram_Config' {aka 'struct <anonymous>'} has no member named 'BaseAddress'; did you mean 'MemBaseAddress'?
+     ConfigPtr->BaseAddress);
+                ^~~~~~~~~~~
+                MemBaseAddress
+../src/BRAM_PS_PL.c:55:36: warning: passing argument 2 of 'XAdcPs_CfgInitialize' from incompatible pointer type [-Wincompatible-pointer-types]
+  XAdcPs_CfgInitialize(XAdcInstPtr, ConfigPtr,
+                                    ^~~~~~~~~
+In file included from ../src/BRAM_PS_PL.c:6:
+../../Ex1_bsp/ps7_cortexa9_0/include/xadcps.h:500:20: note: expected 'XAdcPs_Config *' {aka 'struct <anonymous> *'} but argument is of type 'XBram_Config *' {aka 'struct <anonymous> *'}
+     XAdcPs_Config *ConfigPtr,
+     ~~~~~~~~~~~~~~~^~~~~~~~~
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:192:20: warning: implicit declaration of function 'func'; did you mean 'sync'? [-Wimplicit-function-declaration]
+    int PID_value = func();
+                    ^~~~
+                    sync
+../src/BRAM_PS_PL.c:193:38: error: expected expression before ')' token
+    xil_printf("PID outputs %d \r\n", )
+                                      ^
+../src/BRAM_PS_PL.c:192:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = func();
+        ^~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/BRAM_PS_PL.o' failed
+make: *** [src/BRAM_PS_PL.o] Error 1
+20:25:21 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:192:20: warning: implicit declaration of function 'func'; did you mean 'sync'? [-Wimplicit-function-declaration]
+    int PID_value = func();
+                    ^~~~
+                    sync
+../src/BRAM_PS_PL.c:193:38: error: expected expression before ')' token
+    xil_printf("PID outputs %d \r\n", )
+                                      ^
+../src/BRAM_PS_PL.c:192:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = func();
+        ^~~~~~~~~
+make: *** [src/BRAM_PS_PL.o] Error 1
+src/subdir.mk:24: recipe for target 'src/BRAM_PS_PL.o' failed
+20:25:37 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:192:20: warning: implicit declaration of function 'func'; did you mean 'sync'? [-Wimplicit-function-declaration]
+    int PID_value = func();
+                    ^~~~
+                    sync
+../src/BRAM_PS_PL.c:193:38: error: expected expression before ')' token
+    xil_printf("PID outputs %d \r\n", )
+                                      ^
+../src/BRAM_PS_PL.c:192:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = func();
+        ^~~~~~~~~
+make: *** [src/BRAM_PS_PL.o] Error 1
+src/subdir.mk:24: recipe for target 'src/BRAM_PS_PL.o' failed
+20:25:44 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:192:20: warning: implicit declaration of function 'func'; did you mean 'sync'? [-Wimplicit-function-declaration]
+    int PID_value = func();
+                    ^~~~
+                    sync
+../src/BRAM_PS_PL.c:193:38: error: expected expression before ')' token
+    xil_printf("PID outputs %d \r\n", )
+                                      ^
+../src/BRAM_PS_PL.c:192:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = func();
+        ^~~~~~~~~
+make: *** [src/BRAM_PS_PL.o] Error 1
+src/subdir.mk:24: recipe for target 'src/BRAM_PS_PL.o' failed
+20:26:03 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95924	   2664	  23424	 122012	  1dc9c	PS.elf
+Finished building: PS.elf.size
+ 
+20:28:08 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:35:55 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:37:31 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:48:07 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:49:14 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95924	   2664	  23424	 122012	  1dc9c	PS.elf
+Finished building: PS.elf.size
+ 
+20:49:20 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:50:18 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95924	   2664	  23424	 122012	  1dc9c	PS.elf
+Finished building: PS.elf.size
+ 
+20:50:24 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+20:53:43 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95924	   2664	  23424	 122012	  1dc9c	PS.elf
+Finished building: PS.elf.size
+ 
+20:56:27 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:196:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95924	   2664	  23424	 122012	  1dc9c	PS.elf
+Finished building: PS.elf.size
+ 
+20:59:40 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:00:24 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:00:48 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:04:12 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:04:45 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:05:35 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:05:49 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:07:23 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:09:51 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:196:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  95924	   2664	  23424	 122012	  1dc9c	PS.elf
+Finished building: PS.elf.size
+ 
+21:09:57 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:17:09 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:20:08 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:167:53: error: 'a0' undeclared (first use in this function)
+  xil_printf("%d \t %d \t %d \t %d mV \t %d mA\r\n", a0,a1,a2, battery_act_v, actual_current);
+                                                     ^~
+../src/BRAM_PS_PL.c:167:53: note: each undeclared identifier is reported only once for each function it appears in
+../src/BRAM_PS_PL.c:167:56: error: 'a1' undeclared (first use in this function)
+  xil_printf("%d \t %d \t %d \t %d mV \t %d mA\r\n", a0,a1,a2, battery_act_v, actual_current);
+                                                        ^~
+../src/BRAM_PS_PL.c:167:59: error: 'a2' undeclared (first use in this function)
+  xil_printf("%d \t %d \t %d \t %d mV \t %d mA\r\n", a0,a1,a2, battery_act_v, actual_current);
+                                                           ^~
+../src/BRAM_PS_PL.c:199:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+make: *** [src/BRAM_PS_PL.o] Error 1
+src/subdir.mk:24: recipe for target 'src/BRAM_PS_PL.o' failed
+21:21:01 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:202:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  96052	   2664	  23424	 122140	  1dd1c	PS.elf
+Finished building: PS.elf.size
+ 
+21:21:14 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:202:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  96052	   2664	  23424	 122140	  1dd1c	PS.elf
+Finished building: PS.elf.size
+ 
+21:21:51 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:23:51 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:25:50 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:27:09 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:202:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  96052	   2664	  23424	 122140	  1dd1c	PS.elf
+Finished building: PS.elf.size
+ 
+21:27:14 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:51:45 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:53:39 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+21:54:07 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:192:27: error: stray '\302' in program
+  for(int i = 0; i < 100000½0; i++)
+                           ^
+../src/BRAM_PS_PL.c:192:28: error: stray '\275' in program
+  for(int i = 0; i < 100000½0; i++)
+                            ^
+../src/BRAM_PS_PL.c:192:27: error: expected ';' before numeric constant
+  for(int i = 0; i < 100000½0; i++)
+                           ^ ~
+                           ;
+../src/BRAM_PS_PL.c:202:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+make: *** [src/BRAM_PS_PL.o] Error 1
+src/subdir.mk:24: recipe for target 'src/BRAM_PS_PL.o' failed
+21:54:11 **** Auto Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/BRAM_PS_PL.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/BRAM_PS_PL.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Ex1_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/BRAM_PS_PL.d" -MT"src/BRAM_PS_PL.o" -o "src/BRAM_PS_PL.o" "../src/BRAM_PS_PL.c"
+../src/BRAM_PS_PL.c: In function 'main':
+../src/BRAM_PS_PL.c:202:8: warning: unused variable 'PID_value' [-Wunused-variable]
+    int PID_value = PID_read();
+        ^~~~~~~~~
+Finished building: ../src/BRAM_PS_PL.c
+ 
+Building target: PS.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Ex1_bsp/ps7_cortexa9_0/lib -o "PS.elf"  ./src/BRAM_PS_PL.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: PS.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size PS.elf  |tee "PS.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  96052	   2664	  23424	 122140	  1dd1c	PS.elf
+Finished building: PS.elf.size
+ 
+21:54:21 **** Incremental Build of configuration Debug for project PS ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

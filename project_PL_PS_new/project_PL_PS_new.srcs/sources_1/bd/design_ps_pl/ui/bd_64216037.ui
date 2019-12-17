@@ -1,54 +1,58 @@
 {
-   "ExpandedHierarchyInLayout":"/PS_BRAM",
+   "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port BRAM_PORTB_0 -pg 1 -lvl 0 -x -20 -y 60 -defaultsOSRD
-preplace port DDR -pg 1 -lvl 3 -x 2290 -y 120 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 3 -x 2290 -y 140 -defaultsOSRD
-preplace port Vaux1 -pg 1 -lvl 0 -x -20 -y 480 -defaultsOSRD
-preplace port Vaux6 -pg 1 -lvl 0 -x -20 -y 500 -defaultsOSRD
-preplace port Vaux9 -pg 1 -lvl 0 -x -20 -y 520 -defaultsOSRD
-preplace port sys_clk -pg 1 -lvl 0 -x -20 -y 100 -defaultsOSRD
-preplace portBus data_led -pg 1 -lvl 3 -x 2290 -y 260 -defaultsOSRD
-preplace inst PS_BRAM -pg 1 -lvl 2 -x 880 -y 132 -defaultsOSRD
-preplace inst PL_BRAM_read -pg 1 -lvl 1 -x 240 -y 210 -defaultsOSRD
-preplace inst PS_BRAM|axi_bram_ctrl_0 -pg 1 -lvl 3 -x 1670 -y 432 -defaultsOSRD
-preplace inst PS_BRAM|axi_smc -pg 1 -lvl 2 -x 1360 -y 412 -defaultsOSRD
-preplace inst PS_BRAM|processing_system7_0 -pg 1 -lvl 1 -x 990 -y 352 -defaultsOSRD
-preplace inst PS_BRAM|blk_mem_gen_0 -pg 1 -lvl 4 -x 1990 -y 222 -defaultsOSRD
-preplace inst PS_BRAM|rst_ps7_0_100M -pg 1 -lvl 1 -x 990 -y 132 -defaultsOSRD
-preplace inst PS_BRAM|xadc_wiz_0 -pg 1 -lvl 4 -x 1990 -y 502 -defaultsOSRD
-preplace netloc ps_BRAM_PORTB_0_dout 1 0 2 10 330 520J
-preplace netloc PL_0_BRAM_PORTB_0_addr 1 1 1 540 220n
-preplace netloc clk_125MHz_0_1 1 0 2 0 320 510J
-preplace netloc BRAM_PORTB_0_we_1 1 1 1 500 240n
-preplace netloc PL_0_data_out 1 1 2 490J 642 2270J
-preplace netloc PL_0_BRAM_PORTB_0_en 1 1 1 560 160n
-preplace netloc BRAM_PORTB_0_din_1 1 1 1 550 200n
-preplace netloc BRAM_PORTB_0_rst_1 1 1 1 530 180n
-preplace netloc BRAM_PORTB_0_1 1 0 2 NJ 60 570J
-preplace netloc processing_system7_0_DDR 1 2 1 2250J 120n
-preplace netloc processing_system7_0_FIXED_IO 1 2 1 2260J 140n
-preplace netloc Vaux1_1 1 0 2 NJ 480 540
-preplace netloc Vaux6_1 1 0 2 NJ 500 480
-preplace netloc Vaux9_1 1 0 2 NJ 520 470
-preplace netloc PS_BRAM|processing_system7_0_FCLK_CLK0 1 0 4 760 472 1200 492 1530J 562 1810
-preplace netloc PS_BRAM|rst_ps7_0_100M_peripheral_aresetn 1 1 3 1220 332 1520 342 1830
-preplace netloc PS_BRAM|processing_system7_0_FCLK_RESET0_N 1 0 2 770 462 1190
-preplace netloc PS_BRAM|axi_bram_ctrl_0_BRAM_PORTA 1 3 1 1810 212n
-preplace netloc PS_BRAM|processing_system7_0_M_AXI_GP0 1 1 1 1210 362n
-preplace netloc PS_BRAM|axi_smc_M00_AXI 1 2 1 1510 402n
-preplace netloc PS_BRAM|processing_system7_0_DDR 1 1 4 N 302 NJ 302 NJ 302 NJ
-preplace netloc PS_BRAM|processing_system7_0_FIXED_IO 1 1 4 N 322 NJ 322 NJ 322 NJ
-preplace netloc PS_BRAM|BRAM_PORTB_0_1 1 0 4 NJ 232 NJ 232 NJ 232 N
-preplace netloc PS_BRAM|axi_smc_M01_AXI 1 2 2 1500J 352 1820
-preplace netloc PS_BRAM|Conn1 1 0 4 770 512 NJ 512 NJ 512 1810J
-preplace netloc PS_BRAM|Conn2 1 0 4 NJ 522 NJ 522 NJ 522 1840
-preplace netloc PS_BRAM|Conn3 1 0 4 NJ 552 NJ 552 NJ 552 1850
-levelinfo -pg 1 -20 240 880 2290
-levelinfo -hier PS_BRAM * 990 1360 1670 1990 *
-pagesize -pg 1 -db -bbox -sgen -190 -30 2440 720
-pagesize -hier PS_BRAM -db -bbox -sgen 730 2 2160 622
+preplace port BRAM_PORTB_0 -pg 1 -lvl 0 -x -10 -y 20 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1990 -y 230 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1990 -y 250 -defaultsOSRD
+preplace port Vaux1 -pg 1 -lvl 0 -x -10 -y 300 -defaultsOSRD
+preplace port Vaux6 -pg 1 -lvl 0 -x -10 -y 320 -defaultsOSRD
+preplace port Vaux9 -pg 1 -lvl 0 -x -10 -y 340 -defaultsOSRD
+preplace port sys_clk -pg 1 -lvl 0 -x -10 -y 150 -defaultsOSRD
+preplace port duty_signal -pg 1 -lvl 4 -x 1990 -y 490 -defaultsOSRD
+preplace port clk_out_0 -pg 1 -lvl 4 -x 1990 -y 880 -defaultsOSRD
+preplace portBus data_led -pg 1 -lvl 4 -x 1990 -y 390 -defaultsOSRD
+preplace inst PS_BRAM -pg 1 -lvl 3 -x 1270 -y 240 -defaultsOSRD
+preplace inst const_high -pg 1 -lvl 1 -x 260 -y 420 -defaultsOSRD
+preplace inst const_low -pg 1 -lvl 1 -x 260 -y 520 -defaultsOSRD
+preplace inst PWM_12_mod -pg 1 -lvl 3 -x 1270 -y 492 -defaultsOSRD
+preplace inst PL_BRAM_read -pg 1 -lvl 1 -x 260 -y 160 -defaultsOSRD
+preplace inst read_clk_0 -pg 1 -lvl 1 -x 260 -y 880 -defaultsOSRD
+preplace inst PID_0 -pg 1 -lvl 2 -x 710 -y 500 -defaultsOSRD
+preplace inst PWM_12_mod|inverter_0 -pg 1 -lvl 3 -x 1750 -y 522 -defaultsOSRD
+preplace inst PWM_12_mod|comparator_12_0 -pg 1 -lvl 2 -x 1570 -y 522 -defaultsOSRD
+preplace inst PWM_12_mod|counter_12_0 -pg 1 -lvl 1 -x 1340 -y 512 -defaultsOSRD
+preplace netloc ps_BRAM_PORTB_0_dout 1 0 3 20 310 520J 290 870
+preplace netloc PL_0_BRAM_PORTB_0_addr 1 1 2 560 210 840J
+preplace netloc clk_125MHz_0_1 1 0 3 10 580 550 620 860
+preplace netloc BRAM_PORTB_0_we_1 1 1 2 550 270 850J
+preplace netloc PL_0_data_out 1 1 3 540J 280 840J 390 NJ
+preplace netloc PL_0_BRAM_PORTB_0_en 1 1 2 N 80 880J
+preplace netloc BRAM_PORTB_0_din_1 1 1 2 570 200 NJ
+preplace netloc BRAM_PORTB_0_rst_1 1 1 2 N 100 850J
+preplace netloc PL_BRAM_read_enable 1 1 1 530 200n
+preplace netloc PL_BRAM_read_set_current 1 1 1 500 240n
+preplace netloc PL_BRAM_read_now_current 1 1 1 510 220n
+preplace netloc xlconstant_1_dout 1 1 1 570J 480n
+preplace netloc inverter_0_b 1 3 1 1970J 490n
+preplace netloc PID_0_outp 1 0 3 30 630 N 630 840
+preplace netloc read_clk_0_clk_out 1 1 3 NJ 880 NJ 880 NJ
+preplace netloc const_high_dout 1 1 1 490 420n
+preplace netloc processing_system7_0_DDR 1 3 1 NJ 230
+preplace netloc Vaux6_1 1 0 3 NJ 320 NJ 320 NJ
+preplace netloc BRAM_PORTB_0_1 1 0 3 NJ 20 NJ 20 890J
+preplace netloc processing_system7_0_FIXED_IO 1 3 1 NJ 250
+preplace netloc Vaux9_1 1 0 3 NJ 340 NJ 340 NJ
+preplace netloc Vaux1_1 1 0 3 NJ 300 NJ 300 NJ
+preplace netloc PWM_12_mod|counter_12_0_count 1 1 1 N 512
+preplace netloc PWM_12_mod|comparator_12_0_c 1 2 1 NJ 522
+preplace netloc PWM_12_mod|clk_125MHz_0_1 1 0 1 NJ 512
+preplace netloc PWM_12_mod|inverter_0_b 1 3 1 NJ 522
+preplace netloc PWM_12_mod|PID_0_outp 1 0 2 NJ 572 1460
+levelinfo -pg 1 -10 260 710 1270 1990
+levelinfo -hier PWM_12_mod * 1340 1570 1750 *
+pagesize -pg 1 -db -bbox -sgen -180 -110 2140 940
+pagesize -hier PWM_12_mod -db -bbox -sgen 1190 452 1860 592
 "
 }
 {

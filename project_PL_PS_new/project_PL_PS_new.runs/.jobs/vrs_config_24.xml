@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_ps_pl_PL_0_0_synth_1" LaunchDir="/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.runs/design_ps_pl_PL_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
