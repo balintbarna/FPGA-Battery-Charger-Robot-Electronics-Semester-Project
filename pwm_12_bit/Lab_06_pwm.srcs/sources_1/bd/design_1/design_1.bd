@@ -1,0 +1,132 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x6696EEA06696EEA",
+      "device": "xc7z020clg400-1",
+      "name": "design_1",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.1",
+      "validated": "true"
+    },
+    "design_tree": {
+      "xlconstant_0": "",
+      "counter_27_0": "",
+      "comparator_27_0": "",
+      "inverter_0": ""
+    },
+    "ports": {
+      "clk_in_0": {
+        "direction": "I"
+      },
+      "pwm_signal": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_1_xlconstant_0_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "2866"
+          },
+          "CONST_WIDTH": {
+            "value": "12"
+          }
+        }
+      },
+      "counter_27_0": {
+        "vlnv": "xilinx.com:module_ref:counter_27:1.0",
+        "xci_name": "design_1_counter_27_0_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "counter_27",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "count": {
+            "direction": "O",
+            "left": "11",
+            "right": "0"
+          }
+        }
+      },
+      "comparator_27_0": {
+        "vlnv": "xilinx.com:module_ref:comparator_27:1.0",
+        "xci_name": "design_1_comparator_27_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "comparator_27",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "a": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "b": {
+            "direction": "I",
+            "left": "11",
+            "right": "0"
+          },
+          "c": {
+            "direction": "O"
+          }
+        }
+      },
+      "inverter_0": {
+        "vlnv": "xilinx.com:module_ref:inverter:1.0",
+        "xci_name": "design_1_inverter_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "inverter",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "x": {
+            "direction": "I"
+          },
+          "y": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "counter_27_0_count": {
+        "ports": [
+          "counter_27_0/count",
+          "comparator_27_0/a"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "comparator_27_0/b"
+        ]
+      },
+      "clk_in_0_1": {
+        "ports": [
+          "clk_in_0",
+          "counter_27_0/clk_in"
+        ]
+      },
+      "comparator_27_0_c": {
+        "ports": [
+          "comparator_27_0/c",
+          "inverter_0/x"
+        ]
+      },
+      "inverter_0_y": {
+        "ports": [
+          "inverter_0/y",
+          "pwm_signal"
+        ]
+      }
+    }
+  }
+}
