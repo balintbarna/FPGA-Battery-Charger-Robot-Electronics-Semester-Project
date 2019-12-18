@@ -42,16 +42,16 @@ component pid
 		i_en : IN std_logic; --determines if i term is needed
 		d_en : IN std_logic; --determines if d term is needed
 		sp : IN std_logic_vector(11 DOWNTO 0); -- Setpoint: user input reference
-		input : IN std_logic_vector(11 DOWNTO 0); --feedback value from sensor
+		inp : IN std_logic_vector(11 DOWNTO 0); --feedback value from sensor
 		en : IN std_logic; --determines if controller is active
-		output : OUT std_logic_vector(11 DOWNTO 0); --output of controller
+		outp : OUT std_logic_vector(11 DOWNTO 0); --output of controller
 		clk : IN STD_LOGIC
 	);
 	end component;
 	 
 	signal sp    : std_logic_vector(11 downto 0):="000000000000";    
-	signal input : std_logic_vector(11 downto 0):="000000000000";
-	signal output : std_logic_vector(11 DOWNTO 0):="000000000000";
+	signal inp : std_logic_vector(11 downto 0):="000000000000";
+	signal outp : std_logic_vector(11 DOWNTO 0):="000000000000";
     signal en : std_logic:='0';
 	signal clk :  STD_LOGIC:='0';
 	signal i_en, p_en, d_en: std_logic := '0';
@@ -64,9 +64,9 @@ UUT1:pid PORT MAP
     i_en => i_en,
 	d_en => d_en,
 	sp => sp,    
-	input => input,
+	inp => inp,
     en => en,
-	output =>output,
+	outp =>outp,
 	clk => clk
 );
 clk_process:process
@@ -109,7 +109,7 @@ end process;
 
 feedback_process:process
 begin 
-	input <= std_logic_vector(to_unsigned(to_integer(unsigned(output)/2 + 512),12));
+	inp <= std_logic_vector(to_unsigned(to_integer(unsigned(outp)/2 + 512),12));
 	wait for clk_period;
 end process;
 
