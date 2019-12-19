@@ -1,0 +1,40 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Dec 19 13:30:21 2019
+# Process ID: 16732
+# Current directory: C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14260 C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.xpr
+# Log file: C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/vivado.log
+# Journal file: C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.xpr
+update_compile_order -fileset sources_1
+update_module_reference design_ps_pl_PL_0_0
+update_module_reference design_ps_pl_PID_0_0
+update_module_reference design_ps_pl_counter_12_0_1
+update_module_reference design_ps_pl_inverter_0_2
+update_module_reference design_ps_pl_comparator_12_0_1
+update_module_reference design_ps_pl_read_clk_0_0
+close [ open C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/clock_divider.vhd w ]
+add_files C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/clock_divider.vhd
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd}
+create_bd_cell -type module -reference clock_divider clock_divider_0
+disconnect_bd_net /clk_125MHz_0_1 [get_bd_pins PID_0/clk]
+undo
+disconnect_bd_net /clk_125MHz_0_1 [get_bd_pins PID_0/clk]
+connect_bd_net [get_bd_pins clock_divider_0/new_clk] [get_bd_pins PID_0/clk]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {1 155 679} [get_bd_cells xlconstant_0]
+set_property location {1 119 731} [get_bd_cells xlconstant_0]
+set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {4095}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins clock_divider_0/ticks]
+connect_bd_net [get_bd_ports sys_clk] [get_bd_pins clock_divider_0/clk]
+save_bd_design
+update_compile_order -fileset sources_1
+close_bd_design [get_bd_designs design_ps_pl]

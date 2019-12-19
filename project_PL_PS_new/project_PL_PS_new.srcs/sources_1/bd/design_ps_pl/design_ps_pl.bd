@@ -5,8 +5,7 @@
       "device": "xc7z020clg400-1",
       "name": "design_ps_pl",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2019.1",
-      "validated": "true"
+      "tool_version": "2019.1"
     },
     "design_tree": {
       "PS_BRAM": {
@@ -20,13 +19,15 @@
       "const_high": "",
       "const_low": "",
       "PWM_12_mod": {
+        "counter_12_0": "",
         "inverter_0": "",
-        "comparator_12_0": "",
-        "counter_12_0": ""
+        "comparator_12_0": ""
       },
       "PL_BRAM_read": "",
+      "PID_0": "",
       "read_clk_0": "",
-      "PID_0": ""
+      "clock_divider_0": "",
+      "xlconstant_0": ""
     },
     "interface_ports": {
       "BRAM_PORTB_0": {
@@ -35,88 +36,16 @@
         "parameters": {
           "MASTER_TYPE": {
             "value": "BRAM_CTRL"
-          },
-          "MEM_ECC": {
-            "value": "NONE",
-            "value_src": "default"
-          },
-          "MEM_SIZE": {
-            "value": "8192",
-            "value_src": "default"
-          },
-          "MEM_WIDTH": {
-            "value": "32",
-            "value_src": "default"
-          },
-          "READ_LATENCY": {
-            "value": "1",
-            "value_src": "default"
           }
         }
       },
       "DDR": {
         "mode": "Master",
-        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0",
-        "parameters": {
-          "AXI_ARBITRATION_SCHEME": {
-            "value": "TDM",
-            "value_src": "default"
-          },
-          "BURST_LENGTH": {
-            "value": "8",
-            "value_src": "default"
-          },
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          },
-          "CAS_LATENCY": {
-            "value": "11",
-            "value_src": "default"
-          },
-          "CAS_WRITE_LATENCY": {
-            "value": "11",
-            "value_src": "default"
-          },
-          "CS_ENABLED": {
-            "value": "true",
-            "value_src": "default"
-          },
-          "DATA_MASK_ENABLED": {
-            "value": "true",
-            "value_src": "default"
-          },
-          "DATA_WIDTH": {
-            "value": "8",
-            "value_src": "default"
-          },
-          "MEMORY_TYPE": {
-            "value": "COMPONENTS",
-            "value_src": "default"
-          },
-          "MEM_ADDR_MAP": {
-            "value": "ROW_COLUMN_BANK",
-            "value_src": "default"
-          },
-          "SLOT": {
-            "value": "Single",
-            "value_src": "default"
-          },
-          "TIMEPERIOD_PS": {
-            "value": "1250",
-            "value_src": "default"
-          }
-        }
+        "vlnv": "xilinx.com:interface:ddrx_rtl:1.0"
       },
       "FIXED_IO": {
         "mode": "Master",
-        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0",
-        "parameters": {
-          "CAN_DEBUG": {
-            "value": "false",
-            "value_src": "default"
-          }
-        }
+        "vlnv": "xilinx.com:display_processing_system7:fixedio_rtl:1.0"
       },
       "Vaux1": {
         "mode": "Slave",
@@ -1900,16 +1829,22 @@
           }
         },
         "interface_nets": {
+          "Conn3": {
+            "interface_ports": [
+              "Vaux9",
+              "xadc_wiz_0/Vaux9"
+            ]
+          },
           "axi_smc_M01_AXI": {
             "interface_ports": [
               "axi_smc/M01_AXI",
               "xadc_wiz_0/s_axi_lite"
             ]
           },
-          "Conn3": {
+          "processing_system7_0_DDR": {
             "interface_ports": [
-              "Vaux9",
-              "xadc_wiz_0/Vaux9"
+              "DDR",
+              "processing_system7_0/DDR"
             ]
           },
           "axi_bram_ctrl_0_BRAM_PORTA": {
@@ -1918,10 +1853,10 @@
               "blk_mem_gen_0/BRAM_PORTA"
             ]
           },
-          "processing_system7_0_DDR": {
+          "processing_system7_0_FIXED_IO": {
             "interface_ports": [
-              "DDR",
-              "processing_system7_0/DDR"
+              "FIXED_IO",
+              "processing_system7_0/FIXED_IO"
             ]
           },
           "axi_smc_M00_AXI": {
@@ -1936,18 +1871,6 @@
               "axi_smc/S00_AXI"
             ]
           },
-          "Conn2": {
-            "interface_ports": [
-              "Vaux6",
-              "xadc_wiz_0/Vaux6"
-            ]
-          },
-          "processing_system7_0_FIXED_IO": {
-            "interface_ports": [
-              "FIXED_IO",
-              "processing_system7_0/FIXED_IO"
-            ]
-          },
           "Conn1": {
             "interface_ports": [
               "Vaux1",
@@ -1958,6 +1881,12 @@
             "interface_ports": [
               "BRAM_PORTB_0",
               "blk_mem_gen_0/BRAM_PORTB"
+            ]
+          },
+          "Conn2": {
+            "interface_ports": [
+              "Vaux6",
+              "xadc_wiz_0/Vaux6"
             ]
           }
         },
@@ -2017,6 +1946,26 @@
           }
         },
         "components": {
+          "counter_12_0": {
+            "vlnv": "xilinx.com:module_ref:counter_12:1.0",
+            "xci_name": "design_ps_pl_counter_12_0_1",
+            "reference_info": {
+              "ref_type": "hdl",
+              "ref_name": "counter_12",
+              "boundary_crc": "0x0"
+            },
+            "ports": {
+              "sys_clk": {
+                "type": "clk",
+                "direction": "I"
+              },
+              "count": {
+                "direction": "O",
+                "left": "11",
+                "right": "0"
+              }
+            }
+          },
           "inverter_0": {
             "vlnv": "xilinx.com:module_ref:inverter:1.0",
             "xci_name": "design_ps_pl_inverter_0_2",
@@ -2055,26 +2004,6 @@
               },
               "c": {
                 "direction": "O"
-              }
-            }
-          },
-          "counter_12_0": {
-            "vlnv": "xilinx.com:module_ref:counter_12:1.0",
-            "xci_name": "design_ps_pl_counter_12_0_1",
-            "reference_info": {
-              "ref_type": "hdl",
-              "ref_name": "counter_12",
-              "boundary_crc": "0x0"
-            },
-            "ports": {
-              "sys_clk": {
-                "type": "clk",
-                "direction": "I"
-              },
-              "count": {
-                "direction": "O",
-                "left": "11",
-                "right": "0"
               }
             }
           }
@@ -2176,23 +2105,6 @@
           }
         }
       },
-      "read_clk_0": {
-        "vlnv": "xilinx.com:module_ref:read_clk:1.0",
-        "xci_name": "design_ps_pl_read_clk_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "read_clk",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk_in": {
-            "direction": "I"
-          },
-          "clk_out": {
-            "direction": "O"
-          }
-        }
-      },
       "PID_0": {
         "vlnv": "xilinx.com:module_ref:PID:1.0",
         "xci_name": "design_ps_pl_PID_0_0",
@@ -2234,6 +2146,59 @@
             "right": "0"
           }
         }
+      },
+      "read_clk_0": {
+        "vlnv": "xilinx.com:module_ref:read_clk:1.0",
+        "xci_name": "design_ps_pl_read_clk_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "read_clk",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk_in": {
+            "direction": "I"
+          },
+          "clk_out": {
+            "direction": "O"
+          }
+        }
+      },
+      "clock_divider_0": {
+        "vlnv": "xilinx.com:module_ref:clock_divider:1.0",
+        "xci_name": "design_ps_pl_clock_divider_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "clock_divider",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "new_clk": {
+            "type": "clk",
+            "direction": "O"
+          },
+          "ticks": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_ps_pl_xlconstant_0_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "4095"
+          },
+          "CONST_WIDTH": {
+            "value": "32"
+          }
+        }
       }
     },
     "interface_nets": {
@@ -2241,6 +2206,12 @@
         "interface_ports": [
           "DDR",
           "PS_BRAM/DDR"
+        ]
+      },
+      "processing_system7_0_FIXED_IO": {
+        "interface_ports": [
+          "FIXED_IO",
+          "PS_BRAM/FIXED_IO"
         ]
       },
       "Vaux1_1": {
@@ -2266,12 +2237,6 @@
           "Vaux6",
           "PS_BRAM/Vaux6"
         ]
-      },
-      "processing_system7_0_FIXED_IO": {
-        "interface_ports": [
-          "FIXED_IO",
-          "PS_BRAM/FIXED_IO"
-        ]
       }
     },
     "nets": {
@@ -2294,7 +2259,7 @@
           "PWM_12_mod/sys_clk",
           "PL_BRAM_read/clk_125MHz",
           "read_clk_0/clk_in",
-          "PID_0/clk"
+          "clock_divider_0/clk"
         ]
       },
       "BRAM_PORTB_0_we_1": {
@@ -2375,6 +2340,18 @@
         "ports": [
           "const_high/dout",
           "PID_0/i_en"
+        ]
+      },
+      "clock_divider_0_new_clk": {
+        "ports": [
+          "clock_divider_0/new_clk",
+          "PID_0/clk"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "clock_divider_0/ticks"
         ]
       }
     },

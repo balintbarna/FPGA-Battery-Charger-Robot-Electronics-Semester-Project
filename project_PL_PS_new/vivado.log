@@ -1,0 +1,118 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Dec 19 13:30:21 2019
+# Process ID: 16732
+# Current directory: C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14260 C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.xpr
+# Log file: C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/vivado.log
+# Journal file: C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.xpr
+WARNING: [Board 49-91] Board repository path 'C:/Users/balin/AppData/Roaming/Xilinx/Vivado/2019.1/xhub/board_store' does not exist, it will not be used to search board files.
+INFO: [Project 1-313] Project file moved from '/home/johan/rob_ele/RobotElectronicsProject/project_PL_PS_new' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:29 ; elapsed = 00:00:14 . Memory (MB): peak = 798.000 ; gain = 176.980
+update_compile_order -fileset sources_1
+update_module_reference design_ps_pl_PL_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'BRAM_PORTB_0_rst' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Adding component instance block -- xilinx.com:ip:axi_bram_ctrl:4.1 - axi_bram_ctrl_0
+Adding component instance block -- xilinx.com:ip:smartconnect:1.0 - axi_smc
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding component instance block -- xilinx.com:ip:xadc_wiz:3.3 - xadc_wiz_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_high
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - const_low
+Adding component instance block -- xilinx.com:module_ref:inverter:1.0 - inverter_0
+Adding component instance block -- xilinx.com:module_ref:comparator_12:1.0 - comparator_12_0
+Adding component instance block -- xilinx.com:module_ref:counter_12:1.0 - counter_12_0
+Adding component instance block -- xilinx.com:module_ref:PL:1.0 - PL_BRAM_read
+Adding component instance block -- xilinx.com:module_ref:read_clk:1.0 - read_clk_0
+Adding component instance block -- xilinx.com:module_ref:PID:1.0 - PID_0
+Successfully read diagram <design_ps_pl> from BD file <C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd>
+Upgrading 'C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd'
+INFO: [IP_Flow 19-3420] Updated design_ps_pl_PL_0_0 to use current project options
+Wrote  : <C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.srcs\sources_1\bd\design_ps_pl\design_ps_pl.bd> 
+Wrote  : <C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ui/bd_64216037.ui> 
+upgrade_ip: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 1244.527 ; gain = 0.000
+update_module_reference: Time (s): cpu = 00:00:22 ; elapsed = 00:00:16 . Memory (MB): peak = 1244.527 ; gain = 0.000
+update_module_reference design_ps_pl_PID_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd'
+INFO: [IP_Flow 19-3420] Updated design_ps_pl_PID_0_0 to use current project options
+Wrote  : <C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.srcs\sources_1\bd\design_ps_pl\design_ps_pl.bd> 
+Wrote  : <C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ui/bd_64216037.ui> 
+update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1244.527 ; gain = 0.000
+update_module_reference design_ps_pl_counter_12_0_1
+INFO: [IP_Flow 19-5107] Inferred bus interface 'sys_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'sys_clk': ASSOCIATED_BUSIF bus parameter is missing.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd'
+INFO: [IP_Flow 19-3420] Updated design_ps_pl_counter_12_0_1 to use current project options
+Wrote  : <C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.srcs\sources_1\bd\design_ps_pl\design_ps_pl.bd> 
+update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 1244.527 ; gain = 0.000
+update_module_reference design_ps_pl_inverter_0_2
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd'
+INFO: [IP_Flow 19-3420] Updated design_ps_pl_inverter_0_2 to use current project options
+Wrote  : <C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.srcs\sources_1\bd\design_ps_pl\design_ps_pl.bd> 
+update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1244.527 ; gain = 0.000
+update_module_reference design_ps_pl_comparator_12_0_1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd'
+INFO: [IP_Flow 19-3420] Updated design_ps_pl_comparator_12_0_1 to use current project options
+Wrote  : <C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.srcs\sources_1\bd\design_ps_pl\design_ps_pl.bd> 
+update_module_reference: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1244.527 ; gain = 0.000
+update_module_reference design_ps_pl_read_clk_0_0
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd'
+INFO: [IP_Flow 19-3420] Updated design_ps_pl_read_clk_0_0 to use current project options
+Wrote  : <C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.srcs\sources_1\bd\design_ps_pl\design_ps_pl.bd> 
+Wrote  : <C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ui/bd_64216037.ui> 
+close [ open C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/clock_divider.vhd w ]
+add_files C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/new/clock_divider.vhd
+update_compile_order -fileset sources_1
+open_bd_design {C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/design_ps_pl.bd}
+create_bd_cell -type module -reference clock_divider clock_divider_0
+WARNING: [IP_Flow 19-4318] IP-XACT file does not exist: c:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/mref/clockdivider/component.xml. It will be created.
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'new_clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-3153] Bus Interface 'clk': ASSOCIATED_BUSIF bus parameter is missing.
+WARNING: [IP_Flow 19-3153] Bus Interface 'new_clk': ASSOCIATED_BUSIF bus parameter is missing.
+CRITICAL WARNING: [IP_Flow 19-4751] Bus Interface 'new_clk': FREQ_HZ bus parameter is missing for output clock interface.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+disconnect_bd_net /clk_125MHz_0_1 [get_bd_pins PID_0/clk]
+undo
+INFO: [Common 17-17] undo 'disconnect_bd_net /clk_125MHz_0_1 [get_bd_pins PID_0/clk]'
+disconnect_bd_net /clk_125MHz_0_1 [get_bd_pins PID_0/clk]
+connect_bd_net [get_bd_pins clock_divider_0/new_clk] [get_bd_pins PID_0/clk]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {1 155 679} [get_bd_cells xlconstant_0]
+set_property location {1 119 731} [get_bd_cells xlconstant_0]
+set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {4095}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins clock_divider_0/ticks]
+connect_bd_net [get_bd_ports sys_clk] [get_bd_pins clock_divider_0/clk]
+save_bd_design
+Wrote  : <C:\Users\balin\repos\RobotElectronicsProject\project_PL_PS_new\project_PL_PS_new.srcs\sources_1\bd\design_ps_pl\design_ps_pl.bd> 
+Wrote  : <C:/Users/balin/repos/RobotElectronicsProject/project_PL_PS_new/project_PL_PS_new.srcs/sources_1/bd/design_ps_pl/ui/bd_64216037.ui> 
+update_compile_order -fileset sources_1
+close_bd_design [get_bd_designs design_ps_pl]
